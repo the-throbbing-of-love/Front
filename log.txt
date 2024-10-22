@@ -1,0 +1,1561 @@
+2024-10-18 00:07:44 UTC
+macOS-15.0.1-arm64-arm-64bit
+Ren'Py 8.3.2.24090902
+
+Early init took 0.06s
+Loading error handling took 0.10s
+Loading script took 0.20s
+Loading save slot metadata took 0.04s
+Loading persistent took 0.00s
+Running init code took 0.15s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.01s
+Index archives took 0.00s
+Backing up script files to '/Users/hyunho/Library/RenPy/backups/the throbbing of love':
+Dump and make backups took 0.03s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.02s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.02s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.03s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.59s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M1'
+Version: b'2.1 Metal - 89.3'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1338, 753) drawable=(2676, 1506)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/script.rpy", line 19, in script
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/ast.py", line 821, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/python.py", line 1178, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/script.rpy", line 19, in <module>
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/game.py", line 358, in call_in_new_context
+    context = renpy.execution.Context(False, contexts[-1], clear=clear)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/scenelists.py", line 213, in __init__
+    self.replace_transient(prefix=None)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/scenelists.py", line 263, in replace_transient
+    self.clear(i, True)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/scenelists.py", line 623, in clear
+    self.shown.predict_scene(layer)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/image.py", line 906, in predict_scene
+    self.shown = set((l, t) for l, t in self.shown if l != layer)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/image.py", line 906, in <genexpr>
+    self.shown = set((l, t) for l, t in self.shown if l != layer)
+RecursionError: maximum recursion depth exceeded in comparison
+
+While running game code:
+  File "game/script.rpy", line 19, in script
+  File "game/script.rpy", line 19, in <module>
+RecursionError: maximum recursion depth exceeded in comparison
+While handling exception:
+%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%sWhile handling exception:Traceback (most recent call last):
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/error.py", line 140, in report_exception
+    renpy.game.invoke_in_new_context(
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/game.py", line 303, in invoke_in_new_context
+    return callable(*args, **kwargs)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/error.py", line 48, in call_exception_screen
+    return renpy.ui.interact(mouse="screen", type="screen", suppress_overlay=True, suppress_underlay=True)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/ui.py", line 301, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/core.py", line 2190, in interact
+    self.show_window()
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/core.py", line 1560, in show_window
+    renpy.config.empty_window()
+  File "renpy/common/00library.rpy", line 169, in _default_empty_window
+    store.narrator.empty_window()
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/character.py", line 1311, in empty_window
+    self.do_show(None, "")
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/character.py", line 1084, in do_show
+    return self.show_function(
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/character.py", line 346, in show_display_say
+    props = compute_widget_properties(who_args, what_args, window_args, properties, variant=variant, multiple=multiple)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/character.py", line 279, in compute_widget_properties
+    who_args = style_args(who_args, "who")
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/character.py", line 255, in style_args
+    in_rollback = renpy.exports.in_rollback()
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/exports/rollbackexports.py", line 70, in in_rollback
+    return renpy.game.log.in_rollback() or renpy.game.after_rollback
+RecursionError: maximum recursion depth exceeded
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/execution.py", line 629, in run
+    if renpy.display.error.report_exception(short, full, traceback_fn):
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/error.py", line 163, in report_exception
+    renpy.display.log.exception()
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/log.py", line 193, in exception
+    traceback.print_exc(None, self) # type: ignore
+  File "lib/python3.9/traceback.py", line 163, in print_exc
+  File "lib/python3.9/traceback.py", line 103, in print_exception
+  File "lib/python3.9/traceback.py", line 517, in __init__
+  File "lib/python3.9/traceback.py", line 366, in extract
+  File "lib/python3.9/traceback.py", line 288, in line
+  File "lib/python3.9/linecache.py", line 30, in getline
+  File "lib/python3.9/linecache.py", line 46, in getlines
+  File "lib/python3.9/linecache.py", line 136, in updatecache
+  File "lib/python3.9/tokenize.py", line 392, in open
+RecursionError: maximum recursion depth exceeded while calling a Python object
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/execution.py", line 599, in run
+    node.execute()
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/ast.py", line 821, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/python.py", line 1178, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/script.rpy", line 19, in <module>
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/game.py", line 377, in call_in_new_context
+    return renpy.execution.run_context(False)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/execution.py", line 958, in run_context
+    context.run()
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/execution.py", line 634, in run
+    reraise(exc_info[0], exc_info[1], exc_info[2])
+  File "lib/python3.9/future/utils/__init__.py", line 444, in raise_
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/execution.py", line 599, in run
+    node.execute()
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/ast.py", line 821, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/python.py", line 1178, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/script.rpy", line 19, in <module>
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/game.py", line 358, in call_in_new_context
+    context = renpy.execution.Context(False, contexts[-1], clear=clear)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/execution.py", line 316, in __init__
+    self.scene_lists = renpy.display.scenelists.SceneLists(oldsl, self.images)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/scenelists.py", line 213, in __init__
+    self.replace_transient(prefix=None)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/scenelists.py", line 263, in replace_transient
+    self.clear(i, True)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/scenelists.py", line 623, in clear
+    self.shown.predict_scene(layer)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/image.py", line 906, in predict_scene
+    self.shown = set((l, t) for l, t in self.shown if l != layer)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/image.py", line 906, in <genexpr>
+    self.shown = set((l, t) for l, t in self.shown if l != layer)
+RecursionError: maximum recursion depth exceeded in comparison
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/error.py", line 140, in report_exception
+    renpy.game.invoke_in_new_context(
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/game.py", line 303, in invoke_in_new_context
+    return callable(*args, **kwargs)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/error.py", line 48, in call_exception_screen
+    return renpy.ui.interact(mouse="screen", type="screen", suppress_overlay=True, suppress_underlay=True)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/ui.py", line 301, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/core.py", line 2215, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/core.py", line 2745, in interact_core
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/screen.py", line 480, in visit_all
+    callback(self)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/core.py", line 2745, in <lambda>
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/screen.py", line 491, in per_interact
+    self.update()
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/screen.py", line 697, in update
+    self.screen.function(**self.scope)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/sl2/slast.py", line 2716, in __call__
+    self.execute(context)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/sl2/slast.py", line 2654, in execute
+    SLBlock.execute(self.const_ast, context) # type: ignore
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/sl2/slast.py", line 500, in execute
+    i.execute(context)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/sl2/slast.py", line 918, in execute
+    ctx = SLContext(context)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/sl2/slast.py", line 95, in __init__
+    self.__dict__.update(parent.__dict__)
+RecursionError: maximum recursion depth exceeded while calling a Python object
+
+Full traceback:
+  File "game/script.rpy", line 19, in script
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/ast.py", line 821, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/python.py", line 1178, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/script.rpy", line 19, in <module>
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/game.py", line 377, in call_in_new_context
+    return renpy.execution.run_context(False)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/execution.py", line 958, in run_context
+    context.run()
+  File "game/script.rpy", line 19, in script
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "lib/python3.9/future/utils/__init__.py", line 444, in raise_
+  File "game/script.rpy", line 19, in script
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/ast.py", line 821, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/python.py", line 1178, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/script.rpy", line 19, in <module>
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/game.py", line 377, in call_in_new_context
+    return renpy.execution.run_context(False)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/execution.py", line 958, in run_context
+    context.run()
+  File "game/script.rpy", line 19, in script
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "lib/python3.9/future/utils/__init__.py", line 444, in raise_
+  File "game/script.rpy", line 19, in script
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/ast.py", line 821, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/python.py", line 1178, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/script.rpy", line 19, in <module>
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/game.py", line 358, in call_in_new_context
+    context = renpy.execution.Context(False, contexts[-1], clear=clear)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/scenelists.py", line 213, in __init__
+    self.replace_transient(prefix=None)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/scenelists.py", line 263, in replace_transient
+    self.clear(i, True)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/scenelists.py", line 623, in clear
+    self.shown.predict_scene(layer)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/image.py", line 906, in predict_scene
+    self.shown = set((l, t) for l, t in self.shown if l != layer)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/image.py", line 906, in <genexpr>
+    self.shown = set((l, t) for l, t in self.shown if l != layer)
+RecursionError: maximum recursion depth exceeded in comparison
+
+While running game code:
+  File "game/script.rpy", line 19, in script
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "game/script.rpy", line 19, in <module>
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "game/script.rpy", line 19, in script
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "game/script.rpy", line 19, in script
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "game/script.rpy", line 19, in <module>
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "game/script.rpy", line 19, in script
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "game/script.rpy", line 19, in script
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "game/script.rpy", line 19, in <module>
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+RecursionError: maximum recursion depth exceeded in comparison
+While handling exception:
+Traceback (most recent call last):
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/execution.py", line 629, in run
+    if renpy.display.error.report_exception(short, full, traceback_fn):
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/error.py", line 140, in report_exception
+    renpy.game.invoke_in_new_context(
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/game.py", line 303, in invoke_in_new_context
+    return callable(*args, **kwargs)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/error.py", line 48, in call_exception_screen
+    return renpy.ui.interact(mouse="screen", type="screen", suppress_overlay=True, suppress_underlay=True)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/ui.py", line 301, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/core.py", line 2215, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/core.py", line 2745, in interact_core
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/screen.py", line 480, in visit_all
+    callback(self)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/core.py", line 2745, in <lambda>
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/screen.py", line 491, in per_interact
+    self.update()
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/screen.py", line 697, in update
+    self.screen.function(**self.scope)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/sl2/slast.py", line 2716, in __call__
+    self.execute(context)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/sl2/slast.py", line 2654, in execute
+    SLBlock.execute(self.const_ast, context) # type: ignore
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/sl2/slast.py", line 500, in execute
+    i.execute(context)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/sl2/slast.py", line 918, in execute
+    ctx = SLContext(context)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/sl2/slast.py", line 95, in __init__
+    self.__dict__.update(parent.__dict__)
+RecursionError: maximum recursion depth exceeded while calling a Python object
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/execution.py", line 599, in run
+    node.execute()
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/ast.py", line 821, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/python.py", line 1178, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/script.rpy", line 19, in <module>
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/game.py", line 377, in call_in_new_context
+    return renpy.execution.run_context(False)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/execution.py", line 958, in run_context
+    context.run()
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/execution.py", line 634, in run
+    reraise(exc_info[0], exc_info[1], exc_info[2])
+  File "lib/python3.9/future/utils/__init__.py", line 444, in raise_
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/execution.py", line 599, in run
+    node.execute()
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/ast.py", line 821, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/python.py", line 1178, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/script.rpy", line 19, in <module>
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/game.py", line 377, in call_in_new_context
+    return renpy.execution.run_context(False)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/execution.py", line 958, in run_context
+    context.run()
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/execution.py", line 634, in run
+    reraise(exc_info[0], exc_info[1], exc_info[2])
+  File "lib/python3.9/future/utils/__init__.py", line 444, in raise_
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/execution.py", line 599, in run
+    node.execute()
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/ast.py", line 821, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/python.py", line 1178, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/script.rpy", line 19, in <module>
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/game.py", line 358, in call_in_new_context
+    context = renpy.execution.Context(False, contexts[-1], clear=clear)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/execution.py", line 316, in __init__
+    self.scene_lists = renpy.display.scenelists.SceneLists(oldsl, self.images)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/scenelists.py", line 213, in __init__
+    self.replace_transient(prefix=None)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/scenelists.py", line 263, in replace_transient
+    self.clear(i, True)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/scenelists.py", line 623, in clear
+    self.shown.predict_scene(layer)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/image.py", line 906, in predict_scene
+    self.shown = set((l, t) for l, t in self.shown if l != layer)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/image.py", line 906, in <genexpr>
+    self.shown = set((l, t) for l, t in self.shown if l != layer)
+RecursionError: maximum recursion depth exceeded in comparison
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/error.py", line 140, in report_exception
+    renpy.game.invoke_in_new_context(
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/game.py", line 303, in invoke_in_new_context
+    return callable(*args, **kwargs)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/error.py", line 48, in call_exception_screen
+    return renpy.ui.interact(mouse="screen", type="screen", suppress_overlay=True, suppress_underlay=True)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/ui.py", line 301, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/core.py", line 2215, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/core.py", line 2745, in interact_core
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/screen.py", line 480, in visit_all
+    callback(self)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/core.py", line 2745, in <lambda>
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/screen.py", line 491, in per_interact
+    self.update()
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/screen.py", line 697, in update
+    self.screen.function(**self.scope)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/sl2/slast.py", line 2716, in __call__
+    self.execute(context)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/sl2/slast.py", line 2654, in execute
+    SLBlock.execute(self.const_ast, context) # type: ignore
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/sl2/slast.py", line 500, in execute
+    i.execute(context)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/sl2/slast.py", line 1941, in execute
+    scope[variable] = eval(self.expr, context.globals, scope)
+  File "renpy/common/_errorhandling.rpym", line 704, in <module>
+    default fmt_short = __format_traceback(short)
+  File "renpy/common/_errorhandling.rpym", line 505, in _m1__errorhandling__format_traceback
+    i = re.sub(r'(File "(.*)", line (\d+))', r'{a=edit:\3:\2}\1{/a}', i)
+  File "lib/python3.9/re.py", line 210, in sub
+  File "lib/python3.9/re.py", line 304, in _compile
+  File "lib/python3.9/sre_compile.py", line 764, in compile
+  File "lib/python3.9/sre_parse.py", line 940, in parse
+  File "lib/python3.9/sre_parse.py", line 225, in __init__
+RecursionError: maximum recursion depth exceeded while calling a Python object
+
+Full traceback:
+  File "game/script.rpy", line 19, in script
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/ast.py", line 821, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/python.py", line 1178, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/script.rpy", line 19, in <module>
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/game.py", line 377, in call_in_new_context
+    return renpy.execution.run_context(False)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/execution.py", line 958, in run_context
+    context.run()
+  File "game/script.rpy", line 19, in script
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "lib/python3.9/future/utils/__init__.py", line 444, in raise_
+  File "game/script.rpy", line 19, in script
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/ast.py", line 821, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/python.py", line 1178, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/script.rpy", line 19, in <module>
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/game.py", line 377, in call_in_new_context
+    return renpy.execution.run_context(False)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/execution.py", line 958, in run_context
+    context.run()
+  File "game/script.rpy", line 19, in script
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "lib/python3.9/future/utils/__init__.py", line 444, in raise_
+  File "game/script.rpy", line 19, in script
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/ast.py", line 821, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/python.py", line 1178, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/script.rpy", line 19, in <module>
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/game.py", line 377, in call_in_new_context
+    return renpy.execution.run_context(False)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/execution.py", line 958, in run_context
+    context.run()
+  File "game/script.rpy", line 19, in script
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "lib/python3.9/future/utils/__init__.py", line 444, in raise_
+  File "game/script.rpy", line 19, in script
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/ast.py", line 821, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/python.py", line 1178, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/script.rpy", line 19, in <module>
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/game.py", line 358, in call_in_new_context
+    context = renpy.execution.Context(False, contexts[-1], clear=clear)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/scenelists.py", line 213, in __init__
+    self.replace_transient(prefix=None)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/scenelists.py", line 263, in replace_transient
+    self.clear(i, True)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/scenelists.py", line 623, in clear
+    self.shown.predict_scene(layer)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/image.py", line 906, in predict_scene
+    self.shown = set((l, t) for l, t in self.shown if l != layer)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/image.py", line 906, in <genexpr>
+    self.shown = set((l, t) for l, t in self.shown if l != layer)
+RecursionError: maximum recursion depth exceeded in comparison
+
+While running game code:
+  File "game/script.rpy", line 19, in script
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "game/script.rpy", line 19, in <module>
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "game/script.rpy", line 19, in script
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "game/script.rpy", line 19, in script
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "game/script.rpy", line 19, in <module>
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "game/script.rpy", line 19, in script
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "game/script.rpy", line 19, in script
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "game/script.rpy", line 19, in <module>
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "game/script.rpy", line 19, in script
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "game/script.rpy", line 19, in script
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "game/script.rpy", line 19, in <module>
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+RecursionError: maximum recursion depth exceeded in comparison
+While handling exception:
+Traceback (most recent call last):
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/execution.py", line 629, in run
+    if renpy.display.error.report_exception(short, full, traceback_fn):
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/error.py", line 140, in report_exception
+    renpy.game.invoke_in_new_context(
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/game.py", line 303, in invoke_in_new_context
+    return callable(*args, **kwargs)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/error.py", line 48, in call_exception_screen
+    return renpy.ui.interact(mouse="screen", type="screen", suppress_overlay=True, suppress_underlay=True)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/ui.py", line 301, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/core.py", line 2215, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/core.py", line 2745, in interact_core
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/screen.py", line 480, in visit_all
+    callback(self)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/core.py", line 2745, in <lambda>
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/screen.py", line 491, in per_interact
+    self.update()
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/screen.py", line 697, in update
+    self.screen.function(**self.scope)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/sl2/slast.py", line 2716, in __call__
+    self.execute(context)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/sl2/slast.py", line 2654, in execute
+    SLBlock.execute(self.const_ast, context) # type: ignore
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/sl2/slast.py", line 500, in execute
+    i.execute(context)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/sl2/slast.py", line 1941, in execute
+    scope[variable] = eval(self.expr, context.globals, scope)
+  File "renpy/common/_errorhandling.rpym", line 704, in <module>
+    default fmt_short = __format_traceback(short)
+  File "renpy/common/_errorhandling.rpym", line 505, in _m1__errorhandling__format_traceback
+    i = re.sub(r'(File "(.*)", line (\d+))', r'{a=edit:\3:\2}\1{/a}', i)
+  File "lib/python3.9/re.py", line 210, in sub
+  File "lib/python3.9/re.py", line 304, in _compile
+  File "lib/python3.9/sre_compile.py", line 764, in compile
+  File "lib/python3.9/sre_parse.py", line 940, in parse
+  File "lib/python3.9/sre_parse.py", line 225, in __init__
+RecursionError: maximum recursion depth exceeded while calling a Python object
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/execution.py", line 599, in run
+    node.execute()
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/ast.py", line 821, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/python.py", line 1178, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/script.rpy", line 19, in <module>
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/game.py", line 377, in call_in_new_context
+    return renpy.execution.run_context(False)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/execution.py", line 958, in run_context
+    context.run()
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/execution.py", line 634, in run
+    reraise(exc_info[0], exc_info[1], exc_info[2])
+  File "lib/python3.9/future/utils/__init__.py", line 444, in raise_
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/execution.py", line 599, in run
+    node.execute()
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/ast.py", line 821, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/python.py", line 1178, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/script.rpy", line 19, in <module>
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/game.py", line 377, in call_in_new_context
+    return renpy.execution.run_context(False)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/execution.py", line 958, in run_context
+    context.run()
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/execution.py", line 634, in run
+    reraise(exc_info[0], exc_info[1], exc_info[2])
+  File "lib/python3.9/future/utils/__init__.py", line 444, in raise_
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/execution.py", line 599, in run
+    node.execute()
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/ast.py", line 821, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/python.py", line 1178, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/script.rpy", line 19, in <module>
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/game.py", line 377, in call_in_new_context
+    return renpy.execution.run_context(False)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/execution.py", line 958, in run_context
+    context.run()
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/execution.py", line 634, in run
+    reraise(exc_info[0], exc_info[1], exc_info[2])
+  File "lib/python3.9/future/utils/__init__.py", line 444, in raise_
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/execution.py", line 599, in run
+    node.execute()
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/ast.py", line 821, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/python.py", line 1178, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/script.rpy", line 19, in <module>
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/game.py", line 358, in call_in_new_context
+    context = renpy.execution.Context(False, contexts[-1], clear=clear)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/execution.py", line 316, in __init__
+    self.scene_lists = renpy.display.scenelists.SceneLists(oldsl, self.images)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/scenelists.py", line 213, in __init__
+    self.replace_transient(prefix=None)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/scenelists.py", line 263, in replace_transient
+    self.clear(i, True)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/scenelists.py", line 623, in clear
+    self.shown.predict_scene(layer)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/image.py", line 906, in predict_scene
+    self.shown = set((l, t) for l, t in self.shown if l != layer)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/image.py", line 906, in <genexpr>
+    self.shown = set((l, t) for l, t in self.shown if l != layer)
+RecursionError: maximum recursion depth exceeded in comparison
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/error.py", line 140, in report_exception
+    renpy.game.invoke_in_new_context(
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/game.py", line 303, in invoke_in_new_context
+    return callable(*args, **kwargs)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/error.py", line 48, in call_exception_screen
+    return renpy.ui.interact(mouse="screen", type="screen", suppress_overlay=True, suppress_underlay=True)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/ui.py", line 301, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/core.py", line 2215, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/core.py", line 2745, in interact_core
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/screen.py", line 480, in visit_all
+    callback(self)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/core.py", line 2745, in <lambda>
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/screen.py", line 491, in per_interact
+    self.update()
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/screen.py", line 697, in update
+    self.screen.function(**self.scope)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/sl2/slast.py", line 2716, in __call__
+    self.execute(context)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/sl2/slast.py", line 2654, in execute
+    SLBlock.execute(self.const_ast, context) # type: ignore
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/sl2/slast.py", line 500, in execute
+    i.execute(context)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/sl2/slast.py", line 1098, in execute
+    i.execute(ctx)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/sl2/slast.py", line 1098, in execute
+    i.execute(ctx)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/sl2/slast.py", line 1098, in execute
+    i.execute(ctx)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/sl2/slast.py", line 1055, in execute
+    d = self.displayable(*positional, **keywords)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/text/text.py", line 1999, in __init__
+    self.set_text(text, scope, substitute) # type: ignore
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/text/text.py", line 2132, in set_text
+    i, did_sub = renpy.substitutions.substitute(i, scope, substitute) # type: ignore
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/substitutions.py", line 373, in substitute
+    s = interpolate(s, variables) # type: ignore
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/substitutions.py", line 86, in interpolate
+    raise e
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/substitutions.py", line 78, in interpolate
+    value = renpy.python.py_eval(code, {}, scope)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/python.py", line 1207, in py_eval
+    code = py_compile(code, 'eval')
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/python.py", line 1095, in py_compile
+    tree = wrap_node.visit(tree)
+  File "lib/python3.9/ast.py", line 407, in visit
+  File "lib/python3.9/ast.py", line 492, in generic_visit
+  File "lib/python3.9/ast.py", line 407, in visit
+  File "lib/python3.9/ast.py", line 492, in generic_visit
+  File "lib/python3.9/ast.py", line 407, in visit
+  File "lib/python3.9/ast.py", line 478, in generic_visit
+RecursionError: maximum recursion depth exceeded
+
+Full traceback:
+  File "game/script.rpy", line 19, in script
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/ast.py", line 821, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/python.py", line 1178, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/script.rpy", line 19, in <module>
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/game.py", line 377, in call_in_new_context
+    return renpy.execution.run_context(False)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/execution.py", line 958, in run_context
+    context.run()
+  File "game/script.rpy", line 19, in script
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "lib/python3.9/future/utils/__init__.py", line 444, in raise_
+  File "game/script.rpy", line 19, in script
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/ast.py", line 821, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/python.py", line 1178, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/script.rpy", line 19, in <module>
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/game.py", line 377, in call_in_new_context
+    return renpy.execution.run_context(False)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/execution.py", line 958, in run_context
+    context.run()
+  File "game/script.rpy", line 19, in script
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "lib/python3.9/future/utils/__init__.py", line 444, in raise_
+  File "game/script.rpy", line 19, in script
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/ast.py", line 821, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/python.py", line 1178, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/script.rpy", line 19, in <module>
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/game.py", line 377, in call_in_new_context
+    return renpy.execution.run_context(False)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/execution.py", line 958, in run_context
+    context.run()
+  File "game/script.rpy", line 19, in script
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "lib/python3.9/future/utils/__init__.py", line 444, in raise_
+  File "game/script.rpy", line 19, in script
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/ast.py", line 821, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/python.py", line 1178, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/script.rpy", line 19, in <module>
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/game.py", line 377, in call_in_new_context
+    return renpy.execution.run_context(False)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/execution.py", line 958, in run_context
+    context.run()
+  File "game/script.rpy", line 19, in script
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "lib/python3.9/future/utils/__init__.py", line 444, in raise_
+  File "game/script.rpy", line 19, in script
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/ast.py", line 821, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/python.py", line 1178, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/script.rpy", line 19, in <module>
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/game.py", line 358, in call_in_new_context
+    context = renpy.execution.Context(False, contexts[-1], clear=clear)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/scenelists.py", line 213, in __init__
+    self.replace_transient(prefix=None)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/scenelists.py", line 263, in replace_transient
+    self.clear(i, True)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/scenelists.py", line 623, in clear
+    self.shown.predict_scene(layer)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/image.py", line 906, in predict_scene
+    self.shown = set((l, t) for l, t in self.shown if l != layer)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/image.py", line 906, in <genexpr>
+    self.shown = set((l, t) for l, t in self.shown if l != layer)
+RecursionError: maximum recursion depth exceeded in comparison
+
+While running game code:
+  File "game/script.rpy", line 19, in script
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "game/script.rpy", line 19, in <module>
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "game/script.rpy", line 19, in script
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "game/script.rpy", line 19, in script
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "game/script.rpy", line 19, in <module>
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "game/script.rpy", line 19, in script
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "game/script.rpy", line 19, in script
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "game/script.rpy", line 19, in <module>
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "game/script.rpy", line 19, in script
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "game/script.rpy", line 19, in script
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "game/script.rpy", line 19, in <module>
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "game/script.rpy", line 19, in script
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "game/script.rpy", line 19, in script
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "game/script.rpy", line 19, in <module>
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+RecursionError: maximum recursion depth exceeded in comparison
+While handling exception:
+Traceback (most recent call last):
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/execution.py", line 629, in run
+    if renpy.display.error.report_exception(short, full, traceback_fn):
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/error.py", line 140, in report_exception
+    renpy.game.invoke_in_new_context(
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/game.py", line 303, in invoke_in_new_context
+    return callable(*args, **kwargs)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/error.py", line 48, in call_exception_screen
+    return renpy.ui.interact(mouse="screen", type="screen", suppress_overlay=True, suppress_underlay=True)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/ui.py", line 301, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/core.py", line 2215, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/core.py", line 2745, in interact_core
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/screen.py", line 480, in visit_all
+    callback(self)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/core.py", line 2745, in <lambda>
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/screen.py", line 491, in per_interact
+    self.update()
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/screen.py", line 697, in update
+    self.screen.function(**self.scope)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/sl2/slast.py", line 2716, in __call__
+    self.execute(context)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/sl2/slast.py", line 2654, in execute
+    SLBlock.execute(self.const_ast, context) # type: ignore
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/sl2/slast.py", line 500, in execute
+    i.execute(context)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/sl2/slast.py", line 1098, in execute
+    i.execute(ctx)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/sl2/slast.py", line 1098, in execute
+    i.execute(ctx)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/sl2/slast.py", line 1098, in execute
+    i.execute(ctx)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/sl2/slast.py", line 1055, in execute
+    d = self.displayable(*positional, **keywords)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/text/text.py", line 1999, in __init__
+    self.set_text(text, scope, substitute) # type: ignore
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/text/text.py", line 2132, in set_text
+    i, did_sub = renpy.substitutions.substitute(i, scope, substitute) # type: ignore
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/substitutions.py", line 373, in substitute
+    s = interpolate(s, variables) # type: ignore
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/substitutions.py", line 86, in interpolate
+    raise e
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/substitutions.py", line 78, in interpolate
+    value = renpy.python.py_eval(code, {}, scope)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/python.py", line 1207, in py_eval
+    code = py_compile(code, 'eval')
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/python.py", line 1095, in py_compile
+    tree = wrap_node.visit(tree)
+  File "lib/python3.9/ast.py", line 407, in visit
+  File "lib/python3.9/ast.py", line 492, in generic_visit
+  File "lib/python3.9/ast.py", line 407, in visit
+  File "lib/python3.9/ast.py", line 492, in generic_visit
+  File "lib/python3.9/ast.py", line 407, in visit
+  File "lib/python3.9/ast.py", line 478, in generic_visit
+RecursionError: maximum recursion depth exceeded
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/execution.py", line 599, in run
+    node.execute()
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/ast.py", line 821, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/python.py", line 1178, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/script.rpy", line 19, in <module>
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/game.py", line 377, in call_in_new_context
+    return renpy.execution.run_context(False)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/execution.py", line 958, in run_context
+    context.run()
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/execution.py", line 634, in run
+    reraise(exc_info[0], exc_info[1], exc_info[2])
+  File "lib/python3.9/future/utils/__init__.py", line 444, in raise_
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/execution.py", line 599, in run
+    node.execute()
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/ast.py", line 821, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/python.py", line 1178, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/script.rpy", line 19, in <module>
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/game.py", line 377, in call_in_new_context
+    return renpy.execution.run_context(False)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/execution.py", line 958, in run_context
+    context.run()
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/execution.py", line 634, in run
+    reraise(exc_info[0], exc_info[1], exc_info[2])
+  File "lib/python3.9/future/utils/__init__.py", line 444, in raise_
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/execution.py", line 599, in run
+    node.execute()
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/ast.py", line 821, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/python.py", line 1178, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/script.rpy", line 19, in <module>
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/game.py", line 377, in call_in_new_context
+    return renpy.execution.run_context(False)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/execution.py", line 958, in run_context
+    context.run()
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/execution.py", line 634, in run
+    reraise(exc_info[0], exc_info[1], exc_info[2])
+  File "lib/python3.9/future/utils/__init__.py", line 444, in raise_
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/execution.py", line 599, in run
+    node.execute()
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/ast.py", line 821, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/python.py", line 1178, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/script.rpy", line 19, in <module>
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/game.py", line 377, in call_in_new_context
+    return renpy.execution.run_context(False)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/execution.py", line 958, in run_context
+    context.run()
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/execution.py", line 634, in run
+    reraise(exc_info[0], exc_info[1], exc_info[2])
+  File "lib/python3.9/future/utils/__init__.py", line 444, in raise_
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/execution.py", line 599, in run
+    node.execute()
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/ast.py", line 821, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/python.py", line 1178, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/script.rpy", line 19, in <module>
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/game.py", line 358, in call_in_new_context
+    context = renpy.execution.Context(False, contexts[-1], clear=clear)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/execution.py", line 316, in __init__
+    self.scene_lists = renpy.display.scenelists.SceneLists(oldsl, self.images)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/scenelists.py", line 213, in __init__
+    self.replace_transient(prefix=None)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/scenelists.py", line 263, in replace_transient
+    self.clear(i, True)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/scenelists.py", line 623, in clear
+    self.shown.predict_scene(layer)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/image.py", line 906, in predict_scene
+    self.shown = set((l, t) for l, t in self.shown if l != layer)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/image.py", line 906, in <genexpr>
+    self.shown = set((l, t) for l, t in self.shown if l != layer)
+RecursionError: maximum recursion depth exceeded in comparison
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/error.py", line 140, in report_exception
+    renpy.game.invoke_in_new_context(
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/game.py", line 303, in invoke_in_new_context
+    return callable(*args, **kwargs)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/error.py", line 48, in call_exception_screen
+    return renpy.ui.interact(mouse="screen", type="screen", suppress_overlay=True, suppress_underlay=True)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/ui.py", line 301, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/core.py", line 2215, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/core.py", line 2879, in interact_core
+    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/core.py", line 1381, in draw_screen
+    surftree = renpy.display.render.render_screen(
+  File "render.pyx", line 486, in renpy.display.render.render_screen
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/layout.py", line 903, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/layout.py", line 903, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/layout.py", line 903, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/screen.py", line 754, in render
+    child = renpy.display.render.render(self.child, w, h, st, at)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/layout.py", line 903, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/layout.py", line 1454, in render
+    surf = render(child,
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/layout.py", line 1971, in render
+    cwidth, cheight = sizeit('c', width, height, 0, 0)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/layout.py", line 1968, in sizeit
+    rend = renpy.display.render.render_for_size(pos_d[pos], width, height, st, at)
+  File "render.pyx", line 312, in renpy.display.render.render_for_size
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/layout.py", line 1971, in render
+    cwidth, cheight = sizeit('c', width, height, 0, 0)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/layout.py", line 1968, in sizeit
+    rend = renpy.display.render.render_for_size(pos_d[pos], width, height, st, at)
+  File "render.pyx", line 312, in renpy.display.render.render_for_size
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/viewport.py", line 285, in render
+    surf = renpy.display.render.render(self.child, child_width, child_height, st, at)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/layout.py", line 832, in render
+    width = max(width, compute_raw(minx, width))
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/core.py", line 246, in compute_raw
+    elif isinstance(value, (absolute, int)):
+RecursionError: maximum recursion depth exceeded in __instancecheck__
+
+Full traceback:
+  File "game/script.rpy", line 19, in script
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/ast.py", line 821, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/python.py", line 1178, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/script.rpy", line 19, in <module>
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/game.py", line 377, in call_in_new_context
+    return renpy.execution.run_context(False)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/execution.py", line 958, in run_context
+    context.run()
+  File "game/script.rpy", line 19, in script
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "lib/python3.9/future/utils/__init__.py", line 444, in raise_
+  File "game/script.rpy", line 19, in script
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/ast.py", line 821, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/python.py", line 1178, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/script.rpy", line 19, in <module>
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/game.py", line 377, in call_in_new_context
+    return renpy.execution.run_context(False)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/execution.py", line 958, in run_context
+    context.run()
+  File "game/script.rpy", line 19, in script
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "lib/python3.9/future/utils/__init__.py", line 444, in raise_
+  File "game/script.rpy", line 19, in script
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/ast.py", line 821, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/python.py", line 1178, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/script.rpy", line 19, in <module>
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/game.py", line 377, in call_in_new_context
+    return renpy.execution.run_context(False)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/execution.py", line 958, in run_context
+    context.run()
+  File "game/script.rpy", line 19, in script
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "lib/python3.9/future/utils/__init__.py", line 444, in raise_
+  File "game/script.rpy", line 19, in script
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/ast.py", line 821, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/python.py", line 1178, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/script.rpy", line 19, in <module>
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/game.py", line 377, in call_in_new_context
+    return renpy.execution.run_context(False)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/execution.py", line 958, in run_context
+    context.run()
+  File "game/script.rpy", line 19, in script
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "lib/python3.9/future/utils/__init__.py", line 444, in raise_
+  File "game/script.rpy", line 19, in script
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/ast.py", line 821, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/python.py", line 1178, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/script.rpy", line 19, in <module>
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/game.py", line 377, in call_in_new_context
+    return renpy.execution.run_context(False)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/execution.py", line 958, in run_context
+    context.run()
+  File "game/script.rpy", line 19, in script
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "lib/python3.9/future/utils/__init__.py", line 444, in raise_
+  File "game/script.rpy", line 19, in script
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/ast.py", line 821, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/python.py", line 1178, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/script.rpy", line 19, in <module>
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/game.py", line 358, in call_in_new_context
+    context = renpy.execution.Context(False, contexts[-1], clear=clear)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/scenelists.py", line 213, in __init__
+    self.replace_transient(prefix=None)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/scenelists.py", line 263, in replace_transient
+    self.clear(i, True)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/scenelists.py", line 623, in clear
+    self.shown.predict_scene(layer)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/image.py", line 906, in predict_scene
+    self.shown = set((l, t) for l, t in self.shown if l != layer)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/image.py", line 906, in <genexpr>
+    self.shown = set((l, t) for l, t in self.shown if l != layer)
+RecursionError: maximum recursion depth exceeded in comparison
+
+While running game code:
+  File "game/script.rpy", line 19, in script
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "game/script.rpy", line 19, in <module>
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "game/script.rpy", line 19, in script
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "game/script.rpy", line 19, in script
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "game/script.rpy", line 19, in <module>
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "game/script.rpy", line 19, in script
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "game/script.rpy", line 19, in script
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "game/script.rpy", line 19, in <module>
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "game/script.rpy", line 19, in script
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "game/script.rpy", line 19, in script
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "game/script.rpy", line 19, in <module>
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "game/script.rpy", line 19, in script
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "game/script.rpy", line 19, in script
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "game/script.rpy", line 19, in <module>
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "game/script.rpy", line 19, in script
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "game/script.rpy", line 19, in script
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "game/script.rpy", line 19, in <module>
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+RecursionError: maximum recursion depth exceeded in comparison
+While handling exception:
+Traceback (most recent call last):
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/execution.py", line 629, in run
+    if renpy.display.error.report_exception(short, full, traceback_fn):
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/error.py", line 140, in report_exception
+    renpy.game.invoke_in_new_context(
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/game.py", line 303, in invoke_in_new_context
+    return callable(*args, **kwargs)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/error.py", line 48, in call_exception_screen
+    return renpy.ui.interact(mouse="screen", type="screen", suppress_overlay=True, suppress_underlay=True)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/ui.py", line 301, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/core.py", line 2215, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/core.py", line 2879, in interact_core
+    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/core.py", line 1381, in draw_screen
+    surftree = renpy.display.render.render_screen(
+  File "render.pyx", line 486, in renpy.display.render.render_screen
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/layout.py", line 903, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/layout.py", line 903, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/layout.py", line 903, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/screen.py", line 754, in render
+    child = renpy.display.render.render(self.child, w, h, st, at)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/layout.py", line 903, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/layout.py", line 1454, in render
+    surf = render(child,
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/layout.py", line 1971, in render
+    cwidth, cheight = sizeit('c', width, height, 0, 0)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/layout.py", line 1968, in sizeit
+    rend = renpy.display.render.render_for_size(pos_d[pos], width, height, st, at)
+  File "render.pyx", line 312, in renpy.display.render.render_for_size
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/layout.py", line 1971, in render
+    cwidth, cheight = sizeit('c', width, height, 0, 0)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/layout.py", line 1968, in sizeit
+    rend = renpy.display.render.render_for_size(pos_d[pos], width, height, st, at)
+  File "render.pyx", line 312, in renpy.display.render.render_for_size
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/viewport.py", line 285, in render
+    surf = renpy.display.render.render(self.child, child_width, child_height, st, at)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/layout.py", line 832, in render
+    width = max(width, compute_raw(minx, width))
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/core.py", line 246, in compute_raw
+    elif isinstance(value, (absolute, int)):
+RecursionError: maximum recursion depth exceeded in __instancecheck__
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/execution.py", line 599, in run
+    node.execute()
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/ast.py", line 821, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/python.py", line 1178, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/script.rpy", line 19, in <module>
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/game.py", line 377, in call_in_new_context
+    return renpy.execution.run_context(False)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/execution.py", line 958, in run_context
+    context.run()
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/execution.py", line 634, in run
+    reraise(exc_info[0], exc_info[1], exc_info[2])
+  File "lib/python3.9/future/utils/__init__.py", line 444, in raise_
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/execution.py", line 599, in run
+    node.execute()
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/ast.py", line 821, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/python.py", line 1178, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/script.rpy", line 19, in <module>
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/game.py", line 377, in call_in_new_context
+    return renpy.execution.run_context(False)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/execution.py", line 958, in run_context
+    context.run()
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/execution.py", line 634, in run
+    reraise(exc_info[0], exc_info[1], exc_info[2])
+  File "lib/python3.9/future/utils/__init__.py", line 444, in raise_
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/execution.py", line 599, in run
+    node.execute()
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/ast.py", line 821, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/python.py", line 1178, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/script.rpy", line 19, in <module>
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/game.py", line 377, in call_in_new_context
+    return renpy.execution.run_context(False)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/execution.py", line 958, in run_context
+    context.run()
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/execution.py", line 634, in run
+    reraise(exc_info[0], exc_info[1], exc_info[2])
+  File "lib/python3.9/future/utils/__init__.py", line 444, in raise_
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/execution.py", line 599, in run
+    node.execute()
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/ast.py", line 821, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/python.py", line 1178, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/script.rpy", line 19, in <module>
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/game.py", line 377, in call_in_new_context
+    return renpy.execution.run_context(False)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/execution.py", line 958, in run_context
+    context.run()
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/execution.py", line 634, in run
+    reraise(exc_info[0], exc_info[1], exc_info[2])
+  File "lib/python3.9/future/utils/__init__.py", line 444, in raise_
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/execution.py", line 599, in run
+    node.execute()
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/ast.py", line 821, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/python.py", line 1178, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/script.rpy", line 19, in <module>
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/game.py", line 377, in call_in_new_context
+    return renpy.execution.run_context(False)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/execution.py", line 958, in run_context
+    context.run()
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/execution.py", line 634, in run
+    reraise(exc_info[0], exc_info[1], exc_info[2])
+  File "lib/python3.9/future/utils/__init__.py", line 444, in raise_
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/execution.py", line 599, in run
+    node.execute()
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/ast.py", line 821, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/python.py", line 1178, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/script.rpy", line 19, in <module>
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/game.py", line 358, in call_in_new_context
+    context = renpy.execution.Context(False, contexts[-1], clear=clear)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/execution.py", line 316, in __init__
+    self.scene_lists = renpy.display.scenelists.SceneLists(oldsl, self.images)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/scenelists.py", line 213, in __init__
+    self.replace_transient(prefix=None)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/scenelists.py", line 263, in replace_transient
+    self.clear(i, True)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/scenelists.py", line 623, in clear
+    self.shown.predict_scene(layer)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/image.py", line 906, in predict_scene
+    self.shown = set((l, t) for l, t in self.shown if l != layer)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/image.py", line 906, in <genexpr>
+    self.shown = set((l, t) for l, t in self.shown if l != layer)
+RecursionError: maximum recursion depth exceeded in comparison
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/error.py", line 140, in report_exception
+    renpy.game.invoke_in_new_context(
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/game.py", line 303, in invoke_in_new_context
+    return callable(*args, **kwargs)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/error.py", line 48, in call_exception_screen
+    return renpy.ui.interact(mouse="screen", type="screen", suppress_overlay=True, suppress_underlay=True)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/ui.py", line 301, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/core.py", line 2215, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/core.py", line 2879, in interact_core
+    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/core.py", line 1381, in draw_screen
+    surftree = renpy.display.render.render_screen(
+  File "render.pyx", line 486, in renpy.display.render.render_screen
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/layout.py", line 903, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/layout.py", line 903, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/layout.py", line 903, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/screen.py", line 754, in render
+    child = renpy.display.render.render(self.child, w, h, st, at)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/layout.py", line 903, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/layout.py", line 1454, in render
+    surf = render(child,
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/layout.py", line 1971, in render
+    cwidth, cheight = sizeit('c', width, height, 0, 0)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/layout.py", line 1968, in sizeit
+    rend = renpy.display.render.render_for_size(pos_d[pos], width, height, st, at)
+  File "render.pyx", line 312, in renpy.display.render.render_for_size
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/layout.py", line 1971, in render
+    cwidth, cheight = sizeit('c', width, height, 0, 0)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/layout.py", line 1968, in sizeit
+    rend = renpy.display.render.render_for_size(pos_d[pos], width, height, st, at)
+  File "render.pyx", line 312, in renpy.display.render.render_for_size
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/viewport.py", line 285, in render
+    surf = renpy.display.render.render(self.child, child_width, child_height, st, at)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/layout.py", line 1171, in render
+    surf = render(d, width - x, rh, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/text/text.py", line 2540, in render
+    virtual_layout = Layout(self, width, height, renders, drawable_res=False, size_only=True)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/text/text.py", line 733, in __init__
+    self.paragraphs = self.segment(text.tokens, style, renders, text)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/text/text.py", line 1209, in segment
+    ts.take_style(style, self)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/text/text.py", line 305, in take_style
+    self.underline = layout.scale_int(underline)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/text/text.py", line 1094, in scale_int
+    return round(n * self.oversample)
+RecursionError: maximum recursion depth exceeded while calling a Python object
+
+Full traceback:
+  File "game/script.rpy", line 19, in script
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/ast.py", line 821, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/python.py", line 1178, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/script.rpy", line 19, in <module>
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/game.py", line 377, in call_in_new_context
+    return renpy.execution.run_context(False)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/execution.py", line 958, in run_context
+    context.run()
+  File "game/script.rpy", line 19, in script
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "lib/python3.9/future/utils/__init__.py", line 444, in raise_
+  File "game/script.rpy", line 19, in script
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/ast.py", line 821, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/python.py", line 1178, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/script.rpy", line 19, in <module>
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/game.py", line 377, in call_in_new_context
+    return renpy.execution.run_context(False)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/execution.py", line 958, in run_context
+    context.run()
+  File "game/script.rpy", line 19, in script
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "lib/python3.9/future/utils/__init__.py", line 444, in raise_
+  File "game/script.rpy", line 19, in script
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/ast.py", line 821, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/python.py", line 1178, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/script.rpy", line 19, in <module>
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/game.py", line 377, in call_in_new_context
+    return renpy.execution.run_context(False)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/execution.py", line 958, in run_context
+    context.run()
+  File "game/script.rpy", line 19, in script
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "lib/python3.9/future/utils/__init__.py", line 444, in raise_
+  File "game/script.rpy", line 19, in script
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/ast.py", line 821, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/python.py", line 1178, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/script.rpy", line 19, in <module>
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/game.py", line 377, in call_in_new_context
+    return renpy.execution.run_context(False)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/execution.py", line 958, in run_context
+    context.run()
+  File "game/script.rpy", line 19, in script
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "lib/python3.9/future/utils/__init__.py", line 444, in raise_
+  File "game/script.rpy", line 19, in script
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/ast.py", line 821, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/python.py", line 1178, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/script.rpy", line 19, in <module>
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/game.py", line 377, in call_in_new_context
+    return renpy.execution.run_context(False)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/execution.py", line 958, in run_context
+    context.run()
+  File "game/script.rpy", line 19, in script
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "lib/python3.9/future/utils/__init__.py", line 444, in raise_
+  File "game/script.rpy", line 19, in script
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/ast.py", line 821, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/python.py", line 1178, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/script.rpy", line 19, in <module>
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/game.py", line 377, in call_in_new_context
+    return renpy.execution.run_context(False)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/execution.py", line 958, in run_context
+    context.run()
+  File "game/script.rpy", line 19, in script
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "lib/python3.9/future/utils/__init__.py", line 444, in raise_
+  File "game/script.rpy", line 19, in script
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/ast.py", line 821, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/python.py", line 1178, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/script.rpy", line 19, in <module>
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/game.py", line 358, in call_in_new_context
+    context = renpy.execution.Context(False, contexts[-1], clear=clear)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/scenelists.py", line 213, in __init__
+    self.replace_transient(prefix=None)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/scenelists.py", line 263, in replace_transient
+    self.clear(i, True)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/scenelists.py", line 623, in clear
+    self.shown.predict_scene(layer)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/image.py", line 906, in predict_scene
+    self.shown = set((l, t) for l, t in self.shown if l != layer)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/image.py", line 906, in <genexpr>
+    self.shown = set((l, t) for l, t in self.shown if l != layer)
+RecursionError: maximum recursion depth exceeded in comparison
+
+While running game code:
+  File "game/script.rpy", line 19, in script
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "game/script.rpy", line 19, in <module>
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "game/script.rpy", line 19, in script
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "game/script.rpy", line 19, in script
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "game/script.rpy", line 19, in <module>
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "game/script.rpy", line 19, in script
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "game/script.rpy", line 19, in script
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "game/script.rpy", line 19, in <module>
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "game/script.rpy", line 19, in script
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "game/script.rpy", line 19, in script
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "game/script.rpy", line 19, in <module>
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "game/script.rpy", line 19, in script
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "game/script.rpy", line 19, in script
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "game/script.rpy", line 19, in <module>
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "game/script.rpy", line 19, in script
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "game/script.rpy", line 19, in script
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "game/script.rpy", line 19, in <module>
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "game/script.rpy", line 19, in script
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "game/script.rpy", line 19, in script
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+  File "game/script.rpy", line 19, in <module>
+    $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
+RecursionError: maximum recursion depth exceeded in comparison
