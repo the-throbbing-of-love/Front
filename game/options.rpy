@@ -103,7 +103,7 @@ define config.end_game_transition = None
 ## 사용하여 변경할 수 있습니다.
 
 define config.window = "auto"
-
+ 
 
 ## 대화 창을 표시하고 숨기는 데 사용되는 전환
 
