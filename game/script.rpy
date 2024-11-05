@@ -1,4 +1,20 @@
-﻿init python:
+﻿# init python:
+#     import requests
+
+#     def send_to_raspberry_pi():
+#         url = 'http://10.150.151.164:5000'  # 서버의 GET 엔드포인트
+
+#         try:
+#             response = requests.get(url)
+#             response.raise_for_status()  # HTTP 오류가 발생하면 예외 발생
+#             received_value = response.text  # 문자열로 응답 받기
+#             renpy.notify("서버에서 받은 값: " + received_value)
+#         except Exception as e:
+#             renpy.notify("서버에 연결할 수 없습니다.")
+#             renpy.error(str(e))
+
+
+init python:
     def set_player_name():
         global pn
         pn = renpy.input("당신의 이름을 입력하세요:")
@@ -6,7 +22,6 @@
         # 이름이 비어 있을 경우 기본 이름으로 설정
         if pn == "":
             pn = "김주인"
-
 
 # 캐릭터 호감도 초기화
 $ f_hana_love = 0
@@ -18,7 +33,8 @@ label measure_heart_rate:
     # 초기 심박수 측정
     $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
     return
-
+#배경사진
+image white =  "images/background/white.png"
 
 #플레이어
 define h = Character('이하나', color="#c8ffc8") #활발한 여학생
@@ -28,15 +44,22 @@ define s = Character('시스템') #힌트&설명
 define d = Character('학동운') #연인관계의 도움친구
 define pn = ""
 define q = Character('???') #첫 등장
+
+
+
+
+
 label start:
+    # $ send_to_raspberry_pi()
     scene black
     $ set_player_name()
     s "주인공 이름이 [pn]으로 설정되었습니다."
-
+    
     jump first_day
 # 1일차
 label first_day:
     
+    scene black
 
     #영상 있으면 만들기
 
@@ -53,6 +76,7 @@ label first_day:
     ".."
 
     #스크린 바꾸는거 넣기
+
 
     "오늘은 학교에 가는 첫번째 날이다"
 

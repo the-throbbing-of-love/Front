@@ -1,148 +1,148 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 19, in script
+  File "game/script.rpy", line 34, in script
     $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
-  File "game/script.rpy", line 19, in <module>
+  File "game/script.rpy", line 34, in <module>
     $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
-  File "game/script.rpy", line 19, in script
+  File "game/script.rpy", line 34, in script
     $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
-  File "game/script.rpy", line 19, in script
+  File "game/script.rpy", line 34, in script
     $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
-  File "game/script.rpy", line 19, in <module>
+  File "game/script.rpy", line 34, in <module>
     $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
-  File "game/script.rpy", line 19, in script
+  File "game/script.rpy", line 34, in script
     $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
-  File "game/script.rpy", line 19, in script
+  File "game/script.rpy", line 34, in script
     $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
-  File "game/script.rpy", line 19, in <module>
+  File "game/script.rpy", line 34, in <module>
     $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
-  File "game/script.rpy", line 19, in script
+  File "game/script.rpy", line 34, in script
     $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
-  File "game/script.rpy", line 19, in script
+  File "game/script.rpy", line 34, in script
     $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
-  File "game/script.rpy", line 19, in <module>
+  File "game/script.rpy", line 34, in <module>
     $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
-  File "game/script.rpy", line 19, in script
+  File "game/script.rpy", line 34, in script
     $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
-  File "game/script.rpy", line 19, in script
+  File "game/script.rpy", line 34, in script
     $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
-  File "game/script.rpy", line 19, in <module>
+  File "game/script.rpy", line 34, in <module>
     $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
-  File "game/script.rpy", line 19, in script
+  File "game/script.rpy", line 34, in script
     $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
-  File "game/script.rpy", line 19, in script
+  File "game/script.rpy", line 34, in script
     $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
-  File "game/script.rpy", line 19, in <module>
+  File "game/script.rpy", line 34, in <module>
     $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
-  File "game/script.rpy", line 19, in script
+  File "game/script.rpy", line 34, in script
     $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
-  File "game/script.rpy", line 19, in script
+  File "game/script.rpy", line 34, in script
     $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
-  File "game/script.rpy", line 19, in <module>
+  File "game/script.rpy", line 34, in <module>
     $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
 RecursionError: maximum recursion depth exceeded in comparison
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 19, in script
+  File "game/script.rpy", line 34, in script
     $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
   File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/ast.py", line 821, in execute
     renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
   File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/python.py", line 1178, in py_exec_bytecode
     exec(bytecode, globals, locals)
-  File "game/script.rpy", line 19, in <module>
+  File "game/script.rpy", line 34, in <module>
     $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
   File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/game.py", line 377, in call_in_new_context
     return renpy.execution.run_context(False)
   File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/execution.py", line 958, in run_context
     context.run()
-  File "game/script.rpy", line 19, in script
+  File "game/script.rpy", line 34, in script
     $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
   File "lib/python3.9/future/utils/__init__.py", line 444, in raise_
-  File "game/script.rpy", line 19, in script
+  File "game/script.rpy", line 34, in script
     $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
   File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/ast.py", line 821, in execute
     renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
   File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/python.py", line 1178, in py_exec_bytecode
     exec(bytecode, globals, locals)
-  File "game/script.rpy", line 19, in <module>
+  File "game/script.rpy", line 34, in <module>
     $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
   File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/game.py", line 377, in call_in_new_context
     return renpy.execution.run_context(False)
   File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/execution.py", line 958, in run_context
     context.run()
-  File "game/script.rpy", line 19, in script
+  File "game/script.rpy", line 34, in script
     $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
   File "lib/python3.9/future/utils/__init__.py", line 444, in raise_
-  File "game/script.rpy", line 19, in script
+  File "game/script.rpy", line 34, in script
     $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
   File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/ast.py", line 821, in execute
     renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
   File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/python.py", line 1178, in py_exec_bytecode
     exec(bytecode, globals, locals)
-  File "game/script.rpy", line 19, in <module>
+  File "game/script.rpy", line 34, in <module>
     $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
   File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/game.py", line 377, in call_in_new_context
     return renpy.execution.run_context(False)
   File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/execution.py", line 958, in run_context
     context.run()
-  File "game/script.rpy", line 19, in script
+  File "game/script.rpy", line 34, in script
     $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
   File "lib/python3.9/future/utils/__init__.py", line 444, in raise_
-  File "game/script.rpy", line 19, in script
+  File "game/script.rpy", line 34, in script
     $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
   File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/ast.py", line 821, in execute
     renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
   File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/python.py", line 1178, in py_exec_bytecode
     exec(bytecode, globals, locals)
-  File "game/script.rpy", line 19, in <module>
+  File "game/script.rpy", line 34, in <module>
     $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
   File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/game.py", line 377, in call_in_new_context
     return renpy.execution.run_context(False)
   File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/execution.py", line 958, in run_context
     context.run()
-  File "game/script.rpy", line 19, in script
+  File "game/script.rpy", line 34, in script
     $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
   File "lib/python3.9/future/utils/__init__.py", line 444, in raise_
-  File "game/script.rpy", line 19, in script
+  File "game/script.rpy", line 34, in script
     $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
   File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/ast.py", line 821, in execute
     renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
   File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/python.py", line 1178, in py_exec_bytecode
     exec(bytecode, globals, locals)
-  File "game/script.rpy", line 19, in <module>
+  File "game/script.rpy", line 34, in <module>
     $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
   File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/game.py", line 377, in call_in_new_context
     return renpy.execution.run_context(False)
   File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/execution.py", line 958, in run_context
     context.run()
-  File "game/script.rpy", line 19, in script
+  File "game/script.rpy", line 34, in script
     $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
   File "lib/python3.9/future/utils/__init__.py", line 444, in raise_
-  File "game/script.rpy", line 19, in script
+  File "game/script.rpy", line 34, in script
     $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
   File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/ast.py", line 821, in execute
     renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
   File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/python.py", line 1178, in py_exec_bytecode
     exec(bytecode, globals, locals)
-  File "game/script.rpy", line 19, in <module>
+  File "game/script.rpy", line 34, in <module>
     $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
   File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/game.py", line 377, in call_in_new_context
     return renpy.execution.run_context(False)
   File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/execution.py", line 958, in run_context
     context.run()
-  File "game/script.rpy", line 19, in script
+  File "game/script.rpy", line 34, in script
     $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
   File "lib/python3.9/future/utils/__init__.py", line 444, in raise_
-  File "game/script.rpy", line 19, in script
+  File "game/script.rpy", line 34, in script
     $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
   File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/ast.py", line 821, in execute
     renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
   File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/python.py", line 1178, in py_exec_bytecode
     exec(bytecode, globals, locals)
-  File "game/script.rpy", line 19, in <module>
+  File "game/script.rpy", line 34, in <module>
     $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
   File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/game.py", line 358, in call_in_new_context
     context = renpy.execution.Context(False, contexts[-1], clear=clear)
@@ -158,7 +158,7 @@ Full traceback:
     self.shown = set((l, t) for l, t in self.shown if l != layer)
 RecursionError: maximum recursion depth exceeded in comparison
 
-macOS-15.0.1-arm64-arm-64bit arm64
+macOS-15.1-arm64-arm-64bit arm64
 Ren'Py 8.3.2.24090902
 the throbbing of love 1.0
-Fri Oct 18 09:08:01 2024
+Tue Nov  5 20:25:19 2024

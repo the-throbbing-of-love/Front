@@ -52,20 +52,20 @@ define gui.muted_color = '#515100'
 define gui.hover_muted_color = '#7a7a00'
 
 ## 대사(dialogue)와 선택지(menu choice)의 글자에서 사용됩니다.
-define gui.text_color = '#ffffff'
+define gui.text_color = '#000000'
 define gui.interface_text_color = '#ffffff'
 
 
 ## 글자와 글자 크기 ###################################################################
 
 ## 인-게임 글자에 사용됩니다.
-define gui.text_font = "SourceHanSansLite.ttf"
+define gui.text_font = "ONE Mobile POP.ttf"
 
 ## 캐릭터의 이름에 사용됩니다.
-define gui.name_text_font = "SourceHanSansLite.ttf"
+define gui.name_text_font = "ONE Mobile POP.ttf"
 
 ## 인터페이스에 사용됩니다.
-define gui.interface_text_font = "SourceHanSansLite.ttf"
+define gui.interface_text_font = "ONE Mobile POP.ttf"
 
 ## 일반 대사의 글자 크기입니다.
 define gui.text_size = 33
@@ -102,17 +102,17 @@ define gui.textbox_height = 278
 
 ## 화면에 텍스트박스를 세로로 배치합니다. 0.0은 최상단, 0.5는 중앙, 그리고 1.0은
 ## 최하단입니다.
-define gui.textbox_yalign = 1.0
+define gui.textbox_yalign = 0.99
 
 
 ## 말하는 캐릭터의 이름을 텍스트 박스를 기준으로 배치합니다. 이것은 좌측이나 최
 ## 상단으로부터 전체 픽셀값의 숫자가 되거나, 0.5로 중앙이 될 수 있습니다.
 define gui.name_xpos = 360
-define gui.name_ypos = 0
+define gui.name_ypos = -0.05
 
 ## 캐릭터들의 이름을 수평으로 정렬합니다. 이것은 0.0으로 좌측 정렬, 0.5로 중앙,
 ## 그리고 1.0으로 우측 정렬될 수 있습니다.
-define gui.name_xalign = 0.0
+define gui.name_xalign = -0.29
 
 ## 캐릭터들의 이름이 들어 있는 박스의 너비, 높이, 그리고 테두리입니다. 혹은 그것
 ## 을 None으로 자동 설정할 수 있습니다.
@@ -383,7 +383,7 @@ define gui.nvl_name_width = 225
 define gui.nvl_name_xalign = 1.0
 
 ## 대사 글자의 위치, 너비, 그리고 정렬입니다.
-define gui.nvl_text_xpos = 675
+define gui.nvl_text_xpos = 600
 define gui.nvl_text_ypos = 12
 define gui.nvl_text_width = 885
 define gui.nvl_text_xalign = 0.0
@@ -436,7 +436,7 @@ init python:
         gui.label_text_size = 51
 
         ## 텍스트박스의 위치를 조정합니다.
-        gui.textbox_height = 360
+        gui.textbox_height = 300
         gui.name_xpos = 120
         gui.dialogue_xpos = 135
         gui.dialogue_width = 1650
