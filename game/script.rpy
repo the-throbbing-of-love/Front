@@ -51,7 +51,7 @@ define q = Character('???') #첫 등장
 
 label start:
     # $ send_to_raspberry_pi()
-    scene black
+    scene white
     $ set_player_name()
     s "주인공 이름이 [pn]으로 설정되었습니다."
     menu:

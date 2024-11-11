@@ -206,7 +206,7 @@ define gui.quick_button_text_selected_color = gui.accent_color
 ##
 ## 선택 버튼은 인-게임 메뉴에 사용됩니다.
 
-define gui.choice_button_width = 1185
+define gui.choice_button_width = 800
 define gui.choice_button_height = None
 define gui.choice_button_tile = False
 define gui.choice_button_borders = Borders(150, 8, 150, 8)

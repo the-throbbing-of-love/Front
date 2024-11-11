@@ -160,5 +160,5 @@ RecursionError: maximum recursion depth exceeded in comparison
 
 macOS-15.1-arm64-arm-64bit arm64
 Ren'Py 8.3.2.24090902
-the throbbing of love 1.0
-Mon Nov 11 11:03:57 2024
+ Beta
+Mon Nov 11 16:41:34 2024
