@@ -1,4 +1,11 @@
-﻿## 이 파일은 귀하의 게임 커스텀으로 변경될 수 있는 옵션을 포함합니다.
+﻿# 마우스 커서
+define config.mouse = {
+    "default": [("images/pock/curser.png", 0, 0)]
+}
+
+
+
+## 이 파일은 귀하의 게임 커스텀으로 변경될 수 있는 옵션을 포함합니다.
 ##
 ## 두 개의 '#' 표시로 시작되는 줄은 주석이며, 그것을 없애지 말아야 합니다. 한 개
 ## 의 '#' 표시로 시작되는 줄은 주석 처리된 코드로 필요한 경우 제거해도 됩니다.
@@ -11,7 +18,7 @@
 ##
 ## 문자열을 _()로 둘러 쌓으면 씌우면 번역의 대상으로 표시됩니다.
 
-define config.name = _("the throbbing of love")
+define config.name = _("")
 
 
 ## 위에 주어진 제목이 주 메뉴 화면에 표시되는지 결정합니다. 제목을 숨기려면 이것
@@ -22,7 +29,7 @@ define gui.show_name = True
 
 ## 게임의 버전입니다.
 
-define config.version = "1.0"
+define config.version = "Beta"
 
 
 ## 게임의 about 스크린에 배치되는 텍스트입니다. 텍스트를 삼중 따옴표 사이에 배치
@@ -201,3 +208,5 @@ init python:
 ## 다.
 
 # define build.itch_project = "renpytom/test-project"
+
+

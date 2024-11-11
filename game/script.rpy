@@ -54,7 +54,16 @@ label start:
     scene black
     $ set_player_name()
     s "주인공 이름이 [pn]으로 설정되었습니다."
-    
+    menu:
+        "test1":
+            "test1"
+        "test2":
+            "test2"
+        "test3":
+            "test3"
+        "test4":
+            "test4"
+
     jump first_day
 # 1일차
 label first_day:
