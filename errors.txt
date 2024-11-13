@@ -1,0 +1,10 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/script.rpy", line 98: expected statement.
+    a += " 창 밖에 봄이 찾아왔다."
+      ^
+
+Ren'Py Version: Ren'Py 8.3.2.24090902
+Wed Nov 13 00:32:37 2024
