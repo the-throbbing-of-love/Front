@@ -14,6 +14,7 @@
 #             renpy.error(str(e))
 
 
+
 init python:
     def set_player_name():
         global pn
@@ -24,9 +25,9 @@ init python:
             pn = "김주인"
 
 # 캐릭터 호감도 초기화
-$ f_hana_love = 0
-$ f_ari_love = 0
-$ f_mirae_love = 0
+$ a_love = 0
+$ b_love = 0
+$ c_love = 0
 
 # 플레이어의 심박수 측정
 label measure_heart_rate:
@@ -34,21 +35,57 @@ label measure_heart_rate:
     $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
     return
 #배경사진
-image white =  "images/background/white.png"
+image white =  im.Scale("images/background/white.png",1920,1080) 
+image bg_school_event = im.Scale("images/background/school_event.jpeg",1920,1080) 
+
 
 #플레이어
-define a = Character('a선배', color="#c8ffc8") #활발한 여선배
-define m = Character('김미래', color="#c8ffc8") #동급생 츤데레 여학생
-define a = Character('금아리', color="#c8ffc8") #동급생 신비주의 여학생
+define a = Character('이서현', color="#FDA870") #활발한 여선배
+define b = Character('윤아린', color="#FFBEC1") #동급생 츤데레 여학생
+define c = Character('박서연', color="#373F68") #동급생 신비주의 여학생
 define s = Character('시스템') #힌트&설명
 define friend = Character('학동운') #연인관계의 도움친구
 define pn = ""
 define q = Character('???') #첫 등장
+define camera_senior = Character('선배1')
 
-
-#캐릭터
+#a
 image a_base = im.Scale("images/charater/a/a_base.png", 950, 1000)
+image a_lol = im.Scale("images/charater/a/a_lol.png", 950, 1000)
+image a_sad = im.Scale("images/charater/a/a_sad.png", 950, 1000)
+image a_shy = im.Scale("images/charater/a/a_shy.png", 950, 1000)
+image a_TT = im.Scale("images/charater/a/a_TT.png", 950, 1000)
+image a_wak = im.Scale("images/charater/a/a_wak.png", 950, 1000)
+image a_worr = im.Scale("images/charater/a/a_worr.png", 950, 1000)
 
+
+#b
+image b_base = im.Scale("images/charater/b/b_base.png", 950, 1000)
+image b_lol = im.Scale("images/charater/b/b_lol.png", 950, 1000)
+image b_sad = im.Scale("images/charater/b/b_sad.png", 950, 1000)
+image b_shy = im.Scale("images/charater/b/b_shy.png", 950, 1000)
+image b_wak = im.Scale("images/charater/b/b_wak.png", 950, 1000)
+image b_worr = im.Scale("images/charater/b/b_worr.png", 950, 1000)
+
+
+
+
+#c
+image c_base = im.Scale("images/charater/c/c_base.png", 650, 1000)
+image c_lol = im.Scale("images/charater/c/c_lol.png", 950, 1000)
+image c_sad = im.Scale("images/charater/c/c_sad.png", 950, 1000)
+image c_shy = im.Scale("images/charater/c/c_shy.png", 950, 1000)
+image c_cute = im.Scale("images/charater/c/c_cute.png", 950, 1000)
+image c_worr = im.Scale("images/charater/c/c_worr.png", 950, 1000)
+
+
+
+
+
+
+
+#사이드캐릭터
+image friend = im.Scale("images/charater/side/friend.png", 650, 1000)
 
 
 
@@ -61,7 +98,7 @@ label first_day:
     scene black
 
     #영상 있으면 만들기
-
+    scene black
     s "이 게임은 사용자의 심박수의 증가&감소에따라 선택지가 달라지니 이 포인트를 잘 활용해서 플레이하시길 바랍니다."
 
     s "재밌게 플레이해주세요."
@@ -70,12 +107,13 @@ label first_day:
     # $ player_heart_rate = renpy.call_in_new_context("measure_heart_rate")  # 심박수 측정
 
     # Chapter 1: 입학식
-    scene bg_school_event
+    scene bg_school_event 
     "봄의 따뜻한 햇살이 비치는 교정에 부스들이 가득 펼쳐져 있었다."
     "신입생인 나는 새로 시작하는 대학 생활에 설레기도 하고, 한편으론 낯선 분위기에 긴장도 되었다."
     
     # 친구 등장
-    show friend at right with dissolve
+    show friend at Transform(xalign=0.8, yalign=0.5) with dissolve
+
     friend "야, 무슨 동아리 들어갈 거야? 부스들 보니까 진짜 다양하더라."
     
     "친구의 말에 나는 주변을 둘러보았다. 각양각색의 동아리들이 자신들의 활동을 자랑하고 있었다."
@@ -168,11 +206,16 @@ label first_day:
     
     "동아리 장이자, 그 화려한 무대 위의 주인공… 뭔가 묘하게 가슴이 두근거렸다."
     "이제 다음 주 첫 모임이 더욱 기다려지는 걸 느끼며, 나는 집으로 향했다."
+    scene black
+    "..."
+    ".."
+    "."
     jump chapter_2
 
 # Chapter 2: 첫 동아리 모임
 label chapter_2:
-    
+    "다음날이 되었다"
+    "학교에 모든 수업 끝나고 동아리 모임으로 향했다"
     
     scene bg_clubroom
     "드디어 사진 동아리의 첫 모임 날이 되었다. 동아리 방에 들어서자 여러 신입생과 선배들이 모여 있었다."
@@ -349,8 +392,8 @@ label chapter_2:
                     b "취미는 독서나 음악 듣기 정도? 심심한 편이에요."
                     "그의 소박한 취미가 왠지 정겹게 느껴졌다."
 
-                b "우리 앞으로 자주 이야기해요! 같이 활동하면서 더 가까워질 수 있겠죠?"
-                "B와의 짧은 대화였지만, 우리는 빠르게 친해질 수 있을 거란 예감이 들었다."
+            b "우리 앞으로 자주 이야기해요! 같이 활동하면서 더 가까워질 수 있겠죠?"
+            "B와의 짧은 대화였지만, 우리는 빠르게 친해질 수 있을 거란 예감이 들었다."
 
 
         "C에게 다음 모임 때도 올 건지 물어본다":
@@ -358,30 +401,30 @@ label chapter_2:
             c "다음 모임... 글쎄요."
             "C는 잠시 생각에 잠긴 듯한 표정을 지었다."
             c "사실 아직 잘 모르겠어요. 이런 모임이 제게 맞을지는 확신이 안 서서요."
-                menu:
-                    "C에게 동아리 활동의 재미를 이야기해본다":
-                        "나는 C에게 동아리 활동이 얼마나 재미있을 수 있는지 말해보았다."
-                        "사진을 통해 추억을 남기고, 새로운 사람들과 함께하는 것이 얼마나 즐거운지 이야기했다."
-                        c "음... 듣고 보니 꽤 흥미롭네요."
-                        c "저도 한 번 제대로 참여해봐야겠어요. 다음 모임엔 다시 와볼게요."
-                        "C의 대답에 안도하며 미소 지었다."
+            menu:
+                "C에게 동아리 활동의 재미를 이야기해본다":
+                    "나는 C에게 동아리 활동이 얼마나 재미있을 수 있는지 말해보았다."
+                    "사진을 통해 추억을 남기고, 새로운 사람들과 함께하는 것이 얼마나 즐거운지 이야기했다."
+                    c "음... 듣고 보니 꽤 흥미롭네요."
+                    c "저도 한 번 제대로 참여해봐야겠어요. 다음 모임엔 다시 와볼게요."
+                    "C의 대답에 안도하며 미소 지었다."
 
-                    "C에게 동아리 외의 관심사에 대해 물어본다":
-                        "나는 C에게 사진 동아리 외에 관심 있는 것이 있는지 물었다."
-                        c "사진이 아니라면... 음, 별로 없어요."
-                        c "그냥 혼자서 생각하거나 책 읽는 걸 좋아해요. 사람 많은 곳은 별로 안 좋아하는 편이고요."
-                        "C는 말을 하면서도 약간 망설이는 듯 보였다."
-                        "그의 말에서 혼자만의 시간을 즐기는 사람이란 걸 느낄 수 있었다."
+                "C에게 동아리 외의 관심사에 대해 물어본다":
+                    "나는 C에게 사진 동아리 외에 관심 있는 것이 있는지 물었다."
+                    c "사진이 아니라면... 음, 별로 없어요."
+                    c "그냥 혼자서 생각하거나 책 읽는 걸 좋아해요. 사람 많은 곳은 별로 안 좋아하는 편이고요."
+                    "C는 말을 하면서도 약간 망설이는 듯 보였다."
+                    "그의 말에서 혼자만의 시간을 즐기는 사람이란 걸 느낄 수 있었다."
                     
-                    "C의 모호한 태도에 대해 솔직히 묻는다":
-                        "나는 C에게 그의 모호한 태도가 궁금하다고 솔직히 물었다."
-                        c "제가요? 그냥... 아직 익숙하지 않아서 그래요."
-                        c "새로운 환경에서 너무 쉽게 나서는 게 어색하달까요. 아직 적응 중이에요."
-                        "C는 진솔하게 자신의 마음을 표현했다."
-                        c "하지만 당신 같은 사람이 있다면 더 쉽게 적응할 수 있을지도 모르겠네요."
+                "C의 모호한 태도에 대해 솔직히 묻는다":
+                    "나는 C에게 그의 모호한 태도가 궁금하다고 솔직히 물었다."
+                    c "제가요? 그냥... 아직 익숙하지 않아서 그래요."
+                    c "새로운 환경에서 너무 쉽게 나서는 게 어색하달까요. 아직 적응 중이에요."
+                    "C는 진솔하게 자신의 마음을 표현했다."
+                    c "하지만 당신 같은 사람이 있다면 더 쉽게 적응할 수 있을지도 모르겠네요."
 
-                "C는 내 질문에 담담하게 답하며 조금씩 마음을 열어가는 듯 보였다."
-                "그와의 대화는 짧았지만, 다음 모임에서 또 볼 수 있을 거란 희망이 생겼다."
+            "C는 내 질문에 담담하게 답하며 조금씩 마음을 열어가는 듯 보였다."
+            "그와의 대화는 짧았지만, 다음 모임에서 또 볼 수 있을 거란 희망이 생겼다."
 
         
     "그녀와의 대화가 끝나고, 나는 복잡한 마음으로 동아리 방을 떠났다."
@@ -398,6 +441,7 @@ label chapter_2:
 
 
 label day_3:
+    "다음날이 되었다"
     "학교에 모든 수업 끝나고 동아리 모임으로 향했다"
     
     # 동아리 모임 시작
@@ -503,14 +547,19 @@ label c_observation:
 
 label day_3_end:
     "그렇게 동아리 모임이 끝난 하루가 저물어갔다."
+    scene black
     "백화점 데이트, 우연한 만남, 그리고 묘한 관찰까지... 점점 더 흥미로운 일들이 일어날 것만 같았다."
+    "이런저런 생각끝에 잠에 들었다."
+    "..."
+    ".."
+    "."
     jump chapter_4
 
 
 
 
 label chapter_4:
-
+    "다음날이 되었다"
     # 여행 시작
     "오늘은 동아리 여행 날! 동아리 멤버들과 함께 봉고차에 탑승하여, 자연이 아름답기로 유명한 산으로 향했다."
     "차 안에서는 모두 웃고 떠들며 여행의 시작을 기쁘게 맞이했다."
@@ -562,7 +611,7 @@ label chapter_4:
     "숙소에 도착한 우리는 각자 짐을 풀고 잠시 휴식을 취했다."
 
     # C의 고백 이벤트 (C의 호감도가 높을 경우)
-    if c_love >= 80:
+    if c_love > a_love and c_love > b_love:
         c "잠깐, 나랑 얘기 좀 할래?"
         "C는 나를 조용히 불러 숙소 앞에서 나와 이야기를 나누었다."
         c "사실, 오늘 너에게 고백하고 싶었어. 내가 너에게 느끼는 감정은 그냥 친구 이상의 거야."
@@ -579,7 +628,7 @@ label chapter_4:
                 "C는 약간 실망한 듯 했지만, 그래도 웃으며 대화를 마쳤다."
 
     # A의 고백 이벤트 (A의 호감도가 높을 경우)
-    elif a_love >= 80:
+    elif a_love > b_love and a_love > c_love:
         a "잠깐 나와줄래? 숙소 앞에서 이야기하고 싶은 게 있어."
         "A는 나를 숙소 앞에 불러 조용히 말했다."
         a "사실 내가 네게 마음이 있었어. 우리가 동아리에서 친해지면서, 점점 네가 좋아졌어."
@@ -595,7 +644,7 @@ label chapter_4:
                 "A는 고백을 받아들일 수 없다는 내 말을 이해하고 웃으며 대화를 마쳤다."
 
     # B의 고백 이벤트 (B의 호감도가 높을 경우)
-    elif b_love >= 80:
+    elif b_love > a_love and b_love > c_love:
         b "나 오늘... 너에게 할 말이 있어. 카톡으로 할게."
         "B는 나에게 카톡 메시지를 보내며 고백을 전했다."
         b "사실, 나는 너를 좋아해. 네가 나에게 특별한 사람이라는 걸 알았어."
@@ -625,7 +674,11 @@ label chapter_4:
     b "이번에는 어떤 활동을 할지 기대돼요 더 많은 사람들과 소통할 수 있을 것 같아서 좋아요!"
     
     # 해산
-    "그렇게 각자는 집으로 돌아가게 되었다. 동아리 여행은 끝이 나고, 새로운 시작을 맞이할 준비를 했다."
+    "그렇게 각자는 집으로 돌아가게 되었다. 동아리 여행은 끝이 나고, 축제를 맞이할 준비를 했다."
+    scene black
+    "..."
+    ".."
+    "."
     jump chapter_5
 
 
@@ -635,7 +688,10 @@ label chapter_4:
 
 
 label chapter_5:
-
+    "다음날이 되었다"
+    "오늘은 드디어 기다리던 축제날이다"
+    "기대감을 갖고 학교로 출발했다."
+    
     # 학교에서 축제 준비
     scene bg_school_festival_preparation
     "축제 준비가 한창이다. 학교의 각 부스에서 다양한 활동을 준비하고, 교정은 점점 축제 분위기로 물들어갔다."
