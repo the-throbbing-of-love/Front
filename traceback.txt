@@ -1,14 +1,14 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While processing the color property of anonymous style:
-  File "game/script.rpy", line 176, in script
+While running game code:
+  File "game/script.rpy", line 233, in script
     a "그럼 우리 사진 동아리는 어때? 다양한 활동도 많고 재밌어!"
-Exception: Color string '00000' must be 3, 4, 6, or 8 hex digits long.
+Exception: Style '' does not exist.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 176, in script
+  File "game/script.rpy", line 233, in script
     a "그럼 우리 사진 동아리는 어때? 다양한 활동도 많고 재밌어!"
   File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/ast.py", line 2573, in execute
     Say.execute(self)
@@ -20,44 +20,21 @@ Full traceback:
     self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
   File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/character.py", line 1106, in do_display
     display_say(who,
-  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/character.py", line 803, in display_say
-    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
-  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/ui.py", line 301, in interact
-    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/core.py", line 2215, in interact
-    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
-  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/core.py", line 2745, in interact_core
-    root_widget.visit_all(lambda d : d.per_interact())
-  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/displayable.py", line 434, in visit_all
-    d.visit_all(callback, seen)
-  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/displayable.py", line 434, in visit_all
-    d.visit_all(callback, seen)
-  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/displayable.py", line 434, in visit_all
-    d.visit_all(callback, seen)
-  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/screen.py", line 485, in visit_all
-    self.child.visit_all(callback, seen=None)
-  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/displayable.py", line 434, in visit_all
-    d.visit_all(callback, seen)
-  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/displayable.py", line 434, in visit_all
-    d.visit_all(callback, seen)
-  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/displayable.py", line 434, in visit_all
-    d.visit_all(callback, seen)
-  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/displayable.py", line 436, in visit_all
-    callback(self)
-  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/core.py", line 2745, in <lambda>
-    root_widget.visit_all(lambda d : d.per_interact())
-  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/text/text.py", line 2161, in per_interact
-    if self.style.slow_abortable:
-  File "gen3-static/styleclass.pxi", line 613, in renpy.styledata.styleclass.Style.slow_abortable.__get__
-  File "style.pyx", line 493, in renpy.style.StyleCore._get
-  File "style.pyx", line 717, in renpy.style.build_style
-  File "style.pyx", line 714, in renpy.style.build_style
-  File "gen3-static/style_functions.pyx", line 349, in style_functions.color_property
-  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/color.py", line 165, in __new__
-    raise Exception("Color string {!r} must be 3, 4, 6, or 8 hex digits long.".format(c))
-Exception: Color string '00000' must be 3, 4, 6, or 8 hex digits long.
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/character.py", line 735, in display_say
+    what_text = show_function(who, what_string, **show_args)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/character.py", line 1084, in do_show
+    return self.show_function(
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/character.py", line 346, in show_display_say
+    props = compute_widget_properties(who_args, what_args, window_args, properties, variant=variant, multiple=multiple)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/character.py", line 286, in compute_widget_properties
+    rv[prefix] = style_args(properties.get(prefix, {}), prefix)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/character.py", line 267, in style_args
+    style = getattr(renpy.store.style, style)
+  File "style.pyx", line 216, in renpy.style.StyleManager.__getattr__
+  File "style.pyx", line 83, in renpy.style.get_style
+Exception: Style '' does not exist.
 
 macOS-15.1.1-arm64-arm-64bit arm64
 Ren'Py 8.3.2.24090902
  Beta
-Mon Nov 25 23:26:24 2024
+Tue Nov 26 01:02:04 2024

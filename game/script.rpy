@@ -4,17 +4,25 @@
         background im.Scale("images/textbox/character_box.png", 2024, 389)  # 캐릭터 전용 박스 배경
         font "ONE Moblie POP.ttf"
         color "#000000" 
-        size (0.1, 0.2)  # 너비 500px, 세로는 화면 크기의 20%로 설정
+        size (0.5, 0.5)  # 너비 500px, 세로는 화면 크기의 20%로 설정
         xpos 0.5  # 화면 가로 중앙
+        text_align 3.5
+        padding (410, 20) 
         ypos 1.13  # 화면 아래쪽
         xanchor 0.5  # 기준점을 중앙으로 설정
         yanchor 0.5  # 기준점을 중앙으로 설정
-        padding (56, 143)
+        xminimum 600  # 텍스트 박스 최소 너비
+        yminimum 150  # 텍스트 박스 최소 높이
+
+
+
+    style name_base:
+        xanchor -0.4  # 기준점을 중앙
+        yanchor -1.65 
 
     # 대사 텍스트 베이스
-    style base:
-        xanchor -0.5  # 기준점을 중앙
-        yanchor -0.8  # 높이
+    style what_base:
+        yanchor -4.5  # 높이
 
 
     #b 텍스트 박스
@@ -22,12 +30,15 @@
         background im.Scale("images/textbox/character_box.png", 2024, 389)  # 캐릭터 전용 박스 배경
         font "ONE Moblie POP.ttf"
         color "#000000" 
-        size (0.1, 0.2)  # 너비 500px, 세로는 화면 크기의 20%로 설정
+        size (0.5, 0.5)  # 너비 500px, 세로는 화면 크기의 20%로 설정
         xpos 0.5  # 화면 가로 중앙
+        text_align 3.5
+        padding (410, 20) 
         ypos 1.13  # 화면 아래쪽
         xanchor 0.5  # 기준점을 중앙으로 설정
         yanchor 0.5  # 기준점을 중앙으로 설정
-        padding (56, 143)
+        xminimum 600  # 텍스트 박스 최소 너비
+        yminimum 150  # 텍스트 박스 최소 높이
 
 
     #c 텍스트 박스
@@ -35,12 +46,15 @@
         background im.Scale("images/textbox/character_box.png", 2024, 389)  # 캐릭터 전용 박스 배경
         font "ONE Moblie POP.ttf"
         color "#000000" 
-        size (0.1, 0.2)  # 너비 500px, 세로는 화면 크기의 20%로 설정
+        size (0.5, 0.5)  # 너비 500px, 세로는 화면 크기의 20%로 설정
         xpos 0.5  # 화면 가로 중앙
+        text_align 3.5
+        padding (410, 20) 
         ypos 1.13  # 화면 아래쪽
         xanchor 0.5  # 기준점을 중앙으로 설정
         yanchor 0.5  # 기준점을 중앙으로 설정
-        padding (56, 143)
+        xminimum 600  # 텍스트 박스 최소 너비
+        yminimum 150  # 텍스트 박스 최소 높이
 
 
     #base 텍스트 박스
@@ -48,12 +62,16 @@
         background im.Scale("images/textbox/character_box.png", 2024, 389)  # 캐릭터 전용 박스 배경
         font "ONE Moblie POP.ttf"
         color "#000000" 
-        size (0.1, 0.2)  # 너비 500px, 세로는 화면 크기의 20%로 설정
+        size (0.5, 0.5)  # 너비 500px, 세로는 화면 크기의 20%로 설정
         xpos 0.5  # 화면 가로 중앙
+        text_align 3.5
+        padding (410, 20) 
         ypos 1.13  # 화면 아래쪽
         xanchor 0.5  # 기준점을 중앙으로 설정
         yanchor 0.5  # 기준점을 중앙으로 설정
-        padding (56, 143)
+        xminimum 600  # 텍스트 박스 최소 너비
+        yminimum 150  # 텍스트 박스 최소 높이
+
 # 캐릭터 정의
 define s = Character("주인공", window_style="character_textbox")
 
@@ -111,9 +129,9 @@ image school_buss = im.Scale("images/background/buss.png",1920,1080)
 
 
 #플레이어
-define a = Character('이서현', color="#FDA870",  window_style="character_textbox", what_color="#000000", what_style="base") #활발한 여선배
-define b = Character('윤아린', color="#FFBEC1", window_style="character_textbox", what_color="#000000", what_style="base") #동급생 츤데레 여학생
-define c = Character('박서연', color="#373F68", window_style="character_textbox", what_color="#000000", what_style="base") #동급생 신비주의 여학생
+define a = Character('이서현', color="#FDA870", namebox_style="name_base" ,window_style="a_textbox", what_color="#000000", what_style="what_base") #활발한 여선배
+define b = Character('윤아린', color="#FFBEC1", window_style="b_textbox", what_color="#000000", what_style="base") #동급생 츤데레 여학생
+define c = Character('박서연', color="#373F68", window_style="c_textbox", what_color="#000000", what_style="base") #동급생 신비주의 여학생
 define s = Character('시스템') #힌트&설명
 define friend = Character('학동운', window_style="character_textbox", what_color="#000000", what_style="base") #연인관계의 도움친구
 define pn = ""
@@ -158,6 +176,11 @@ image c_worr = im.Scale("images/charater/c/c_worr.png", 950, 1000)
 #사이드캐릭터
 image friend = im.Scale("images/charater/side/friend.png", 650, 1000)
 
+
+
+
+#오브젝트
+image report = im.Scale("images/object/report.png", 588, 832)
 
 
 label start:
@@ -246,22 +269,24 @@ label first_day:
                     "나는 아직 결정을 내리지 않고 다른 부스를 둘러보기로 했다."
 
     "나는 선배의 말에 이끌려 사진 동아리에 흥미가 생겼다."
-    extend "그렇기에 나는 사진동아리에 들어가겠다고 다짐했다"
+    #extend 
+    "그렇기에 나는 사진동아리에 들어가겠다고 다짐했다"
     # 동아리 가입을 권유하며 선택지를 제공
     
     a "좋아! 관심 있다면 참가서 작성하고 가. 네가 관심 있으면 나중에 후회 안 할 거야!"
     menu:
         "사진 동아리에 가입한다":
-            "동아리 참가서를 작성하며 선배의 기대 어린 눈빛을 느낄 수 있었다."
+            hide a_base
             show a_senior at left with dissolve
             a "잘 생각했어! 이거 꽉 채워서 작성해줘!"
             
-            #이름적는 페이지
             
-
+            
+            #이름적는 페이지
+            show report at center
             a "여기에 이름을 적어줘!"
             $ set_player_name()
-
+            "동아리 참가서를 작성하며 선배의 기대 어린 눈빛을 느낄 수 있었다."
             # 가입 이유 확인 선택지
             "작성을 마치자 선배가 질문했다."
             a "근데 정말 하고 싶어서 작성한 거 맞아? 잠깐의 호기심만으로는 힘들 수도 있어."
