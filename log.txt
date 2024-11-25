@@ -1,34 +1,35 @@
-2024-11-19 05:29:50 UTC
-macOS-15.1-arm64-arm-64bit
+2024-11-25 15:17:34 UTC
+macOS-15.1.1-arm64-arm-64bit
 Ren'Py 8.3.2.24090902
 
-Early init took 0.03s
-Loading error handling took 0.08s
-Loading script took 0.13s
-Loading save slot metadata took 0.04s
+Early init took 0.04s
+Loading error handling took 0.14s
+Loading script took 0.37s
+Loading save slot metadata took 0.06s
 Loading persistent took 0.00s
-Running init code took 0.11s
+Running init code took 0.23s
 Loading analysis data took 0.01s
 Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.01s
+Reloading save slot metadata took 0.02s
 Index archives took 0.00s
+Backing up script files to '/Users/hyunho/Library/RenPy/backups/the throbbing of love':
 Dump and make backups took 0.03s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
-Initial gc took 0.02s
+Initial gc took 0.03s
 DPI scale factor: 1.000000
 Creating interface object took 0.00s
 Cleaning stores took 0.00s
 Init translation took 0.02s
 Build styles took 0.00s
-Load screen analysis took 0.01s
-Analyze screens took 0.00s
-Save screen analysis took 0.00s
-Prepare screens took 0.03s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.04s
 Save pyanalysis. took 0.00s
-Save bytecode. took 0.02s
+Save bytecode. took 0.03s
 Running _start took 0.00s
-Interface start took 0.61s
+Interface start took 0.85s
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1440, 900)
@@ -42,19 +43,3 @@ Screen sizes: virtual=(1920, 1080) physical=(1440, 794) drawable=(2880, 1588)
 Maximum texture size: 4096x4096
 Screen sizes: virtual=(1920, 1080) physical=(1440, 794) drawable=(2880, 1588)
 Maximum texture size: 4096x4096
-
-Full traceback:
-  File "game/script.rpy", line 279, in script
-    dance_leader "안녕, 모두들! 우리 사진 동아리에 온 걸 환영해. 나는 동아리 장이고, 앞으로 잘 부탁할게!"
-  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/ast.py", line 2573, in execute
-    Say.execute(self)
-  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/ast.py", line 575, in execute
-    who = eval_who(self.who, self.who_fast)
-  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/ast.py", line 464, in eval_who
-    raise Exception("Sayer '%s' is not defined." % who)
-Exception: Sayer 'dance_leader' is not defined.
-
-While running game code:
-  File "game/script.rpy", line 279, in script
-    dance_leader "안녕, 모두들! 우리 사진 동아리에 온 걸 환영해. 나는 동아리 장이고, 앞으로 잘 부탁할게!"
-Exception: Sayer 'dance_leader' is not defined.

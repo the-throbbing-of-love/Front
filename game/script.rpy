@@ -1,4 +1,63 @@
-﻿# init python:
+﻿init:
+    #a 텍스트 박스
+    style a_textbox:
+        background im.Scale("images/textbox/character_box.png", 2024, 389)  # 캐릭터 전용 박스 배경
+        font "ONE Moblie POP.ttf"
+        color "#000000" 
+        size (0.1, 0.2)  # 너비 500px, 세로는 화면 크기의 20%로 설정
+        xpos 0.5  # 화면 가로 중앙
+        ypos 1.13  # 화면 아래쪽
+        xanchor 0.5  # 기준점을 중앙으로 설정
+        yanchor 0.5  # 기준점을 중앙으로 설정
+        padding (56, 143)
+
+    # 대사 텍스트 베이스
+    style base:
+        xanchor -0.5  # 기준점을 중앙
+        yanchor -0.8  # 높이
+
+
+    #b 텍스트 박스
+    style b_textbox:
+        background im.Scale("images/textbox/character_box.png", 2024, 389)  # 캐릭터 전용 박스 배경
+        font "ONE Moblie POP.ttf"
+        color "#000000" 
+        size (0.1, 0.2)  # 너비 500px, 세로는 화면 크기의 20%로 설정
+        xpos 0.5  # 화면 가로 중앙
+        ypos 1.13  # 화면 아래쪽
+        xanchor 0.5  # 기준점을 중앙으로 설정
+        yanchor 0.5  # 기준점을 중앙으로 설정
+        padding (56, 143)
+
+
+    #c 텍스트 박스
+    style c_textbox:
+        background im.Scale("images/textbox/character_box.png", 2024, 389)  # 캐릭터 전용 박스 배경
+        font "ONE Moblie POP.ttf"
+        color "#000000" 
+        size (0.1, 0.2)  # 너비 500px, 세로는 화면 크기의 20%로 설정
+        xpos 0.5  # 화면 가로 중앙
+        ypos 1.13  # 화면 아래쪽
+        xanchor 0.5  # 기준점을 중앙으로 설정
+        yanchor 0.5  # 기준점을 중앙으로 설정
+        padding (56, 143)
+
+
+    #base 텍스트 박스
+    style base_textbox:
+        background im.Scale("images/textbox/character_box.png", 2024, 389)  # 캐릭터 전용 박스 배경
+        font "ONE Moblie POP.ttf"
+        color "#000000" 
+        size (0.1, 0.2)  # 너비 500px, 세로는 화면 크기의 20%로 설정
+        xpos 0.5  # 화면 가로 중앙
+        ypos 1.13  # 화면 아래쪽
+        xanchor 0.5  # 기준점을 중앙으로 설정
+        yanchor 0.5  # 기준점을 중앙으로 설정
+        padding (56, 143)
+# 캐릭터 정의
+define s = Character("주인공", window_style="character_textbox")
+
+# init python:
 #     import requests
 
 #     def send_to_raspberry_pi():
@@ -12,6 +71,15 @@
 #         except Exception as e:
 #             renpy.notify("서버에 연결할 수 없습니다.")
 #             renpy.error(str(e))
+
+
+
+#트랜스펌
+transform move_to_left:
+    xalign 0.5 yalign 0.5  # 화면 중앙에서 시작
+    zoom 0.5  
+    linear 2.0 xalign 0.2 zoom 1.0 
+
 
 
 
@@ -36,21 +104,24 @@ label measure_heart_rate:
     return
 #배경사진
 image white =  im.Scale("images/background/white.png",1920,1080) 
-image bg_school_event = im.Scale("images/background/school_event.jpeg",1920,1080) 
+image bg_school_event = im.Scale("images/background/bg_school_event.png",1920,1080) 
+image school_event = im.Scale("images/background/school_event.jpeg",1920,1080) 
+image school_buss = im.Scale("images/background/buss.png",1920,1080) 
+
 
 
 #플레이어
-define a = Character('이서현', color="#FDA870") #활발한 여선배
-define b = Character('윤아린', color="#FFBEC1") #동급생 츤데레 여학생
-define c = Character('박서연', color="#373F68") #동급생 신비주의 여학생
+define a = Character('이서현', color="#FDA870",  window_style="character_textbox", what_color="#000000", what_style="base") #활발한 여선배
+define b = Character('윤아린', color="#FFBEC1", window_style="character_textbox", what_color="#000000", what_style="base") #동급생 츤데레 여학생
+define c = Character('박서연', color="#373F68", window_style="character_textbox", what_color="#000000", what_style="base") #동급생 신비주의 여학생
 define s = Character('시스템') #힌트&설명
-define friend = Character('학동운') #연인관계의 도움친구
+define friend = Character('학동운', window_style="character_textbox", what_color="#000000", what_style="base") #연인관계의 도움친구
 define pn = ""
-define q = Character('???') #첫 등장
-define camera_senior = Character('선배1')
+define q = Character('???', window_style="character_textbox", what_color="#000000", what_style="base") #첫 등장
+define camera_senior = Character('선배1', window_style="character_textbox", what_color="#000000", what_style="base")
 
 #a
-image a_base = im.Scale("images/charater/a/a_base.png", 950, 1000)
+image a_base = im.Scale("images/charater/a/a_base.png", 1000, 1100)
 image a_lol = im.Scale("images/charater/a/a_lol.png", 950, 1000)
 image a_sad = im.Scale("images/charater/a/a_sad.png", 950, 1000)
 image a_shy = im.Scale("images/charater/a/a_shy.png", 950, 1000)
@@ -103,12 +174,18 @@ label first_day:
 
     s "재밌게 플레이해주세요."
 
-    "주인공은 심박동 센서를 통해 자신의 심박수를 측정했다."
+
     # $ player_heart_rate = renpy.call_in_new_context("measure_heart_rate")  # 심박수 측정
 
     # Chapter 1: 입학식
-    scene bg_school_event 
-    "봄의 따뜻한 햇살이 비치는 교정에 부스들이 가득 펼쳐져 있었다."
+    scene bg_school_event with dissolve
+    "대학 입구에 도착하니, 웅장한 교문이 나를 맞이했다."
+    "이곳에서 앞으로의 내 삶이 어떻게 바뀔지 상상하니 가슴이 두근거렸다."
+    "새로운 시작에 대한 설렘과 약간의 두려움이 뒤섞인 복잡한 감정이 밀려왔다."
+
+
+    scene school_event
+    "입구를 지나니 봄의 따뜻한 햇살이 비치는 교정에 부스들이 가득 펼쳐져 있었다."
     "신입생인 나는 새로 시작하는 대학 생활에 설레기도 하고, 한편으론 낯선 분위기에 긴장도 되었다."
     
     # 친구 등장
@@ -119,14 +196,27 @@ label first_day:
     "친구의 말에 나는 주변을 둘러보았다. 각양각색의 동아리들이 자신들의 활동을 자랑하고 있었다."
     "스포츠, 학술, 문화... 선택지가 많아 어떤 동아리를 들어가야 할지 고민이 깊어졌다."
 
+
+    friend "야 나 킴만석이 불러서 나중에 보자!!"
+
+    hide friend with dissolve
+
+    "친구는 갑작스럽게 어디론가 뛰어갔다. 나는 홀로 남아 부스를 둘러보며 천천히 걸었다."
+
+    scene school_buss
+    "우연히 어떠한 부스를 지나고있었다."
+
+    "누군가 나에게 말을 걸었다."
+
     # 선배 등장
-    show a_base at left with dissolve
-    a "안녕! 신입생 맞지? 동아리 알아보고 있어?"
+    show a_base at move_to_left with dissolve
+    q "안녕! 신입생 맞지? 동아리 알아보고 있어?"
 
     # 첫 대화 선택지
     menu:
         #증가
         "조금 둘러보고 있어요":
+            show a_base at left with move
             "부스 구경 중이던 내게 선배가 친근하게 다가왔다."
             a "그럼 우리 사진 동아리는 어때? 다양한 활동도 많고 재밌어!"
             "나는 사진 동아리에 대한 이야기를 들으며 조금씩 흥미가 생겼다."

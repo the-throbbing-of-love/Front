@@ -1,24 +1,63 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While running game code:
-  File "game/script.rpy", line 279, in script
-    dance_leader "안녕, 모두들! 우리 사진 동아리에 온 걸 환영해. 나는 동아리 장이고, 앞으로 잘 부탁할게!"
-Exception: Sayer 'dance_leader' is not defined.
+While processing the color property of anonymous style:
+  File "game/script.rpy", line 176, in script
+    a "그럼 우리 사진 동아리는 어때? 다양한 활동도 많고 재밌어!"
+Exception: Color string '00000' must be 3, 4, 6, or 8 hex digits long.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 279, in script
-    dance_leader "안녕, 모두들! 우리 사진 동아리에 온 걸 환영해. 나는 동아리 장이고, 앞으로 잘 부탁할게!"
+  File "game/script.rpy", line 176, in script
+    a "그럼 우리 사진 동아리는 어때? 다양한 활동도 많고 재밌어!"
   File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/ast.py", line 2573, in execute
     Say.execute(self)
-  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/ast.py", line 575, in execute
-    who = eval_who(self.who, self.who_fast)
-  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/ast.py", line 464, in eval_who
-    raise Exception("Sayer '%s' is not defined." % who)
-Exception: Sayer 'dance_leader' is not defined.
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/ast.py", line 615, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/exports/sayexports.py", line 132, in say
+    who(what, *args, **kwargs)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/character.py", line 1455, in __call__
+    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/character.py", line 1106, in do_display
+    display_say(who,
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/character.py", line 803, in display_say
+    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/ui.py", line 301, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/core.py", line 2215, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/core.py", line 2745, in interact_core
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/screen.py", line 485, in visit_all
+    self.child.visit_all(callback, seen=None)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/displayable.py", line 436, in visit_all
+    callback(self)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/core.py", line 2745, in <lambda>
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/text/text.py", line 2161, in per_interact
+    if self.style.slow_abortable:
+  File "gen3-static/styleclass.pxi", line 613, in renpy.styledata.styleclass.Style.slow_abortable.__get__
+  File "style.pyx", line 493, in renpy.style.StyleCore._get
+  File "style.pyx", line 717, in renpy.style.build_style
+  File "style.pyx", line 714, in renpy.style.build_style
+  File "gen3-static/style_functions.pyx", line 349, in style_functions.color_property
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/color.py", line 165, in __new__
+    raise Exception("Color string {!r} must be 3, 4, 6, or 8 hex digits long.".format(c))
+Exception: Color string '00000' must be 3, 4, 6, or 8 hex digits long.
 
-macOS-15.1-arm64-arm-64bit arm64
+macOS-15.1.1-arm64-arm-64bit arm64
 Ren'Py 8.3.2.24090902
  Beta
-Tue Nov 19 14:32:12 2024
+Mon Nov 25 23:26:24 2024
