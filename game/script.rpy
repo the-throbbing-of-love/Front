@@ -72,9 +72,6 @@
         xminimum 600  # 텍스트 박스 최소 너비
         yminimum 150  # 텍스트 박스 최소 높이
 
-# 캐릭터 정의
-define s = Character("주인공", window_style="character_textbox")
-
 # init python:
 #     import requests
 
@@ -140,32 +137,32 @@ define camera_senior = Character('선배1', window_style="character_textbox", wh
 
 #a
 image a_base = im.Scale("images/charater/a/a_base.png", 1000, 1100)
-image a_lol = im.Scale("images/charater/a/a_lol.png", 950, 1000)
-image a_sad = im.Scale("images/charater/a/a_sad.png", 950, 1000)
-image a_shy = im.Scale("images/charater/a/a_shy.png", 950, 1000)
-image a_TT = im.Scale("images/charater/a/a_TT.png", 950, 1000)
-image a_wak = im.Scale("images/charater/a/a_wak.png", 950, 1000)
-image a_worr = im.Scale("images/charater/a/a_worr.png", 950, 1000)
+image a_lol = im.Scale("images/charater/a/a_lol.png", 1000, 1100)
+image a_sad = im.Scale("images/charater/a/a_sad.png", 1000, 1100)
+image a_shy = im.Scale("images/charater/a/a_shy.png", 1000, 1100)
+image a_TT = im.Scale("images/charater/a/a_TT.png", 1000, 1100)
+image a_wak = im.Scale("images/charater/a/a_wak.png", 1000, 1100)
+image a_worr = im.Scale("images/charater/a/a_worr.png", 1000, 1100)
 
 
 #b
-image b_base = im.Scale("images/charater/b/b_base.png", 950, 1000)
-image b_lol = im.Scale("images/charater/b/b_lol.png", 950, 1000)
-image b_sad = im.Scale("images/charater/b/b_sad.png", 950, 1000)
-image b_shy = im.Scale("images/charater/b/b_shy.png", 950, 1000)
-image b_wak = im.Scale("images/charater/b/b_wak.png", 950, 1000)
-image b_worr = im.Scale("images/charater/b/b_worr.png", 950, 1000)
+image b_base = im.Scale("images/charater/b/b_base.png", 1000, 1100)
+image b_lol = im.Scale("images/charater/b/b_lol.png", 1000, 1100)
+image b_sad = im.Scale("images/charater/b/b_sad.png", 1000, 1100)
+image b_shy = im.Scale("images/charater/b/b_shy.png",1000, 1100)
+image b_wak = im.Scale("images/charater/b/b_wak.png", 1000, 1100)
+image b_worr = im.Scale("images/charater/b/b_worr.png", 1000, 1100)
 
 
 
 
 #c
-image c_base = im.Scale("images/charater/c/c_base.png", 650, 1000)
-image c_lol = im.Scale("images/charater/c/c_lol.png", 950, 1000)
-image c_sad = im.Scale("images/charater/c/c_sad.png", 950, 1000)
-image c_shy = im.Scale("images/charater/c/c_shy.png", 950, 1000)
-image c_cute = im.Scale("images/charater/c/c_cute.png", 950, 1000)
-image c_worr = im.Scale("images/charater/c/c_worr.png", 950, 1000)
+image c_base = im.Scale("images/charater/c/c_base.png", 1000, 1100)
+image c_lol = im.Scale("images/charater/c/c_lol.png", 1000, 1100)
+image c_sad = im.Scale("images/charater/c/c_sad.png", 1000, 1100)
+image c_shy = im.Scale("images/charater/c/c_shy.png", 1000, 1100)
+image c_cute = im.Scale("images/charater/c/c_cute.png", 1000, 1100)
+image c_worr = im.Scale("images/charater/c/c_worr.png", 1000, 1100)
 
 
 
@@ -277,7 +274,7 @@ label first_day:
     menu:
         "사진 동아리에 가입한다":
             hide a_base
-            show a_senior at left with dissolve
+            show a_shy at left
             a "잘 생각했어! 이거 꽉 채워서 작성해줘!"
             
             
@@ -288,7 +285,9 @@ label first_day:
             $ set_player_name()
             "동아리 참가서를 작성하며 선배의 기대 어린 눈빛을 느낄 수 있었다."
             # 가입 이유 확인 선택지
+            "[pn].."
             "작성을 마치자 선배가 질문했다."
+
             a "근데 정말 하고 싶어서 작성한 거 맞아? 잠깐의 호기심만으로는 힘들 수도 있어."
             menu:
                 "네, 하고 싶어서 작성했어요":
