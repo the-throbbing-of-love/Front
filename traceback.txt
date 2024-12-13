@@ -1,40 +1,56 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While running game code:
-  File "game/script.rpy", line 233, in script
-    a "그럼 우리 사진 동아리는 어때? 다양한 활동도 많고 재밌어!"
-Exception: Style '' does not exist.
+After initialization, but before game start.
+  File "game/screens.rpy", line 289, in prepare_screen
+    screen navigation():
+  File "game/screens.rpy", line 289, in prepare
+    screen navigation():
+  File "game/screens.rpy", line 291, in prepare
+    vbox:
+  File "game/screens.rpy", line 291, in prepare
+    vbox:
+  File "game/screens.rpy", line 299, in prepare
+    if main_menu:
+  File "game/screens.rpy", line 299, in prepare
+    if main_menu:
+  File "game/screens.rpy", line 301, in prepare
+    textbutton _("시작하기", window_style="my_button") action Start()
+  File "game/screens.rpy", line 301, in <module>
+    textbutton _("시작하기", window_style="my_button") action Start()
+TypeError: _() got an unexpected keyword argument 'window_style'
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 233, in script
-    a "그럼 우리 사진 동아리는 어때? 다양한 활동도 많고 재밌어!"
-  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/ast.py", line 2573, in execute
-    Say.execute(self)
-  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/ast.py", line 615, in execute
-    renpy.exports.say(who, what, *args, **kwargs)
-  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/exports/sayexports.py", line 132, in say
-    who(what, *args, **kwargs)
-  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/character.py", line 1455, in __call__
-    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
-  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/character.py", line 1106, in do_display
-    display_say(who,
-  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/character.py", line 735, in display_say
-    what_text = show_function(who, what_string, **show_args)
-  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/character.py", line 1084, in do_show
-    return self.show_function(
-  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/character.py", line 346, in show_display_say
-    props = compute_widget_properties(who_args, what_args, window_args, properties, variant=variant, multiple=multiple)
-  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/character.py", line 286, in compute_widget_properties
-    rv[prefix] = style_args(properties.get(prefix, {}), prefix)
-  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/character.py", line 267, in style_args
-    style = getattr(renpy.store.style, style)
-  File "style.pyx", line 216, in renpy.style.StyleManager.__getattr__
-  File "style.pyx", line 83, in renpy.style.get_style
-Exception: Style '' does not exist.
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/bootstrap.py", line 359, in bootstrap
+    renpy.main.main()
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/main.py", line 652, in main
+    run(restart)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/main.py", line 94, in run
+    renpy.display.screen.prepare_screens()
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/screen.py", line 1026, in prepare_screens
+    s.ast.prepare_screen()
+  File "game/screens.rpy", line 289, in prepare_screen
+    screen navigation():
+  File "game/screens.rpy", line 289, in prepare
+    screen navigation():
+  File "game/screens.rpy", line 291, in prepare
+    vbox:
+  File "game/screens.rpy", line 291, in prepare
+    vbox:
+  File "game/screens.rpy", line 299, in prepare
+    if main_menu:
+  File "game/screens.rpy", line 299, in prepare
+    if main_menu:
+  File "game/screens.rpy", line 301, in prepare
+    textbutton _("시작하기", window_style="my_button") action Start()
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/python.py", line 1202, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/screens.rpy", line 301, in <module>
+    textbutton _("시작하기", window_style="my_button") action Start()
+TypeError: _() got an unexpected keyword argument 'window_style'
 
 macOS-15.1.1-arm64-arm-64bit arm64
 Ren'Py 8.3.2.24090902
  Beta
-Tue Nov 26 01:02:04 2024
+Thu Dec 12 23:54:24 2024

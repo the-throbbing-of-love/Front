@@ -1,7 +1,7 @@
 ﻿init:
     #a 텍스트 박스
     style a_textbox:
-        background im.Scale("images/textbox/character_box.png", 2024, 389)  # 캐릭터 전용 박스 배경
+        background im.Scale("images/textbox/a_textbox.png", 2024, 389)  # 캐릭터 전용 박스 배경
         font "ONE Moblie POP.ttf"
         color "#000000" 
         size (0.5, 0.5)  # 너비 500px, 세로는 화면 크기의 20%로 설정
@@ -27,7 +27,7 @@
 
     #b 텍스트 박스
     style b_textbox:
-        background im.Scale("images/textbox/character_box.png", 2024, 389)  # 캐릭터 전용 박스 배경
+        background im.Scale("images/textbox/b_textbox.png", 2024, 389)  # 캐릭터 전용 박스 배경
         font "ONE Moblie POP.ttf"
         color "#000000" 
         size (0.5, 0.5)  # 너비 500px, 세로는 화면 크기의 20%로 설정
@@ -43,7 +43,7 @@
 
     #c 텍스트 박스
     style c_textbox:
-        background im.Scale("images/textbox/character_box.png", 2024, 389)  # 캐릭터 전용 박스 배경
+        background im.Scale("images/textbox/c_textbox.png", 2024, 389)  # 캐릭터 전용 박스 배경
         font "ONE Moblie POP.ttf"
         color "#000000" 
         size (0.5, 0.5)  # 너비 500px, 세로는 화면 크기의 20%로 설정
@@ -117,23 +117,26 @@ label measure_heart_rate:
     # 초기 심박수 측정
     $ player_initial_heart_rate = renpy.call_in_new_context("measure_heart_rate")
     return
+
+
 #배경사진
+image muda =  im.Scale("images/background/muda.png",1920,1080) 
 image white =  im.Scale("images/background/white.png",1920,1080) 
 image bg_school_event = im.Scale("images/background/bg_school_event.png",1920,1080) 
 image school_event = im.Scale("images/background/school_event.jpeg",1920,1080) 
 image school_buss = im.Scale("images/background/buss.png",1920,1080) 
-
-
-
+image class = im.Scale("images/background/class.png",1920,1080) 
+image hclass = im.Scale("images/background/hclass.png",1920,1080) 
+image dongai = im.Scale("images/background/dongai.png",1920,1080) 
 #플레이어
-define a = Character('이서현', color="#FDA870", namebox_style="name_base" ,window_style="a_textbox", what_color="#000000", what_style="what_base") #활발한 여선배
-define b = Character('윤아린', color="#FFBEC1", window_style="b_textbox", what_color="#000000", what_style="base") #동급생 츤데레 여학생
-define c = Character('박서연', color="#373F68", window_style="c_textbox", what_color="#000000", what_style="base") #동급생 신비주의 여학생
+define a = Character('윤아린', color="#AD9480", namebox_style="name_base" ,window_style="a_textbox", what_color="#000000", what_style="what_base") #활발한 여선배
+define b = Character('이서현', color="#E9ADFF", namebox_style="name_base" ,window_style="b_textbox", what_color="#000000", what_style="what_base") #동급생 츤데레 여학생
+define c = Character('박서연', color="#2F3364", namebox_style="name_base" ,window_style="c_textbox", what_color="#000000", what_style="what_base") #동급생 신비주의 여학생
 define s = Character('시스템') #힌트&설명
-define friend = Character('학동운', window_style="character_textbox", what_color="#000000", what_style="base") #연인관계의 도움친구
+define friend = Character('학동운', namebox_style="name_base" ,window_style="base_textbox", what_color="#000000", what_style="what_base") #연인관계의 도움친구
 define pn = ""
-define q = Character('???', window_style="character_textbox", what_color="#000000", what_style="base") #첫 등장
-define camera_senior = Character('선배1', window_style="character_textbox", what_color="#000000", what_style="base")
+define q = Character('???', namebox_style="name_base" ,window_style="base_textbox", what_color="#000000", what_style="what_base") #첫 등장
+define camera_senior = Character('선배1', namebox_style="name_base" ,window_style="base_textbox", what_color="#000000", what_style="what_base")
 
 #a
 image a_base = im.Scale("images/charater/a/a_base.png", 1000, 1100)
@@ -301,22 +304,19 @@ label first_day:
             
             a "첫 모임은 다음 주 수요일 오후 6시! 장소는 동아리 방이니까 잊지 마!"
     # 집으로 가는 길
+    # 여기 사진넣기 @@@@@@@@@@@@@@@@@@@@@@@@@
     "그렇게 입학식이 끝나고 집으로 가는 길에 들뜬 마음을 진정시키며 캠퍼스를 걷고 있었다."
     "갑자기 사람들이 모여서 환호하는 소리가 들려 발걸음을 멈췄다."
-    
-    # 댄스 공연 장면
-    scene bg_dance_stage
     "사람들이 모여 있는 쪽으로 다가가 보니, 무대 위에서 댄스 공연이 한창이었다."
     "화려한 춤과 함께 무대를 채운 그들 중에서도 유독 눈에 띄는 선배가 있었다."
     
-    # 동아리 장 등장
-    show dance_leader at center with dissolve
+    scene muda
     "그녀는 강렬한 눈빛으로 무대를 지배하며, 멋진 춤 동작을 선보이고 있었다."
     "나는 그 선배가 자꾸만 눈에 들어와 공연이 끝날 때까지 시선을 떼지 못했다."
     
     # 선배 정체 확인
     "공연이 끝난 후, 옆에 있던 친구가 그녀를 가리키며 말했다."
-    friend "저 선배, 우리 학교에서 엄청 유명해! 듣자 하니, 네가 가입한 사진 동아리의 동아리 장이래!"
+    friend "저 선배, 우리 학교에서 엄청 유명해! 듣자 하니, 네가 가입한 사진 동아리의 동아리 아린 선배님이래!"
     
     "동아리 장이자, 그 화려한 무대 위의 주인공… 뭔가 묘하게 가슴이 두근거렸다."
     "이제 다음 주 첫 모임이 더욱 기다려지는 걸 느끼며, 나는 집으로 향했다."
@@ -329,9 +329,10 @@ label first_day:
 # Chapter 2: 첫 동아리 모임
 label chapter_2:
     "다음날이 되었다"
+    scene hclass
     "학교에 모든 수업 끝나고 동아리 모임으로 향했다"
+    scene class
     
-    scene bg_clubroom
     "드디어 사진 동아리의 첫 모임 날이 되었다. 동아리 방에 들어서자 여러 신입생과 선배들이 모여 있었다."
     
     # B 등장
@@ -621,7 +622,7 @@ label b_encounter:
     menu:
         "B의 제안을 수락한다":
             "나는 B의 제안을 수락했다."
-            b "좋아, 그럼 지금 가자!"
+            b "좋아, 그럼 지금 가자!"   
             jump b_date_shopping
 
         "B의 제안을 거절한다":

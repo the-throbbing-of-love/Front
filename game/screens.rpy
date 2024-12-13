@@ -8,7 +8,14 @@ init offset = -1
 ################################################################################
 ## 스타일
 ################################################################################
-
+style my_button:
+    size 24 # 텍스트 크기
+    background "./images/button/btn.png" xpos -0.1 ypos -0.7# 기본 배경 이미지
+    hover_background "./images/button/hoverbtn.png" # 호버 상태 배경 이미지
+    xpadding 80 # 텍스트 왼쪽 여백
+    ypadding 7 # 텍스트 위쪽 여백
+    text_align 0.0 # 텍스트를 왼쪽으로 정렬
+    
 style default:
     properties gui.text_properties()
     language gui.language
@@ -287,42 +294,49 @@ screen navigation():
         xpos gui.navigation_xpos
         yalign 0.8
 
-        spacing gui.navigation_spacing
-
         if main_menu:
+            spacing gui.navigation_spacing
+            textbutton _("시작하기") action Start() style "my_button"
+            textbutton _("불러오기") action ShowMenu("load") style "my_button"
+            textbutton _("환경설정") action ShowMenu("preferences") style "my_button"
+            textbutton _("버전정보") action ShowMenu("about") style "my_button"
+            if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
 
-            textbutton _("시작하기") action Start()
+                ## 도움말 메뉴는 모바일 디바이스와 맞지 않아 불필요합니다. 
+                textbutton _("조작방법") action ShowMenu("help") style "my_button"
 
+            if renpy.variant("pc"):
+
+                ## iOS에서는 종료 버튼이 금지되어 있으며 Android 및 웹에서는 불필요
+                ## 합니다.
+                textbutton _("종료하기") action Quit(confirm=not main_menu) style "my_button"
         else:
-
+            spacing 10
             textbutton _("대사록") action ShowMenu("history")
 
             textbutton _("저장하기") action ShowMenu("save")
 
-        textbutton _("불러오기") action ShowMenu("load")
+            textbutton _("불러오기") action ShowMenu("load") 
+    
+            textbutton _("환경설정") action ShowMenu("preferences")
+            
+            textbutton _("버전정보") action ShowMenu("about") 
 
-        textbutton _("환경설정") action ShowMenu("preferences")
+            if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
+
+                ## 도움말 메뉴는 모바일 디바이스와 맞지 않아 불필요합니다. 
+                textbutton _("조작방법") action ShowMenu("help") 
+            
+            textbutton _("메인 메뉴") action MainMenu()
+            if renpy.variant("pc"):
+            
+                ## iOS에서는 종료 버튼이 금지되어 있으며 Android 및 웹에서는 불필요
+                ## 합니다.
+                textbutton _("종료하기") action Quit(confirm=not main_menu) 
 
         if _in_replay:
 
             textbutton _("리플레이 끝내기") action EndReplay(confirm=True)
-
-        elif not main_menu:
-
-            textbutton _("메인 메뉴") action MainMenu()
-
-        textbutton _("버전정보") action ShowMenu("about")
-
-        if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
-
-            ## 도움말 메뉴는 모바일 디바이스와 맞지 않아 불필요합니다.
-            textbutton _("조작방법") action ShowMenu("help")
-
-        if renpy.variant("pc"):
-
-            ## iOS에서는 종료 버튼이 금지되어 있으며 Android 및 웹에서는 불필요
-            ## 합니다.
-            textbutton _("종료하기") action Quit(confirm=not main_menu)
 
 
 style navigation_button is gui_button
@@ -554,8 +568,6 @@ screen about():
             ## gui.about 의 내용은 보통 options.rpy에 있습니다.
             if gui.about:
                 text "[gui.about!t]\n"
-
-            text _("{a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only] 으로 만들어진 게임.\n\n[renpy.license!t]")
 
 
 style about_label is gui_label

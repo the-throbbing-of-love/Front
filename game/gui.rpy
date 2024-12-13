@@ -25,12 +25,12 @@ define config.check_conflicting_properties = True
 ## 인터페이스에서 글자의 색상입니다.
 
 ## 강조 색상은 레이블(label)과 강조된 글자로 인터페이스 전체에서 사용됩니다.
-define gui.accent_color = '#cccc00'
+define gui.accent_color = '#A7D7FF'
 
 ## 텍스트 버튼(text button)이 선택(selected)됐거나 커서를 올리지(hovered) 않았을
 ## 때 사용됩니다.
 
-define gui.idle_color = '#ff009d99'
+define gui.idle_color = '#ffffff'
 
 
 ## 작은(small) 색상은 같은 효과를 내기 위해 더 밝거나 어두워야 하는 작은 글자에
@@ -38,13 +38,13 @@ define gui.idle_color = '#ff009d99'
 define gui.idle_small_color = '#aaaaaa'
 
 ## 버튼(button)과 막대(bar)에 커서를 올렸을 때(hovered) 사용됩니다.
-define gui.hover_color = '#ff009dff'
+define gui.hover_color = '#84c4ebff'
 
 
 ## 텍스트 버튼(text button)에 선택됐지만(selected) 포커스되지(focused) 않았을 때
 ## 사용됩니다. 버튼(button)은 현재 화면이거나 설정값인 경우 선택됨(selected)이
 ## 됩니다.
-define gui.selected_color = '#ffffff'
+define gui.selected_color = '#45bbff'
 
 ## 텍스트 버튼(text button)이 선택되지(selected) 않았을 때 사용됩니다.
 define gui.insensitive_color = '#8888887f'
@@ -260,7 +260,7 @@ define gui.notify_ypos = 68
 define gui.choice_spacing = 33
 
 ## 메인과 게임 메뉴에서 네비게이션 섹션의 버튼들 간의 간격입니다.
-define gui.navigation_spacing = 6
+define gui.navigation_spacing = 30
 
 ## 환경 설정들 간의 간격을 제어합니다.
 define gui.pref_spacing = 15

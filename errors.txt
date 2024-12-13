@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 12: style statement expects a non-empty block.
-    style base:
-               ^
+File "game/screens.rpy", line 316: 'else' is not a keyword argument or valid child of the vbox statement.
+    else:
+        ^
 
 Ren'Py Version: Ren'Py 8.3.2.24090902
-Tue Nov 26 00:12:52 2024
+Thu Dec 12 23:56:11 2024
