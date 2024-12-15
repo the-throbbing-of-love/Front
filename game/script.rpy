@@ -157,6 +157,14 @@ image macdow = im.Scale("images/background/macdow.png",1920,1080)
 image chdongnone = im.Scale("images/background/chdongnone.png",1920,1080) 
 image booo = im.Scale("images/background/booo.png",1920,1080) 
 image photo_booth = im.Scale("images/background/photo_booth.png",1920,1080) 
+image dengi = im.Scale("images/background/dengi.png",1920,1080) 
+
+
+
+
+
+
+
 #플레이어
 define a = Character('윤아린', color="#AD9480", namebox_style="name_base" ,window_style="a_textbox", what_color="#000000", what_style="what_base") #활발한 여선배
 define b = Character('이서현', color="#E9ADFF", namebox_style="name_base" ,window_style="b_textbox", what_color="#000000", what_style="what_base") #동급생 츤데레 여학생
@@ -351,6 +359,7 @@ label first_day:
             a "첫 모임은 다음 주 수요일 오후 6시! 장소는 동아리 방이니까 잊지 마!"
     # 집으로 가는 길
     # 여기 사진넣기 @@@@@@@@@@@@@@@@@@@@@@@@@
+    scene gengi
     "그렇게 입학식이 끝나고 집으로 가는 길에 들뜬 마음을 진정시키며 캠퍼스를 걷고 있었다."
     "갑자기 사람들이 모여서 환호하는 소리가 들려 발걸음을 멈췄다."
     "사람들이 모여 있는 쪽으로 다가가 보니, 무대 위에서 댄스 공연이 한창이었다."
@@ -891,7 +900,7 @@ label chapter_4:
     # 숙소 도착
     scene suk
     "숙소에 도착한 우리는 각자 짐을 풀고 잠시 휴식을 취했다."
-    $ b_love = 10000
+
 
     # C의 고백 이벤트 (C의 호감도가 높을 경우)
     if c_love > a_love and c_love > b_love:
@@ -1038,23 +1047,31 @@ label chapter_5:
     show b_base at right with dissolve
     b "사진 찍으면서 다들 즐길 수 있는 부스야!"
 
+    hide a_base
+    hide b_base
     # 선택: 연인과 함께 부스를 운영하기
     if a_cup == 1:
+        show a_base at left with dissolve
         "아린선배는 내 옆에서 웃으며 촬영을 돕는다."
         "사람들을 맞이하면서 함께 시간을 보내다 보니, 시간이 금방 지나갔다."
         "여자친구가 된 아린선배와 함께 하는 시간이 너무 즐거워, 나도 모르게 더 많은 사람들과 웃으며 대화했다."
+        hide a_base
         
             
     elif b_cup == 1:
+        show b_base at left with dissolve
         "서현는 내 옆에서 활발하게 손님들을 맞이하며 촬영을 도왔다."
         "자연스럽게 분위기가 밝아지며, 웃음소리가 끊이질 않았다."
         "서현과 함께 부스를 운영하며 우리는 점점 더 가까워지는 것 같았다."
+        hide b_base
 
     elif c_cup == 1:
+        show c_base at left with dissolve
         "서현은 차분하게 내 옆에서 촬영을 돕기 시작했다."
         "사람들 앞에 나서기보다는 뒤에서 꼼꼼하게 장비를 점검하며, 나를 세심히 도와주었다."
         "함께 대화를 나누며 조용히 시간을 보내는 동안, 평소에는 느끼지 못했던 서현의 따뜻한 면모를 알게 되었다."
         "그 순간만큼은 바쁜 부스 안에서도 두 사람만의 시간이 흐르는 것 같았다."
+        hide c_base
         
         
     else:
