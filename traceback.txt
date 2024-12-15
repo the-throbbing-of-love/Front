@@ -1,28 +1,48 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While running game code:
-  File "game/script.rpy", line 788, in script
-    if b_back == 1:
-  File "game/script.rpy", line 788, in <module>
-    if b_back == 1:
-NameError: name 'b_back' is not defined
+Compiling ATL code at game/script.rpy:885
+  File "game/script.rpy", line 884, in script
+    show b_backha at right with dissolve:
+  File "game/script.rpy", line 885, in <module>
+    size (0, 0)(1000,1100)
+TypeError: 'tuple' object is not callable
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 788, in script
-    if b_back == 1:
-  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/ast.py", line 1843, in execute
-    if renpy.python.py_eval(condition):
-  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/python.py", line 1209, in py_eval
+  File "game/script.rpy", line 884, in script
+    show b_backha at right with dissolve:
+  File "/Users/hyunho/Downloads/renpy-8.3.4-sdk/renpy/ast.py", line 1117, in execute
+    show_imspec(self.imspec, atl=getattr(self, "atl", None))
+  File "/Users/hyunho/Downloads/renpy-8.3.4-sdk/renpy/ast.py", line 1080, in show_imspec
+    renpy.config.show(name,
+  File "/Users/hyunho/Downloads/renpy-8.3.4-sdk/renpy/exports/displayexports.py", line 503, in show
+    sls.add(layer, img, key, zorder, behind, at_list=at_list, name=name, atl=atl, default_transform=default_transform, transient=transient)
+  File "/Users/hyunho/Downloads/renpy-8.3.4-sdk/renpy/display/scenelists.py", line 477, in add
+    thing.visit_all(lambda d : None)
+  File "/Users/hyunho/Downloads/renpy-8.3.4-sdk/renpy/display/displayable.py", line 424, in visit_all
+    for d in self.visit():
+  File "/Users/hyunho/Downloads/renpy-8.3.4-sdk/renpy/atl.py", line 816, in visit
+    block = self.compile()
+  File "/Users/hyunho/Downloads/renpy-8.3.4-sdk/renpy/atl.py", line 723, in compile
+    block = self.atl.compile(self.context)
+  File "/Users/hyunho/Downloads/renpy-8.3.4-sdk/renpy/atl.py", line 925, in compile
+    statements = [ i.compile(ctx) for i in self.statements ]
+  File "/Users/hyunho/Downloads/renpy-8.3.4-sdk/renpy/atl.py", line 925, in <listcomp>
+    statements = [ i.compile(ctx) for i in self.statements ]
+  File "/Users/hyunho/Downloads/renpy-8.3.4-sdk/renpy/atl.py", line 1267, in compile
+    value = ctx.eval(expr)
+  File "/Users/hyunho/Downloads/renpy-8.3.4-sdk/renpy/atl.py", line 387, in eval
+    return renpy.python.py_eval(expr, locals=self.context)
+  File "/Users/hyunho/Downloads/renpy-8.3.4-sdk/renpy/python.py", line 1209, in py_eval
     return py_eval_bytecode(code, globals, locals)
-  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/python.py", line 1202, in py_eval_bytecode
+  File "/Users/hyunho/Downloads/renpy-8.3.4-sdk/renpy/python.py", line 1202, in py_eval_bytecode
     return eval(bytecode, globals, locals)
-  File "game/script.rpy", line 788, in <module>
-    if b_back == 1:
-NameError: name 'b_back' is not defined
+  File "game/script.rpy", line 885, in <module>
+    size (0, 0)(1000,1100)
+TypeError: 'tuple' object is not callable
 
 macOS-15.1.1-arm64-arm-64bit arm64
-Ren'Py 8.3.2.24090902
+Ren'Py 8.3.4.24120703
  Beta
-Sat Dec 14 15:00:17 2024
+Sun Dec 15 20:40:17 2024

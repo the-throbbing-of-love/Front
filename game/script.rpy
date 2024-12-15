@@ -72,20 +72,36 @@
         xminimum 600  # 텍스트 박스 최소 너비
         yminimum 150  # 텍스트 박스 최소 높이
 
+
+
 # init python:
 #     import requests
+#     import json
 
-#     def send_to_raspberry_pi():
-#         url = 'http://10.150.151.164:5000'  # 서버의 GET 엔드포인트
+    # def send_to_raspberry_pi(round_id, page):
+    #     url = 'http://10.150.150.219:8000/heart/measurement'  # 서버의 POST 엔드포인트
+    #     data = {  # 요청 본문 데이터
+    #         'round_id': round_id,
+    #         'page': page
+    #     }
 
-#         try:
-#             response = requests.get(url)
-#             response.raise_for_status()  # HTTP 오류가 발생하면 예외 발생
-#             received_value = response.text  # 문자열로 응답 받기
-#             renpy.notify("서버에서 받은 값: " + received_value)
-#         except Exception as e:
-#             renpy.notify("서버에 연결할 수 없습니다.")
-#             renpy.error(str(e))
+    #     try:
+    #         # POST 요청 보내기
+    #         response = requests.post(url, data)
+    #         response.raise_for_status()  # HTTP 오류가 발생하면 예외 발생
+            
+    #         # 응답을 JSON 형식으로 파싱
+    #         received_value = response.json()  # JSON을 dict로 변환
+            
+    #         # dict를 문자열로 변환하여 출력
+            
+    #         return received_value
+    #     except requests.exceptions.JSONDecodeError:
+    #         renpy.notify("서버에서 JSON 응답을 받지 못했습니다.")
+    #     except Exception as e:
+    #         renpy.notify("서버에 연결할 수 없습니다.")
+    #         renpy.error(str(e))
+
 
 
 
@@ -112,6 +128,8 @@ default a_love = 0
 default b_love = 0
 default c_love = 0
 
+
+#커플 되었을때
 default a_cup = 0
 default b_cup = 0
 default c_cup = 0
@@ -122,7 +140,10 @@ default b_back = 0
 default danchan = 0
 default danhan = 0
 
+default round_id = 1
+default page = 1
 
+default test = None
 
 
 # 플레이어의 심박수 측정
@@ -158,7 +179,7 @@ image chdongnone = im.Scale("images/background/chdongnone.png",1920,1080)
 image booo = im.Scale("images/background/booo.png",1920,1080) 
 image photo_booth = im.Scale("images/background/photo_booth.png",1920,1080) 
 image dengi = im.Scale("images/background/dengi.png",1920,1080) 
-
+image dongC = im.Scale("images/background/dong_C.png",1920,1080) 
 
 
 
@@ -194,7 +215,7 @@ image b_sad = im.Scale("images/charater/b/b_sad.png", 1000, 1100)
 image b_shy = im.Scale("images/charater/b/b_shy.png",1000, 1100)
 image b_wak = im.Scale("images/charater/b/b_wak.png", 1000, 1100)
 image b_worr = im.Scale("images/charater/b/b_worr.png", 1000, 1100)
-image b_backha = im.Scale("images/charater/b/b_backha.png", 1000, 1100)
+image b_backha = im.Scale("images/charater/b/b_backha.png", 600, 900)
 
 
 
@@ -231,7 +252,7 @@ image gobackv2 = im.Scale("images/object/gobackv2.png", 560, 832)
 
 
 label start:
-    # $ send_to_raspberry_pi()
+    
     jump first_day
 # 1일차
 label first_day:
@@ -243,6 +264,7 @@ label first_day:
     s "이 게임은 사용자의 심박수의 증가&감소에따라 선택지가 달라지니 이 포인트를 잘 활용해서 플레이하시길 바랍니다."
 
     s "재밌게 플레이해주세요."
+    # $ test = send_to_raspberry_pi(round_id, page)
 
 
     # $ player_heart_rate = renpy.call_in_new_context("measure_heart_rate")  # 심박수 측정
@@ -251,6 +273,10 @@ label first_day:
     scene bg_school_event with dissolve
     "대학 입구에 도착하니, 웅장한 교문이 나를 맞이했다."
     "이곳에서 앞으로의 내 삶이 어떻게 바뀔지 상상하니 가슴이 두근거렸다."
+    # if [test['rising']] == True:
+    #     "나는 트루맨"
+    # else:
+    #     "나는 펄스"
     "새로운 시작에 대한 설렘과 약간의 두려움이 뒤섞인 복잡한 감정이 밀려왔다."
 
 
@@ -284,7 +310,7 @@ label first_day:
 
     # 첫 대화 선택지
     menu:
-        #증가
+        #표정이 좋으면
         "조금 둘러보고 있어요":
             show a_base at left with move
             "부스 구경 중이던 내게 선배가 친근하게 다가왔다."
@@ -304,7 +330,7 @@ label first_day:
                     a "좋아! 그럼 참가서 작성해줘. 잘 생각했어!"
                     "내가 참가서를 작성하는 동안 선배는 조언과 격려의 말을 아끼지 않았다."
                 
-        #감소
+        #표정이 안좋으면
         "네, 하지만 뭐가 좋을지 모르겠네요":
             "막연히 둘러보고 있던 내게 선배가 추천을 시작했다."
             a "음, 사진 동아리 어때? 여행도 가고 추억도 남길 수 있어."
@@ -358,8 +384,8 @@ label first_day:
             
             a "첫 모임은 다음 주 수요일 오후 6시! 장소는 동아리 방이니까 잊지 마!"
     # 집으로 가는 길
-    # 여기 사진넣기 @@@@@@@@@@@@@@@@@@@@@@@@@
-    scene gengi
+    # @@@@@@@@@@@@@@@@@@@@@@@@@
+    scene dengi
     "그렇게 입학식이 끝나고 집으로 가는 길에 들뜬 마음을 진정시키며 캠퍼스를 걷고 있었다."
     "갑자기 사람들이 모여서 환호하는 소리가 들려 발걸음을 멈췄다."
     "사람들이 모여 있는 쪽으로 다가가 보니, 무대 위에서 댄스 공연이 한창이었다."
@@ -396,9 +422,10 @@ label chapter_2:
     show b_base at right with dissolve
     b "안녕하세요! 혹시 여기가 사진 동아리 맞나요?"
     
-    "들어오는 나와 동시에 동기인 B가 반갑게 인사하며 동아리 방에 들어왔다."
+    "들어오는 나와 동시에 동기인 서현이가 반갑게 인사하며 동아리 방에 들어왔다."
     
     menu:
+        #심장박동 오르면
         "서현에게 친근하게 인사를 건넨다":
             "나 역시 그에게 가볍게 손을 흔들며 인사를 건넸다."
             $ b_love += 3
@@ -411,7 +438,7 @@ label chapter_2:
                     $ b_love += 2
                     b "저도요! 대학 생활에서 뭔가 멋진 경험을 하고 싶었거든요."
                     hide b_base
-        
+        #심장박동 내려가면
         "조용히 자리에 앉는다":
             $ b_love -= 2
             hide b_base
@@ -466,6 +493,7 @@ label chapter_2:
     "여러 선배들이 돌아가면서 자신들의 경험과 추억을 공유하며 분위기를 풀어주었다."
     
     menu:
+        #표정 좋으면
         "환영식에 집중한다":
             $ a_love += 1
             "선배들의 이야기를 들으며 사진 동아리가 얼마나 다양한 활동을 해왔는지 알 수 있었다."
@@ -477,7 +505,7 @@ label chapter_2:
                 "활동 계획에 대해 질문한다":
                     $ a_love += 2
                     a "좋은 질문이야! 다음 달에는 캠퍼스 사진 전시회를 열 계획이야."
-        
+        #표정 안좋으면
         "옆의 동급생들과 작은 얘기를 나눈다":
             $ a_love -= 1
             "옆에 앉은 동급생들과 가볍게 속삭이며 인사를 나누었다."
@@ -498,9 +526,11 @@ label chapter_2:
     hide a_base
     # C 동급생과의 만남
     "환영식이 끝난 후, 다른 동아리 멤버들이 자유롭게 이야기를 나누고 있었다."
-    "그때, 방 구석에서 혼자 앉아 있는 한 신입생이 눈에 띄었다. 그는 라는 동급생으로 보였고, 다른 사람들과 어울리지 않고 조용히 있는 모습이 조금 특이했다."
+    "그때, 방 구석에서 혼자 앉아 있는 한 신입생이 눈에 띄었다. 동급생으로 보였고, 다른 사람들과 어울리지 않고 조용히 있는 모습이 조금 특이했다."
     menu:
+        #심장박동이 오르면
         "???에게 다가가 인사를 건넨다":
+            scene dongC
             $ c_love += 5
             "나는 용기를 내어 그에게 다가가 인사를 건넸다."
             show c_lol
@@ -512,33 +542,37 @@ label chapter_2:
                     show c_worr
                     $ c_love += 2
                     c "솔직히 아직은 잘 모르겠어요. 그냥... 분위기를 느껴보고 싶었을 뿐이에요."
-                    "C의 대답은 마치 자신이 어떤 정체성을 찾고 있는 것처럼 느껴졌다."
+                    "서연의 대답은 마치 자신이 어떤 정체성을 찾고 있는 것처럼 느껴졌다."
                     hide c_worr
-                "C에게 카메라에 대해 물어본다":
+                    scene dongai
+                "서연에게 카메라에 대해 물어본다":
                     $ c_love += 1
                     c "아직 카메라는 잘 모르겠어요. 배워가며 생각해보려구요."
-                    "C는 약간의 호기심을 보이며 말을 이어갔다."
+                    "서연는 약간의 호기심을 보이며 말을 이어갔다."
                     hide c_lol
-        
+                    scene dongai
+        #심장박동이 내려가면
         "혼자 있게 내버려둔다":
             $ c_love -= 1
             "그가 혼자 있고 싶어 하는 것 같아서 굳이 다가가지 않고 멀리서 지켜보기로 했다."
             "그러나 그의 차분한 분위기와 시선이 계속 신경 쓰였다."
             menu:
-                "C에게 인사를 건네본다":
+                "서연에게 인사를 건네본다":
+                    scene dongC
                     show c_lol
                     $ c_love += 3
                     c "…아, 안녕하세요."
                     "그의 말투에는 어딘가 신비로운 분위기가 감돌았다."
                     "마치 평범하지않은 신입생같다."
                     hide c_lol
+                    scene dongai
                 "방을 조용히 둘러본다":
                     "나는 동아리 방의 분위기를 차분히 느끼며, 앞으로의 활동을 기대하기 시작했다."
                     $ c_love -= 1
     # A 또는 B 또는C와 마지막 대화
     "다들 집으로 돌아가기 전, 나는 용기를 내어 마지막 대화를 나누어 보기로 했다."
     menu:
-        "A에게 동아리 활동에 대해 자세히 물어본다":
+        "아린선배에게 동아리 활동에 대해 자세히 물어본다":
             $ a_love +=2
             "나는 그녀에게 동아리에 대해 자세히 물었다."
             show a_lol
@@ -575,74 +609,77 @@ label chapter_2:
             hide a_lol
                 
 
-        "B에게 친하게 지내자고 말해본다":
+        "서현에게 친하게 지내자고 말해본다":
             $ b_love += 3
-            "나는 용기를 내어 B에게 친하게 지내자고 말했다."
+            "나는 용기를 내어 서현에게 친하게 지내자고 말했다."
             show b_lol
             b "정말요? 좋아요! 저도 같은 생각이었어요."
-            "B는 환하게 웃으며 내 제안을 흔쾌히 받아들였다."
+            "서현는 환하게 웃으며 내 제안을 흔쾌히 받아들였다."
             b "아직 아는 사람이 많지 않아서 조금 어색했는데, 덕분에 마음이 놓이네요."
     
             menu:
-                "B에게 왜 사진 동아리에 가입했는지 묻는다":
-                    "나는 B에게 사진 동아리를 선택한 이유를 물었다."
+                "서현에게 왜 사진 동아리에 가입했는지 묻는다":
+                    "나는 서현에게 사진 동아리를 선택한 이유를 물었다."
                     b "저요? 사실 사진 찍는 건 초보예요."
                     b "근데 친구가 추천해줘서 시작했어요. 추억을 남길 수 있는 활동이 멋지다고 하더라고요."
-                    "B의 솔직한 대답에 나는 공감하며 고개를 끄덕였다."
+                    "서현의 솔직한 대답에 나는 공감하며 고개를 끄덕였다."
                 
-                "B에게 어떤 사진을 찍어보고 싶은지 묻는다":
-                    "나는 B에게 어떤 사진을 찍어보고 싶냐고 물었다."
+                "서현에게 어떤 사진을 찍어보고 싶은지 묻는다":
+                    "나는 서현에게 어떤 사진을 찍어보고 싶냐고 물었다."
                     b "음... 저는 풍경 사진을 찍어보고 싶어요."
                     b "평소 여행을 좋아하는데, 여행지의 멋진 순간을 사진으로 남기면 정말 특별할 것 같아요."
-                    "B의 대답에 나도 공감하며 여행 사진에 대한 기대를 나누었다."
+                    "서현의 대답에 나도 공감하며 여행 사진에 대한 기대를 나누었다."
                 
-                "B에게 학과나 취미를 물어본다":
-                    "나는 B에게 학과나 취미에 대해 물어보았다."
+                "서현에게 학과나 취미를 물어본다":
+                    "나는 서현에게 학과나 취미에 대해 물어보았다."
                     b "저는 문학과예요. 그래서인지 감정이나 분위기를 담는 사진이 매력적으로 느껴져요."
                     b "취미는 독서나 음악 듣기 정도? 심심한 편이에요."
                     "그의 소박한 취미가 왠지 정겹게 느껴졌다."
 
             b "우리 앞으로 자주 이야기해요! 같이 활동하면서 더 가까워질 수 있겠죠?"
-            "B와의 짧은 대화였지만, 우리는 빠르게 친해질 수 있을 거란 예감이 들었다."
+            "서현과의 짧은 대화였지만, 우리는 빠르게 친해질 수 있을 거란 예감이 들었다."
             hide b_lol
 
 
-        "C에게 다음 모임 때도 올 건지 물어본다":
+        "서연에게 다음 모임 때도 올 건지 물어본다":
+            scene dongC
             $ c_love +=3
-            "나는 조심스럽게 C에게 다음 모임 때도 올 계획이 있는지 물었다."
+            "나는 조심스럽게 서연에게 다음 모임 때도 올 계획이 있는지 물었다."
             show c_base
             c "다음 모임... 글쎄요."
-            "C는 잠시 생각에 잠긴 듯한 표정을 지었다."
+            "서연는 잠시 생각에 잠긴 듯한 표정을 지었다."
             c "사실 아직 잘 모르겠어요. 이런 모임이 제게 맞을지는 확신이 안 서서요."
             menu:
-                "C에게 동아리 활동의 재미를 이야기해본다":
-                    "나는 C에게 동아리 활동이 얼마나 재미있을 수 있는지 말해보았다."
+                "서연에게 동아리 활동의 재미를 이야기해본다":
+                    "나는 서연에게 동아리 활동이 얼마나 재미있을 수 있는지 말해보았다."
                     "사진을 통해 추억을 남기고, 새로운 사람들과 함께하는 것이 얼마나 즐거운지 이야기했다."
                     c "음... 듣고 보니 꽤 흥미롭네요."
                     c "저도 한 번 제대로 참여해봐야겠어요. 다음 모임엔 다시 와볼게요."
                     hide c_base
                     show c_cute
-                    "C의 대답에 안도하며 미소 지었다."
+                    "서연의 대답에 안도하며 미소 지었다."
                     hide c_cute
 
-                "C에게 동아리 외의 관심사에 대해 물어본다":
-                    "나는 C에게 사진 동아리 외에 관심 있는 것이 있는지 물었다."
+                "서연에게 동아리 외의 관심사에 대해 물어본다":
+                    "나는 서연에게 사진 동아리 외에 관심 있는 것이 있는지 물었다."
                     c "사진이 아니라면... 음, 별로 없어요."
                     c "그냥 혼자서 생각하거나 책 읽는 걸 좋아해요. 사람 많은 곳은 별로 안 좋아하는 편이고요."
-                    "C는 말을 하면서도 약간 망설이는 듯 보였다."
+                    "서연는 말을 하면서도 약간 망설이는 듯 보였다."
                     "그의 말에서 혼자만의 시간을 즐기는 사람이란 걸 느낄 수 있었다."
                     hide c_base
+                    scene dongai
                     
-                "C의 모호한 태도에 대해 솔직히 묻는다":
-                    "나는 C에게 그의 모호한 태도가 궁금하다고 솔직히 물었다."
+                "서연의 모호한 태도에 대해 솔직히 묻는다":
+                    "나는 서연에게 그의 모호한 태도가 궁금하다고 솔직히 물었다."
                     hide c_base
                     show c_lol
                     c "제가요? 그냥... 아직 익숙하지 않아서 그래요."
                     c "새로운 환경에서 너무 쉽게 나서는 게 어색하달까요. 아직 적응 중이에요."
-                    "C는 진솔하게 자신의 마음을 표현했다."
+                    "서연는 진솔하게 자신의 마음을 표현했다."
                     c "하지만 [pn] 같은 사람이 있다면 더 쉽게 적응할 수 있을지도 모르겠네요."
                     hide c_lol
-            "C는 내 질문에 담담하게 답하며 조금씩 마음을 열어가는 듯 보였다."
+                    scene dongai
+            "서연는 내 질문에 담담하게 답하며 조금씩 마음을 열어가는 듯 보였다."
             "그와의 대화는 짧았지만, 다음 모임에서 또 볼 수 있을 거란 희망이 생겼다."
 
         
@@ -847,9 +884,12 @@ label chapter_4:
     a "곧 정상이야 조금만 더 힘내!"
     
     if b_back == 1:
-        show b_backha at right with dissolve
+        show b_backha at right with dissolve:
+            size (900,1100)
+            yalign -1.0
     else:
         show b_base at right with dissolve
+            
     b "얼른 올라가서 쉬자 ㅠㅠ"
     if b_back == 1:
         hide b_backha 

@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 1056: expected statement.
-    "모두 거절하고 혼자서 촬영 부스를 운영한다":
-                             ^
+File "game/script.rpy", line 146: expected '=' not found.
+    default test
+                ^
 
-Ren'Py Version: Ren'Py 8.3.2.24090902
-Sat Dec 14 16:51:28 2024
+Ren'Py Version: Ren'Py 8.3.4.24120703
+Sun Dec 15 19:43:06 2024
