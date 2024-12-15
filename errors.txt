@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/screens.rpy", line 316: 'else' is not a keyword argument or valid child of the vbox statement.
-    else:
-        ^
+File "game/script.rpy", line 1056: expected statement.
+    "모두 거절하고 혼자서 촬영 부스를 운영한다":
+                             ^
 
 Ren'Py Version: Ren'Py 8.3.2.24090902
-Thu Dec 12 23:56:11 2024
+Sat Dec 14 16:51:28 2024
