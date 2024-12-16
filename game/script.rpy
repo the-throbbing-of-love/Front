@@ -258,7 +258,6 @@ label start:
 label first_day:
     
     scene black
-
     #영상 있으면 만들기
     scene black
     s "이 게임은 사용자의 심박수의 증가&감소에따라 선택지가 달라지니 이 포인트를 잘 활용해서 플레이하시길 바랍니다."
@@ -271,6 +270,8 @@ label first_day:
 
     # Chapter 1: 입학식
     scene bg_school_event with dissolve
+    play music "audio/bgm/base_music.mp3"
+
     "대학 입구에 도착하니, 웅장한 교문이 나를 맞이했다."
     "이곳에서 앞으로의 내 삶이 어떻게 바뀔지 상상하니 가슴이 두근거렸다."
     # if [test['rising']] == True:
@@ -387,11 +388,12 @@ label first_day:
     # @@@@@@@@@@@@@@@@@@@@@@@@@
     scene dengi
     "그렇게 입학식이 끝나고 집으로 가는 길에 들뜬 마음을 진정시키며 캠퍼스를 걷고 있었다."
+    play sound "audio/sound/CheerSound.mp3"
     "갑자기 사람들이 모여서 환호하는 소리가 들려 발걸음을 멈췄다."
     "사람들이 모여 있는 쪽으로 다가가 보니, 무대 위에서 댄스 공연이 한창이었다."
     "화려한 춤과 함께 무대를 채운 그들 중에서도 유독 눈에 띄는 선배가 있었다."
     
-    scene muda
+    scene muda 
     "그녀는 강렬한 눈빛으로 무대를 지배하며, 멋진 춤 동작을 선보이고 있었다."
     "나는 그 선배가 자꾸만 눈에 들어와 공연이 끝날 때까지 시선을 떼지 못했다."
     
@@ -402,20 +404,25 @@ label first_day:
     
     "동아리 장이자, 그 화려한 무대 위의 주인공… 뭔가 묘하게 가슴이 두근거렸다."
     "이제 다음 주 첫 모임이 더욱 기다려지는 걸 느끼며, 나는 집으로 향했다."
+    stop music
     scene black
     "..."
     ".."
     "."
+
     jump chapter_2
 
 # Chapter 2: 첫 동아리 모임
 label chapter_2:
     "다음날이 되었다"
+    play music "audio/bgm/base2_music.mp3"
     scene hclass
     "학교에 모든 수업이 끝나고 동아리 모임으로 향했다"
     scene class
     "동아리 앞에 도착했다."
     scene dongai
+    play sound "audio/sound/DoorOpen.mp3"
+    
     "드디어 사진 동아리의 첫 모임 날이 되었다. 동아리 방에 들어서자 여러 신입생과 선배들이 모여 있었다."
     
     # B 등장
@@ -685,7 +692,7 @@ label chapter_2:
         
     "그녀와의 대화가 끝나고, 나는 복잡한 마음으로 동아리 방을 떠났다."
     "모든 것이 새롭고 설레는 대학 생활 속에서, 앞으로 어떤 이야기가 펼쳐질지 기대가 되는 마음으로 집으로 향했다."
-
+    stop music
     scene black
     "..."
     ".."
@@ -699,6 +706,7 @@ label chapter_2:
 label day_3:
     "다음날이 되었다"
     scene hclass
+    play music "audio/bgm/base3_music.mp3"
     "학교에 모든 수업이 끝나고 동아리 모임으로 향했다"
     
     # 동아리 모임 시작
@@ -711,6 +719,7 @@ label day_3:
     scene camera1
     "나는 멤버들과 함께 사진 촬영 준비를 했다. 카메라 앞에 서니 조금 긴장이 되었다."
     scene white
+    play sound "audio/sound/Storytelling.mp3"
     "찰칵! 카메라 셔터 소리와 함께 모두의 얼굴이 사진으로 남았다."
     scene dongai
     # 동아리 여행 공지
@@ -734,6 +743,7 @@ label day_3:
             $ a_love += 2
             a "좋아! 그럼 내일 백화점에서 만나자!"
             hide a_base 
+            stop music
             jump a_date_shopping
 
         "제안을 거절한다":
@@ -741,12 +751,14 @@ label day_3:
             a "아쉽지만 어쩔 수 없지. 그래도 준비 잘 해!"
             hide a_base 
             $ a_love -= 2
+            stop music
             jump b_encounter
 
 label a_date_shopping:
     # A와 쇼핑
     scene black
     "다음 날, 나는 선배와 함께 백화점으로 갔다."
+    play music "audio/bgm/departmentstore.mp3"
     scene backha
     show a_base
     a "여기 정말 크다! 뭐부터 볼까?"
@@ -775,7 +787,9 @@ label a_date_shopping:
     jump day_3_end
 
 label b_encounter:
+    stop music
     scene haha
+    play music "audio/bgm/alley.mp3"
     # B와의 우연한 만남
     "오늘의 일과를 끝내고"
     "하교 도중, 나는 우연히 서현과 마주쳤다."
@@ -801,9 +815,11 @@ label b_encounter:
 
 label b_date_shopping:
     # B와 쇼핑
+    stop music
     scene black
     "나는 서현과 함께 백화점으로 향했다."
     scene backha
+    play music "audio/bgm/Bdepartmentstore.mp3"
     b "와, 여기는 언제 와도 신기해! 뭐부터 볼까?"
     "우리는 함께 여러 매장을 돌아다니며 쇼핑을 즐겼다."
     
@@ -828,7 +844,9 @@ label b_date_shopping:
 
 label c_observation:
     # C의 관찰 이벤트
+    stop music
     scene hidehaha 
+    play music "audio/bgm/C_alley"
     $ c_love += 5
     "나는 혼자 집으로 가는 길에 익숙한 시선을 느꼈다."
     "앞을 자세히보니, 멀리서 서연이 조용히 나를 지켜보고 있었다."
@@ -840,6 +858,7 @@ label c_observation:
 
 label day_3_end:
     "그렇게 동아리 모임이 끝난 하루가 저물어갔다."
+    stop music
     scene black
     "점점 더 흥미로운 일들이 일어날 것만 같았다."
     "이런저런 생각끝에 잠에 들었다."
@@ -854,6 +873,7 @@ label day_3_end:
 label chapter_4:
     "다음 주가 되었다"
     # 여행 시작
+    play music  "audio/bgm/travel.mp3"
     "오늘은 동아리 여행 날! 동아리 멤버들과 함께 봉고차에 탑승하여, 자연이 아름답기로 유명한 산으로 향했다."
     scene mount
     show bongo at left:
@@ -863,6 +883,7 @@ label chapter_4:
 
     # 대여한 봉고차
     "차가 산을 향해 달리는 동안 창밖으로 펼쳐지는 풍경이 아름다웠다."
+    play sound "audio/sound/Car.mp3"
     show bongo:
         linear 4.0 xalign 1.0 
     "모두가 기분 좋게 웃으며 대화를 나누고 있었다."
@@ -870,6 +891,8 @@ label chapter_4:
     
     # 산에 도착
     hide bongo
+    stop music
+    play music "audio/bgm/Nature.mp3"
     scene realmount
     "도착한 산은 정말 아름다웠다. 푸른 숲과 맑은 공기가 나를 맞이했다."
     "우리는 다같이 산 정상으로 올라가기로 했다."
@@ -901,14 +924,17 @@ label chapter_4:
     else:
         hide a_base
     # 정상에서 단체 사진
-    
+    stop music 
     scene highmount
+    
     "우리는 마침내 산 정상에 도달했다."
+    play music "audio/bgm/down.mp3"
     "탁 트인 풍경과 함께 우리는 기념사진을 찍자는 분위기였다."
     
     menu:
         "단체사진을 찍는다":
             "모두 사진찍을 준비를 했다."
+            play sound "audio/sound/Storytelling.mp3"
             "찰칵 소리가 들렸다"
             scene white
             "단체 사진이 정말 마음에 들었다. 모두 함께 웃는 모습이 참 보기 좋았다."
@@ -920,6 +946,7 @@ label chapter_4:
             $ a_love -= 3
             $ b_love -= 2
             $ c_love += 3
+            play sound "audio/sound/Storytelling.mp3"
             "내가 찍은 셀카가 잘 나온 것 같아 뿌듯해했다."
             "사진을 찍고 모두 기분 좋게 정상에서 내려왔다."
             
@@ -939,12 +966,16 @@ label chapter_4:
 
     # 숙소 도착
     scene suk
+    
     "숙소에 도착한 우리는 각자 짐을 풀고 잠시 휴식을 취했다."
+    stop music
+    
 
 
     # C의 고백 이벤트 (C의 호감도가 높을 경우)
     if c_love > a_love and c_love > b_love:
         c "잠깐, 나랑 얘기 좀 할래?"
+        play music "audio/bgm/c_music.mp3"
         "서연은 나를 조용히 불러 숙소 앞에서 나와 이야기를 나누었다."
         scene gii
         show c_shy
@@ -964,6 +995,7 @@ label chapter_4:
             "서연의 고백을 거절한다":
                 $ c_love -= 999
                 "나는 서연의 고백을 정중히 거절했다."
+                stop music
                 hide c_shy
                 show c_sad
                 c "알겠어, 네가 부담되지 않게 해줄게."
@@ -974,6 +1006,7 @@ label chapter_4:
     elif a_love > b_love and a_love > c_love:
         a "잠깐 나와줄래? 숙소 앞에서 이야기하고 싶은 게 있어."
         "아린은 나를 숙소 앞에 불러 조용히 말했다."
+        play music "audio/bgm/a_music.mp3"
         scene sukfront
         show a_shy
         a "사실 내가 네게 마음이 있었어. 우리가 동아리에서 친해지면서, 점점 네가 좋아졌어."
@@ -987,6 +1020,8 @@ label chapter_4:
 
             "아린의 고백을 거절한다":
                 hide a_shy
+                $ a_love -= 999
+                stop music
                 "나는 아린의 고백을 거절했다."
                 show a_sad
                 a "알겠어. 부담 가지지 말고, 그래도 좋은 선후배로 계속 지내자!"
@@ -995,6 +1030,7 @@ label chapter_4:
     # B의 고백 이벤트 (B의 호감도가 높을 경우)
     elif b_love > a_love and b_love > c_love:
         scene macdow
+        play music "audio/bgm/b_music.mp3"
         show goback1:
             align (0.5, 0.2)
         b "나 오늘... 너에게 할 말이 있어."
@@ -1028,8 +1064,10 @@ label chapter_4:
                 hide goback4
                 show gobackv2:
                     align (0.5, 0.2)
+                stop music
                 "나는 서현의 고백을 거절했다."
                 hide gobackv2
+                $ b_love -= 9999
                 show gobacklose:
                     align (0.5, 0.2)
                 b "알겠어. 그래도 계속 친구로 잘 지내자"
@@ -1037,6 +1075,7 @@ label chapter_4:
                 hide gobacklose
 
     # 샤워 후 잠
+    stop music
     scene black
     "저녁이 되고, 우리는 각자 샤워를 하고 잠을 자러 갔다."
     "하루의 피로를 풀고, 곧 잠이 들었다."
@@ -1044,6 +1083,7 @@ label chapter_4:
 
     # 아침 일어남
     "다음 날 아침, 봉고차를 타고 학교로 돌아오는 길이었다."
+    play music "audio/bgm/base4_music.mp3"
     "여행의 피로도 남아있지만, 마음은 한층 더 가까워진 동아리 멤버들과 함께여서 기뻤다."
 
     # 축제 설명
@@ -1054,6 +1094,7 @@ label chapter_4:
     b "더 많은 사람들과 소통할 수 있을 것 같아서 좋아요!"
     
     # 해산
+    stop music
     scene black
     "그렇게 각자는 집으로 돌아가게 되었다. 동아리 여행은 끝이 나고, 축제를 맞이할 준비를 했다."
     "..."
@@ -1070,8 +1111,9 @@ label chapter_4:
 label chapter_5:
     "다음날이 되었다"
     "오늘은 드디어 기다리던 축제날이다"
+    play music "audio/bgm/festival.mp3"
     "기대감을 갖고 학교로 출발했다."
-    
+
     # 학교에서 축제 준비
     
     "축제 준비가 한창이다. 학교의 각 부스에서 다양한 활동을 준비하고, 교정은 점점 축제 분위기로 물들어갔다."
@@ -1127,6 +1169,7 @@ label chapter_5:
     b "김치!"
     c "ㄱ,김치"
     scene white
+    play sound "audio/sound/Storytelling.mp3"
     "찰칵"
     "촬영을 마친 후, 사진을 보며 그동안의 추억이 떠올랐다. 부스에서 웃고 떠들던 시간, 그리고 동아리 친구들과의 따뜻한 순간들이 떠오른다."
 
@@ -1144,4 +1187,4 @@ label chapter_5:
     # END
     "오늘의 축제도 끝이 나고, 나는 다시 일상으로 돌아갔다."
     "하지만 그 날의 추억은 항상 내 마음 속에 남아 있을 것이다."
-    
+    stop music

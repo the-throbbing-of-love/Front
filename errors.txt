@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 146: expected '=' not found.
-    default test
-                ^
+File "game/script.rpy", line 710: play requires a file
+    play music
+              ^
 
 Ren'Py Version: Ren'Py 8.3.4.24120703
-Sun Dec 15 19:43:06 2024
+Mon Dec 16 17:29:18 2024
