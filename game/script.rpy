@@ -7,8 +7,8 @@
         size (0.5, 0.5)  # 너비 500px, 세로는 화면 크기의 20%로 설정
         xpos 0.5  # 화면 가로 중앙
         text_align 3.5
-        padding (410, 20) 
-        ypos 1.13  # 화면 아래쪽
+        padding (410, 10) 
+        ypos 1.14  # 화면 아래쪽
         xanchor 0.5  # 기준점을 중앙으로 설정
         yanchor 0.5  # 기준점을 중앙으로 설정
         xminimum 600  # 텍스트 박스 최소 너비
@@ -33,8 +33,8 @@
         size (0.5, 0.5)  # 너비 500px, 세로는 화면 크기의 20%로 설정
         xpos 0.5  # 화면 가로 중앙
         text_align 3.5
-        padding (410, 20) 
-        ypos 1.13  # 화면 아래쪽
+        padding (410, 10) 
+        ypos 1.14  # 화면 아래쪽
         xanchor 0.5  # 기준점을 중앙으로 설정
         yanchor 0.5  # 기준점을 중앙으로 설정
         xminimum 600  # 텍스트 박스 최소 너비
@@ -49,8 +49,8 @@
         size (0.5, 0.5)  # 너비 500px, 세로는 화면 크기의 20%로 설정
         xpos 0.5  # 화면 가로 중앙
         text_align 3.5
-        padding (410, 20) 
-        ypos 1.13  # 화면 아래쪽
+        padding (410, 10) 
+        ypos 1.14  # 화면 아래쪽
         xanchor 0.5  # 기준점을 중앙으로 설정
         yanchor 0.5  # 기준점을 중앙으로 설정
         xminimum 600  # 텍스트 박스 최소 너비
@@ -66,7 +66,7 @@
         xpos 0.5  # 화면 가로 중앙
         text_align 3.5
         padding (410, 20) 
-        ypos 1.13  # 화면 아래쪽
+        ypos 1.14  # 화면 아래쪽
         xanchor 0.5  # 기준점을 중앙으로 설정
         yanchor 0.5  # 기준점을 중앙으로 설정
         xminimum 600  # 텍스트 박스 최소 너비
@@ -286,7 +286,8 @@ label first_day:
     "신입생인 나는 새로 시작하는 대학 생활에 설레기도 하고, 한편으론 낯선 분위기에 긴장도 되었다."
     
     # 친구 등장
-    show friend at Transform(xalign=0.8, yalign=0.5) with dissolve
+    show friend at Transform(xalign=0.8, yalign=0.5) with dissolve:
+        yalign 1.0
 
     friend "야, 무슨 동아리 들어갈 거야? 부스들 보니까 진짜 다양하더라."
     
@@ -404,7 +405,7 @@ label first_day:
     
     "동아리 장이자, 그 화려한 무대 위의 주인공… 뭔가 묘하게 가슴이 두근거렸다."
     "이제 다음 주 첫 모임이 더욱 기다려지는 걸 느끼며, 나는 집으로 향했다."
-    stop music
+    stop music fadeout 2.5
     scene black
     "..."
     ".."
@@ -692,7 +693,7 @@ label chapter_2:
         
     "그녀와의 대화가 끝나고, 나는 복잡한 마음으로 동아리 방을 떠났다."
     "모든 것이 새롭고 설레는 대학 생활 속에서, 앞으로 어떤 이야기가 펼쳐질지 기대가 되는 마음으로 집으로 향했다."
-    stop music
+    stop music fadeout 2.5
     scene black
     "..."
     ".."
@@ -743,7 +744,7 @@ label day_3:
             $ a_love += 2
             a "좋아! 그럼 내일 백화점에서 만나자!"
             hide a_base 
-            stop music
+            stop music fadeout 2.5
             jump a_date_shopping
 
         "제안을 거절한다":
@@ -751,7 +752,7 @@ label day_3:
             a "아쉽지만 어쩔 수 없지. 그래도 준비 잘 해!"
             hide a_base 
             $ a_love -= 2
-            stop music
+            stop music fadeout 2.5
             jump b_encounter
 
 label a_date_shopping:
@@ -776,7 +777,7 @@ label a_date_shopping:
             "나는 선배에게 어울릴 것 같은 옷을 추천했다."
             a "이거? 한번 입어볼게!"
             hide a_base
-            "A가 옷을 갈아입고 나오자, 마치 모델처럼 눈길을 끌었다."
+            "아린선배가 옷을 갈아입고 나오자, 마치 모델처럼 눈길을 끌었다."
             show a_backha at center
             a "어때? 괜찮아?"
             "나는 고개를 끄덕이며 칭찬했다."
@@ -787,7 +788,7 @@ label a_date_shopping:
     jump day_3_end
 
 label b_encounter:
-    stop music
+    stop music fadeout 2.5
     scene haha
     play music "audio/bgm/alley.mp3"
     # B와의 우연한 만남
@@ -815,7 +816,7 @@ label b_encounter:
 
 label b_date_shopping:
     # B와 쇼핑
-    stop music
+    stop music fadeout 2.5
     scene black
     "나는 서현과 함께 백화점으로 향했다."
     scene backha
@@ -844,7 +845,7 @@ label b_date_shopping:
 
 label c_observation:
     # C의 관찰 이벤트
-    stop music
+    stop music fadeout 2.5
     scene hidehaha 
     play music "audio/bgm/C_alley"
     $ c_love += 5
@@ -858,7 +859,7 @@ label c_observation:
 
 label day_3_end:
     "그렇게 동아리 모임이 끝난 하루가 저물어갔다."
-    stop music
+    stop music fadeout 2.5
     scene black
     "점점 더 흥미로운 일들이 일어날 것만 같았다."
     "이런저런 생각끝에 잠에 들었다."
@@ -891,7 +892,7 @@ label chapter_4:
     
     # 산에 도착
     hide bongo
-    stop music
+    stop music fadeout 2.5
     play music "audio/bgm/Nature.mp3"
     scene realmount
     "도착한 산은 정말 아름다웠다. 푸른 숲과 맑은 공기가 나를 맞이했다."
@@ -924,7 +925,7 @@ label chapter_4:
     else:
         hide a_base
     # 정상에서 단체 사진
-    stop music 
+    stop music fadeout 2.5
     scene highmount
     
     "우리는 마침내 산 정상에 도달했다."
@@ -968,7 +969,7 @@ label chapter_4:
     scene suk
     
     "숙소에 도착한 우리는 각자 짐을 풀고 잠시 휴식을 취했다."
-    stop music
+    stop music fadeout 2.5
     
 
 
@@ -1073,9 +1074,12 @@ label chapter_4:
                 b "알겠어. 그래도 계속 친구로 잘 지내자"
                 "서현은 내 거절을 아쉬워했다."
                 hide gobacklose
+    else:
+        "아무 일이 일어나지않고"
+        "서로 즐겁게 떠들며 해는 저물어갔다."
 
     # 샤워 후 잠
-    stop music
+    stop music fadeout 2.5
     scene black
     "저녁이 되고, 우리는 각자 샤워를 하고 잠을 자러 갔다."
     "하루의 피로를 풀고, 곧 잠이 들었다."
@@ -1094,7 +1098,7 @@ label chapter_4:
     b "더 많은 사람들과 소통할 수 있을 것 같아서 좋아요!"
     
     # 해산
-    stop music
+    stop music fadeout 2.5
     scene black
     "그렇게 각자는 집으로 돌아가게 되었다. 동아리 여행은 끝이 나고, 축제를 맞이할 준비를 했다."
     "..."
@@ -1187,4 +1191,4 @@ label chapter_5:
     # END
     "오늘의 축제도 끝이 나고, 나는 다시 일상으로 돌아갔다."
     "하지만 그 날의 추억은 항상 내 마음 속에 남아 있을 것이다."
-    stop music
+    stop music fadeout 2.5
