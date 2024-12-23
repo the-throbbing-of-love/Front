@@ -74,35 +74,113 @@
 
 
 
-# init python:
-#     import requests
-#     import json
+init python:
+    import requests
+    import json
 
-    # def send_to_raspberry_pi(round_id, page):
-    #     url = 'http://10.150.150.219:8000/heart/measurement'  # 서버의 POST 엔드포인트
-    #     data = {  # 요청 본문 데이터
-    #         'round_id': round_id,
-    #         'page': page
-    #     }
+    def send_to_raspberry_pi(new_round_number, scene):
+        url = 'http://10.150.150.219:8000/heart/measurement'  # 서버의 POST 엔드포인트
+        data = {  # 요청 본문 데이터
+            'round_id': new_round_number,
+            'page': scene
+        }
 
-    #     try:
-    #         # POST 요청 보내기
-    #         response = requests.post(url, data)
-    #         response.raise_for_status()  # HTTP 오류가 발생하면 예외 발생
+        try:
+            # POST 요청 보내기
+            response = requests.post(url, data)
+            response.raise_for_status()  # HTTP 오류가 발생하면 예외 발생
             
-    #         # 응답을 JSON 형식으로 파싱
-    #         received_value = response.json()  # JSON을 dict로 변환
+            # 응답을 JSON 형식으로 파싱
+            received_value = response.json()  # JSON을 dict로 변환
             
-    #         # dict를 문자열로 변환하여 출력
+            # dict를 문자열로 변환하여 출력
             
-    #         return received_value
-    #     except requests.exceptions.JSONDecodeError:
-    #         renpy.notify("서버에서 JSON 응답을 받지 못했습니다.")
-    #     except Exception as e:
-    #         renpy.notify("서버에 연결할 수 없습니다.")
-    #         renpy.error(str(e))
+            return received_value
+        except requests.exceptions.JSONDecodeError:
+            renpy.notify("서버에서 JSON 응답을 받지 못했습니다.")
+        except Exception as e:
+            renpy.notify("서버에 연결할 수 없습니다.")
+            renpy.error(str(e))
 
 
+
+init python:
+    import requests
+    import json
+
+    def create_new_round():
+        url = 'http://10.150.150.219:8000/round/new-round'  # API URL
+
+        try:
+            # POST 요청
+            response = requests.post(url)
+            response.raise_for_status()
+
+            # 응답 처리
+            response_data = response.json()
+            new_round = response_data.get("new-round")  # 'new-round' 키만 추출
+
+            if new_round is not None:
+                return {"success": True, "new_round": new_round}
+            else:
+                return {"success": False, "error": "응답에 회차 정보가 없습니다."}
+
+        except requests.exceptions.RequestException as e:
+            # 네트워크 오류 처리
+            return {"success": False, "error": f"서버 연결 실패: {str(e)}"}
+        except json.JSONDecodeError:
+            # JSON 디코딩 오류
+            return {"success": False, "error": "유효하지 않은 JSON 응답"}
+        except Exception as e:
+            # 기타 오류
+            return {"success": False, "error": f"알 수 없는 오류: {str(e)}"}
+
+
+init python:
+    import requests
+    import json
+    import base64
+
+    def get_photo(new_round_number, scene):
+        """
+        사진을 불러오는 API 호출 함수
+        """
+        url = f"http://10.150.150.219:8000/history/photo/?scene={scene}&round_id={new_round_number}"  # 실제 API URL로 변경
+
+        try:
+            # GET 요청 보내기
+            response = requests.get(url)
+            response.raise_for_status()  # HTTP 오류 발생 시 예외 발생
+
+            # 응답 데이터 처리
+            response_data = response.json()
+
+            if response_data.get("status") == 200:
+                # base_img 데이터를 디코딩하여 이미지로 저장 가능
+                base_img = response_data.get("base_img")
+                if base_img:
+                    with open("game/images/photo.jpg", "wb") as img_file:
+                        img_file.write(base64.b64decode(base_img))
+                    return {"success": True, "image_path": "images/photo.jpg"}
+                else:
+                    return {"success": False, "error": "이미지 데이터가 없습니다."}
+
+            elif response_data.get("status") == 500:
+                error_message = response_data.get("error", "알 수 없는 오류")
+                return {"success": False, "error": error_message}
+
+            else:
+                return {"success": False, "error": "예상치 못한 응답 상태입니다."}
+
+        except requests.exceptions.RequestException as e:
+            # 네트워크 오류 처리
+            return {"success": False, "error": f"서버 연결 실패: {str(e)}"}
+        except json.JSONDecodeError:
+            # JSON 디코딩 오류 처리
+            return {"success": False, "error": "유효하지 않은 JSON 응답입니다."}
+        except Exception as e:
+            # 기타 오류 처리
+            return {"success": False, "error": f"알 수 없는 오류: {str(e)}"}
 
 
 #트랜스펌
@@ -144,6 +222,13 @@ default round_id = 1
 default page = 1
 
 default test = None
+default game_start = None
+default api_url = None
+default payload = None
+default new_round_number = None
+default comeimg = None
+default scene = None 
+default capephoto = None
 
 
 # 플레이어의 심박수 측정
@@ -191,7 +276,7 @@ define a = Character('윤아린', color="#AD9480", namebox_style="name_base" ,wi
 define b = Character('이서현', color="#E9ADFF", namebox_style="name_base" ,window_style="b_textbox", what_color="#000000", what_style="what_base") #동급생 츤데레 여학생
 define c = Character('박서연', color="#2F3364", namebox_style="name_base" ,window_style="c_textbox", what_color="#000000", what_style="what_base") #동급생 신비주의 여학생
 define s = Character('시스템') #힌트&설명
-define friend = Character('학동운', namebox_style="name_base" ,window_style="base_textbox", what_color="#000000", what_style="what_base") #연인관계의 도움친구
+define friend = Character('윤동운', namebox_style="name_base" ,window_style="base_textbox", what_color="#000000", what_style="what_base") #연인관계의 도움친구
 define pn = ""
 define q = Character('???', namebox_style="name_base" ,window_style="base_textbox", what_color="#000000", what_style="what_base") #첫 등장
 define camera_senior = Character('김민주', namebox_style="name_base" ,window_style="base_textbox", what_color="#000000", what_style="what_base")
@@ -249,6 +334,22 @@ image goback = im.Scale("images/object/goback.png", 560, 832)
 image gobackwin = im.Scale("images/object/gobackwin.png", 560, 832)
 image gobacklose = im.Scale("images/object/gobacklose.png", 560, 832)
 image gobackv2 = im.Scale("images/object/gobackv2.png", 560, 832)
+image page1 = im.Scale("images/object/page1.png", 1080, 632)
+image page2 = im.Scale("images/object/page2.png", 560, 832)
+image page3 = im.Scale("images/object/page3.png", 560, 832)
+image page4 = im.Scale("images/object/page4.png", 560, 832)
+image page5 = im.Scale("images/object/page5.png", 560, 832)
+image page6 = im.Scale("images/object/page6.png", 560, 832)
+
+
+label open_camera_page:
+    # Python 코드에서 웹 브라우저 열기
+    python:
+        import webbrowser
+        # 서버의 /camera 경로를 호출
+        webbrowser.open("http://10.150.150.219:8000/camera")
+    
+    return
 
 
 label start:
@@ -256,28 +357,34 @@ label start:
     jump first_day
 # 1일차
 label first_day:
-    
+    $ scene = 1
     scene black
     #영상 있으면 만들기
     scene black
     s "이 게임은 사용자의 심박수의 증가&감소에따라 선택지가 달라지니 이 포인트를 잘 활용해서 플레이하시길 바랍니다."
-
+    show page1 at center
     s "재밌게 플레이해주세요."
-    # $ test = send_to_raspberry_pi(round_id, page)
-
-
-    # $ player_heart_rate = renpy.call_in_new_context("measure_heart_rate")  # 심박수 측정
-
+    $ game_start = create_new_round() #라운드 불러오기
     # Chapter 1: 입학식
+    $ new_round_number = game_start['new_round'] #라운드 값 함수에 저장
+    "[new_round_number]번쨰 회차가 생성되었습니다"
     scene bg_school_event with dissolve
     play music "audio/bgm/base_music.mp3"
-
+    # call open_camera_page #카메라 불러오기
     "대학 입구에 도착하니, 웅장한 교문이 나를 맞이했다."
-    "이곳에서 앞으로의 내 삶이 어떻게 바뀔지 상상하니 가슴이 두근거렸다."
-    # if [test['rising']] == True:
-    #     "나는 트루맨"
+    $ comeimg = get_photo(new_round_number, scene)
+    # $ test = send_to_raspberry_pi(round_id, page) # 심박수 측정 호출
+    # $ capephoto = get_photo(new_round_number, scene)
+
+    # if capephoto["success"]:
+    #     # 이미지 표시
+    #     show image capephoto["image_path"]
+    #     "사진이 성공적으로 불러와졌습니다!"
     # else:
-    #     "나는 펄스"
+    #     # 오류 메시지 출력
+    #     "오류: [capephoto['error']]"
+    
+    "이곳에서 앞으로의 내 삶이 어떻게 바뀔지 상상하니 가슴이 두근거렸다."
     "새로운 시작에 대한 설렘과 약간의 두려움이 뒤섞인 복잡한 감정이 밀려왔다."
 
 
@@ -295,7 +402,7 @@ label first_day:
     "스포츠, 학술, 문화... 선택지가 많아 어떤 동아리를 들어가야 할지 고민이 깊어졌다."
 
 
-    friend "야 나 킴만석이 불러서 나중에 보자!!"
+    friend "야 나 장유진이 불러서 나중에 보자!!"
 
     hide friend with dissolve
 
@@ -415,6 +522,7 @@ label first_day:
 
 # Chapter 2: 첫 동아리 모임
 label chapter_2:
+    $ scene = 2
     "다음날이 되었다"
     play music "audio/bgm/base2_music.mp3"
     scene hclass
@@ -432,32 +540,35 @@ label chapter_2:
     
     "들어오는 나와 동시에 동기인 서현이가 반갑게 인사하며 동아리 방에 들어왔다."
     
-    menu:
+    $ test = send_to_raspberry_pi(new_round_number, scene) # 심박수 측정 호출
+    "이곳에서 앞으로의 내 삶이 어떻게 바뀔지 상상하니 가슴이 두근거렸다."
+    if test['rising'] == True:
         #심장박동 오르면
-        "서현에게 친근하게 인사를 건넨다":
-            "나 역시 그에게 가볍게 손을 흔들며 인사를 건넸다."
-            $ b_love += 3
-            menu:
-                "동아리에 대한 기대를 이야기한다":
-                    $ b_love += 2
-                    b "저도요! 새로운 사람들도 만나고, 여러 추억을 남길 수 있겠죠."
-                    hide b_base
-                "대학 생활에 대한 설렘을 이야기한다":
-                    $ b_love += 2
-                    b "저도요! 대학 생활에서 뭔가 멋진 경험을 하고 싶었거든요."
-                    hide b_base
+        "서현에게 친근하게 인사를 건냈다"
+        "나 역시 그에게 가볍게 손을 흔들며 인사를 건넸다."
+        $ b_love += 3
+        menu:
+            "동아리에 대한 기대를 이야기한다":
+                $ b_love += 2
+                b "저도요! 새로운 사람들도 만나고, 여러 추억을 남길 수 있겠죠."
+                hide b_base
+            "대학 생활에 대한 설렘을 이야기한다":
+                $ b_love += 2
+                b "저도요! 대학 생활에서 뭔가 멋진 경험을 하고 싶었거든요."
+                hide b_base
+    else:
         #심장박동 내려가면
-        "조용히 자리에 앉는다":
-            $ b_love -= 2
-            hide b_base
-            "나는 살짝 긴장한 마음을 추스르며 조용히 자리에 앉았다."
-            "주변을 둘러보며, 점차 채워지는 동아리 방의 분위기에 마음이 두근거렸다."
-            menu:
-                "옆 사람에게 조용히 인사를 건넨다":
-                    $ b_love -= 1
-                    "옆에 앉은 동급생이 나를 보며 미소를 지어주었다."
-                "그저 가만히 자리에 앉아있다":
-                    "나는 아직 어색함을 느끼며 주변을 둘러보았다."
+        "조용히 자리에 앉았다"
+        $ b_love -= 2
+        hide b_base
+        "나는 살짝 긴장한 마음을 추스르며 조용히 자리에 앉았다."
+        "주변을 둘러보며, 점차 채워지는 동아리 방의 분위기에 마음이 두근거렸다."
+        menu:
+            "옆 사람에게 조용히 인사를 건넨다":
+                $ b_love -= 1
+                "옆에 앉은 동급생이 나를 보며 미소를 지어주었다."
+            "그저 가만히 자리에 앉아있다":
+                "나는 아직 어색함을 느끼며 주변을 둘러보았다."
         
     # 카메라 조작 중인 선배와 조우
     scene chdongai
@@ -466,7 +577,7 @@ label chapter_2:
     "내가 궁금한 표정으로 바라보자 선배가 미소를 지으며 말을 걸었다."
     
     camera_senior "신입생이구나? 카메라에 관심 있니?"
-    
+    #얼굴
     menu:
         "네, 배우고 싶어요.":
             "선배는 흐뭇한 표정으로 고개를 끄덕였다."
@@ -705,6 +816,7 @@ label chapter_2:
 
 
 label day_3:
+    $ scene = 3
     "다음날이 되었다"
     scene hclass
     play music "audio/bgm/base3_music.mp3"
@@ -719,8 +831,8 @@ label day_3:
     b "맞아요. 매년 이렇게 사진을 찍어서 추억을 남기거든요."
     scene camera1
     "나는 멤버들과 함께 사진 촬영 준비를 했다. 카메라 앞에 서니 조금 긴장이 되었다."
-    scene white
     play sound "audio/sound/Storytelling.mp3"
+    call open_camera_page #카메라 불러오기
     "찰칵! 카메라 셔터 소리와 함께 모두의 얼굴이 사진으로 남았다."
     scene dongai
     # 동아리 여행 공지
@@ -872,6 +984,7 @@ label day_3_end:
 
 
 label chapter_4:
+    $ scene = 4
     "다음 주가 되었다"
     # 여행 시작
     play music  "audio/bgm/travel.mp3"
@@ -936,8 +1049,8 @@ label chapter_4:
         "단체사진을 찍는다":
             "모두 사진찍을 준비를 했다."
             play sound "audio/sound/Storytelling.mp3"
+            call open_camera_page #카메라 불러오기
             "찰칵 소리가 들렸다"
-            scene white
             "단체 사진이 정말 마음에 들었다. 모두 함께 웃는 모습이 참 보기 좋았다."
             scene highmount
             "사진을 보고 나서 서로 웃으며 내려가기 시작했다."
@@ -994,7 +1107,6 @@ label chapter_4:
                 hide c_cute
                 $ c_cup = 1
             "서연의 고백을 거절한다":
-                $ c_love -= 999
                 "나는 서연의 고백을 정중히 거절했다."
                 stop music
                 hide c_shy
@@ -1021,7 +1133,6 @@ label chapter_4:
 
             "아린의 고백을 거절한다":
                 hide a_shy
-                $ a_love -= 999
                 stop music
                 "나는 아린의 고백을 거절했다."
                 show a_sad
@@ -1068,7 +1179,6 @@ label chapter_4:
                 stop music
                 "나는 서현의 고백을 거절했다."
                 hide gobackv2
-                $ b_love -= 9999
                 show gobacklose:
                     align (0.5, 0.2)
                 b "알겠어. 그래도 계속 친구로 잘 지내자"
@@ -1113,6 +1223,7 @@ label chapter_4:
 
 
 label chapter_5:
+    $ scene = 5
     "다음날이 되었다"
     "오늘은 드디어 기다리던 축제날이다"
     play music "audio/bgm/festival.mp3"
@@ -1172,23 +1283,39 @@ label chapter_5:
     a "얘들아 웃어!"
     b "김치!"
     c "ㄱ,김치"
-    scene white
     play sound "audio/sound/Storytelling.mp3"
-    "찰칵"
+    call open_camera_page #카메라 불러오기
     "촬영을 마친 후, 사진을 보며 그동안의 추억이 떠올랐다. 부스에서 웃고 떠들던 시간, 그리고 동아리 친구들과의 따뜻한 순간들이 떠오른다."
 
 
 
-    "미개발구역입니다 빽과 같이 구현 할 예정"
     # 추억 회상
-    menu:
-        "과거의 추억을 떠올리며 웃는다":
-            "그때 그 순간들이 아직도 생생하게 기억난다. 시간이 지나도 그 추억은 내가 간직할 소중한 기억이 될 것이다."
-        
-        "미소를 지으며 다시 그날을 떠올린다":
-            "그날의 웃음과 즐거움은 지금도 내 마음속에 남아 있다. 앞으로도 함께할 더 많은 추억이 기대된다."
-
+    scene black
     # END
+    # if happy-page == 1:
+    #     show page1
+    # elif happy-page == 2:
+    #     show page1
+    # elif happy-page == 3:
+    #     show page1
+    # elif happy-page == 4:
+    #     show page1
+    # elif happy-page == 5:
+    #     show page1
+    # elif happy-page == 6:
+    #     show page1
+    # if heart-page == 1:
+    #     show page1
+    # elif heart-page == 2:
+    #     show page2
+    # elif heart-page == 3:
+    #     show page3
+    # elif heart-page == 4:
+    #     show page4
+    # elif heart-page == 5:
+    #     show page5
+    # elif heart-page == 6:
+    #     show page6
     "오늘의 축제도 끝이 나고, 나는 다시 일상으로 돌아갔다."
     "하지만 그 날의 추억은 항상 내 마음 속에 남아 있을 것이다."
     stop music fadeout 2.5

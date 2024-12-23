@@ -1,13 +1,55 @@
-2024-12-17 01:00:00 UTC
+2024-12-23 07:04:36 UTC
 macOS-15.1.1-arm64-arm-64bit
 Ren'Py 8.3.4.24120703
 
 Early init took 0.04s
-Loading error handling took 0.10s
-Loading script took 0.68s
-Loading save slot metadata took 0.05s
+Loading error handling took 0.02s
+Loading script took 0.32s
+Loading save slot metadata took 0.03s
 Loading persistent took 0.00s
-Running init code took 0.15s
+Running init code took 0.08s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.02s
+Index archives took 0.00s
+Backing up script files to '/Users/hyunho/Library/RenPy/backups/the throbbing of love':
+Dump and make backups took 0.03s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.02s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.02s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.03s
+Save pyanalysis. took 0.01s
+Save bytecode. took 0.03s
+Running _start took 0.00s
+Interface start took 1.75s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M1'
+Version: b'2.1 Metal - 89.3'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 19.77s
+Loading error handling took 0.02s
+Loading script took 0.16s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Running init code took 0.05s
 Loading analysis data took 0.01s
 Analyze and compile ATL took 0.00s
 Reloading save slot metadata took 0.02s
@@ -27,93 +69,9 @@ Analyze screens took 0.01s
 Save screen analysis took 0.01s
 Prepare screens took 0.03s
 Save pyanalysis. took 0.00s
-Save bytecode. took 0.02s
-Running _start took 0.00s
-Interface start took 0.87s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1440, 900)
-swap interval: 1 frames
-Fullscreen mode.
-Vendor: "b'Apple'"
-Renderer: b'Apple M1'
-Version: b'2.1 Metal - 89.3'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 65.83s
-Loading error handling took 0.13s
-Loading script took 0.25s
-Loading save slot metadata took 0.05s
-Loading persistent took 0.00s
-Running init code took 0.04s
-Loading analysis data took 0.01s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.02s
-Index archives took 0.00s
-Backing up script files to '/Users/hyunho/Library/RenPy/backups/the throbbing of love':
-Dump and make backups took 0.03s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.03s
-DPI scale factor: 1.000000
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.03s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.01s
-Prepare screens took 0.03s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.01s
-Running _start took 0.05s
-Interface start took 0.32s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1440, 900)
-swap interval: 1 frames
-Fullscreen mode.
-Vendor: "b'Apple'"
-Renderer: b'Apple M1'
-Version: b'2.1 Metal - 89.3'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 83.74s
-Loading error handling took 0.10s
-Loading script took 0.25s
-Loading save slot metadata took 0.04s
-Loading persistent took 0.00s
-Running init code took 0.08s
-Loading analysis data took 0.01s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.02s
-Index archives took 0.00s
-Backing up script files to '/Users/hyunho/Library/RenPy/backups/the throbbing of love':
-Dump and make backups took 0.03s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.04s
-DPI scale factor: 1.000000
-Creating interface object took 0.16s
-Cleaning stores took 0.00s
-Init translation took 0.05s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.02s
-Prepare screens took 0.05s
-Save pyanalysis. took 0.00s
 Save bytecode. took 0.01s
 Running _start took 0.00s
-Interface start took 0.31s
+Interface start took 0.11s
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1440, 900)
@@ -128,1044 +86,12 @@ Maximum texture size: 4096x4096
 Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
 Maximum texture size: 4096x4096
 Resetting cache.
-Early init took 117.86s
-Loading error handling took 0.12s
-Loading script took 0.24s
-Loading save slot metadata took 0.08s
-Loading persistent took 0.00s
-Running init code took 0.04s
-Loading analysis data took 0.01s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.02s
-Index archives took 0.00s
-Backing up script files to '/Users/hyunho/Library/RenPy/backups/the throbbing of love':
-Dump and make backups took 0.03s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.03s
-DPI scale factor: 1.000000
-Creating interface object took 0.04s
-Cleaning stores took 0.00s
-Init translation took 0.02s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.01s
-Prepare screens took 0.03s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Interface start took 0.35s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1440, 900)
-swap interval: 1 frames
-Fullscreen mode.
-Vendor: "b'Apple'"
-Renderer: b'Apple M1'
-Version: b'2.1 Metal - 89.3'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 127.58s
-Loading error handling took 0.10s
-Loading script took 0.22s
-Loading save slot metadata took 0.06s
-Loading persistent took 0.00s
-Running init code took 0.04s
-Loading analysis data took 0.01s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.02s
-Index archives took 0.00s
-Backing up script files to '/Users/hyunho/Library/RenPy/backups/the throbbing of love':
-Dump and make backups took 0.02s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.03s
-DPI scale factor: 1.000000
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.02s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.01s
-Prepare screens took 0.03s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Interface start took 0.25s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1440, 900)
-swap interval: 1 frames
-Fullscreen mode.
-Vendor: "b'Apple'"
-Renderer: b'Apple M1'
-Version: b'2.1 Metal - 89.3'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 134.44s
-Loading error handling took 0.08s
-Loading script took 0.23s
-Loading save slot metadata took 0.06s
-Loading persistent took 0.00s
-Running init code took 0.04s
-Loading analysis data took 0.01s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.02s
-Index archives took 0.00s
-Backing up script files to '/Users/hyunho/Library/RenPy/backups/the throbbing of love':
-Dump and make backups took 0.03s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.03s
-DPI scale factor: 1.000000
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.03s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.01s
-Prepare screens took 0.03s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Interface start took 0.28s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1440, 900)
-swap interval: 1 frames
-Fullscreen mode.
-Vendor: "b'Apple'"
-Renderer: b'Apple M1'
-Version: b'2.1 Metal - 89.3'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 141.49s
-Loading error handling took 0.08s
-Loading script took 0.22s
-Loading save slot metadata took 0.07s
-Loading persistent took 0.00s
-Running init code took 0.04s
-Loading analysis data took 0.01s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.02s
-Index archives took 0.00s
-Backing up script files to '/Users/hyunho/Library/RenPy/backups/the throbbing of love':
-Dump and make backups took 0.02s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.03s
-DPI scale factor: 1.000000
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.02s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.01s
-Prepare screens took 0.03s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Interface start took 0.15s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1440, 900)
-swap interval: 1 frames
-Fullscreen mode.
-Vendor: "b'Apple'"
-Renderer: b'Apple M1'
-Version: b'2.1 Metal - 89.3'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 189.17s
-Loading error handling took 0.14s
-Loading script took 0.21s
-Loading save slot metadata took 0.07s
-Loading persistent took 0.00s
-Running init code took 0.04s
-Loading analysis data took 0.01s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.02s
-Index archives took 0.00s
-Backing up script files to '/Users/hyunho/Library/RenPy/backups/the throbbing of love':
-Dump and make backups took 0.03s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.03s
-DPI scale factor: 1.000000
-Creating interface object took 0.04s
-Cleaning stores took 0.00s
-Init translation took 0.02s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.01s
-Prepare screens took 0.03s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Interface start took 0.27s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1440, 900)
-swap interval: 1 frames
-Fullscreen mode.
-Vendor: "b'Apple'"
-Renderer: b'Apple M1'
-Version: b'2.1 Metal - 89.3'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 209.79s
-Loading error handling took 0.10s
-Loading script took 0.23s
-Loading save slot metadata took 0.04s
-Loading persistent took 0.00s
-Running init code took 0.04s
-Loading analysis data took 0.01s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.02s
-Index archives took 0.00s
-Backing up script files to '/Users/hyunho/Library/RenPy/backups/the throbbing of love':
-Dump and make backups took 0.02s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.03s
-DPI scale factor: 1.000000
-Creating interface object took 0.04s
-Cleaning stores took 0.00s
-Init translation took 0.03s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.01s
-Prepare screens took 0.03s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Interface start took 0.36s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1440, 900)
-swap interval: 1 frames
-Fullscreen mode.
-Vendor: "b'Apple'"
-Renderer: b'Apple M1'
-Version: b'2.1 Metal - 89.3'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 256.55s
-Loading error handling took 0.11s
-Loading script took 0.24s
-Loading save slot metadata took 0.17s
-Loading persistent took 0.00s
-Running init code took 0.07s
-Loading analysis data took 0.01s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.02s
-Index archives took 0.00s
-Dump and make backups took 0.03s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.03s
-DPI scale factor: 1.000000
-Creating interface object took 0.08s
-Cleaning stores took 0.00s
-Init translation took 0.03s
-Build styles took 0.00s
-Load screen analysis took 0.02s
-Analyze screens took 0.00s
-Save screen analysis took 0.00s
-Prepare screens took 0.05s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.00s
-Running _start took 0.00s
-Interface start took 0.45s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1440, 900)
-swap interval: 1 frames
-Fullscreen mode.
-Vendor: "b'Apple'"
-Renderer: b'Apple M1'
-Version: b'2.1 Metal - 89.3'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 303.07s
-Loading error handling took 0.16s
-Loading script took 0.28s
-Loading save slot metadata took 0.11s
-Loading persistent took 0.00s
-Running init code took 0.08s
-Loading analysis data took 0.01s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.02s
-Index archives took 0.00s
-Backing up script files to '/Users/hyunho/Library/RenPy/backups/the throbbing of love':
-Dump and make backups took 0.03s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.05s
-DPI scale factor: 1.000000
-Creating interface object took 0.04s
-Cleaning stores took 0.00s
-Init translation took 0.03s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.01s
-Prepare screens took 0.04s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.01s
-Running _start took 0.04s
-Interface start took 0.60s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1440, 900)
-swap interval: 1 frames
-Fullscreen mode.
-Vendor: "b'Apple'"
-Renderer: b'Apple M1'
-Version: b'2.1 Metal - 89.3'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 320.57s
-Loading error handling took 0.11s
-Loading script took 0.21s
-Loading save slot metadata took 0.09s
-Loading persistent took 0.00s
-Running init code took 0.04s
-Loading analysis data took 0.01s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.02s
-Index archives took 0.00s
-Backing up script files to '/Users/hyunho/Library/RenPy/backups/the throbbing of love':
-Dump and make backups took 0.02s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.03s
-DPI scale factor: 1.000000
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.02s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.01s
-Prepare screens took 0.03s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Interface start took 0.30s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1440, 900)
-swap interval: 1 frames
-Fullscreen mode.
-Vendor: "b'Apple'"
-Renderer: b'Apple M1'
-Version: b'2.1 Metal - 89.3'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 339.49s
-Loading error handling took 0.10s
-Loading script took 0.21s
-Loading save slot metadata took 0.05s
-Loading persistent took 0.00s
-Running init code took 0.04s
-Loading analysis data took 0.01s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.02s
-Index archives took 0.00s
-Backing up script files to '/Users/hyunho/Library/RenPy/backups/the throbbing of love':
-Dump and make backups took 0.02s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.03s
-DPI scale factor: 1.000000
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.02s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.01s
-Prepare screens took 0.03s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.02s
-Running _start took 0.00s
-Interface start took 0.25s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1440, 900)
-swap interval: 1 frames
-Fullscreen mode.
-Vendor: "b'Apple'"
-Renderer: b'Apple M1'
-Version: b'2.1 Metal - 89.3'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 345.59s
-Loading error handling took 0.12s
-Loading script took 0.25s
-Loading save slot metadata took 0.09s
-Loading persistent took 0.00s
-Running init code took 0.04s
-Loading analysis data took 0.01s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.06s
-Index archives took 0.00s
-Backing up script files to '/Users/hyunho/Library/RenPy/backups/the throbbing of love':
-Dump and make backups took 0.03s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.03s
-DPI scale factor: 1.000000
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.02s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.01s
-Prepare screens took 0.03s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Interface start took 0.32s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1440, 900)
-swap interval: 1 frames
-Fullscreen mode.
-Vendor: "b'Apple'"
-Renderer: b'Apple M1'
-Version: b'2.1 Metal - 89.3'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 367.98s
-Loading error handling took 0.13s
-Loading script took 0.45s
-Loading save slot metadata took 0.03s
-Loading persistent took 0.00s
-Running init code took 0.05s
-Loading analysis data took 0.01s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.02s
-Index archives took 0.00s
-Backing up script files to '/Users/hyunho/Library/RenPy/backups/the throbbing of love':
-Dump and make backups took 0.03s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.05s
-DPI scale factor: 1.000000
-Creating interface object took 0.15s
-Cleaning stores took 0.00s
-Init translation took 0.07s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.01s
-Prepare screens took 0.04s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.01s
-Running _start took 0.03s
-Interface start took 0.44s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1440, 900)
-swap interval: 1 frames
-Fullscreen mode.
-Vendor: "b'Apple'"
-Renderer: b'Apple M1'
-Version: b'2.1 Metal - 89.3'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 466.84s
-Loading error handling took 0.12s
-Loading script took 0.21s
-Loading save slot metadata took 0.08s
-Loading persistent took 0.00s
-
-File "game/script.rpy", line 299: end of line expected.
-    hide friend with dissolve:
-                             ^
-DPI scale factor: 1.000000
-Interface start took 0.32s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1440, 900)
-swap interval: 1 frames
-Fullscreen mode.
-Vendor: "b'Apple'"
-Renderer: b'Apple M1'
-Version: b'2.1 Metal - 89.3'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 494.47s
-Loading error handling took 0.12s
-Loading script took 0.26s
-Loading save slot metadata took 0.09s
-Loading persistent took 0.00s
-Running init code took 0.05s
-Loading analysis data took 0.01s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.02s
-Index archives took 0.00s
-Backing up script files to '/Users/hyunho/Library/RenPy/backups/the throbbing of love':
-Dump and make backups took 0.03s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.02s
-DPI scale factor: 1.000000
-Creating interface object took 0.03s
-Cleaning stores took 0.00s
-Init translation took 0.02s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.01s
-Prepare screens took 0.03s
-Save pyanalysis. took 0.04s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Interface start took 0.42s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1440, 900)
-swap interval: 1 frames
-Fullscreen mode.
-Vendor: "b'Apple'"
-Renderer: b'Apple M1'
-Version: b'2.1 Metal - 89.3'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 512.25s
-Loading error handling took 0.08s
-Loading script took 0.21s
-Loading save slot metadata took 0.04s
-Loading persistent took 0.00s
-Running init code took 0.04s
-Loading analysis data took 0.01s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.02s
-Index archives took 0.00s
-Backing up script files to '/Users/hyunho/Library/RenPy/backups/the throbbing of love':
-Dump and make backups took 0.03s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.03s
-DPI scale factor: 1.000000
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.02s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.01s
-Prepare screens took 0.03s
-Save pyanalysis. took 0.05s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Interface start took 0.26s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1440, 900)
-swap interval: 1 frames
-Fullscreen mode.
-Vendor: "b'Apple'"
-Renderer: b'Apple M1'
-Version: b'2.1 Metal - 89.3'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 520.62s
-Loading error handling took 0.10s
-Loading script took 0.21s
-Loading save slot metadata took 0.05s
-Loading persistent took 0.00s
-Running init code took 0.04s
-Loading analysis data took 0.01s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.02s
-Index archives took 0.00s
-Backing up script files to '/Users/hyunho/Library/RenPy/backups/the throbbing of love':
-Dump and make backups took 0.02s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.03s
-DPI scale factor: 1.000000
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.02s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.01s
-Prepare screens took 0.03s
-Save pyanalysis. took 0.04s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Interface start took 0.25s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1440, 900)
-swap interval: 1 frames
-Fullscreen mode.
-Vendor: "b'Apple'"
-Renderer: b'Apple M1'
-Version: b'2.1 Metal - 89.3'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 535.31s
-Loading error handling took 0.10s
-Loading script took 0.25s
-Loading save slot metadata took 0.07s
-Loading persistent took 0.00s
-Running init code took 0.04s
-Loading analysis data took 0.01s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.02s
-Index archives took 0.00s
-Backing up script files to '/Users/hyunho/Library/RenPy/backups/the throbbing of love':
-Dump and make backups took 0.03s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.03s
-DPI scale factor: 1.000000
-Creating interface object took 0.03s
-Cleaning stores took 0.00s
-Init translation took 0.02s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.01s
-Prepare screens took 0.03s
-Save pyanalysis. took 0.03s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Interface start took 0.32s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1440, 900)
-swap interval: 1 frames
-Fullscreen mode.
-Vendor: "b'Apple'"
-Renderer: b'Apple M1'
-Version: b'2.1 Metal - 89.3'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 565.08s
-Loading error handling took 0.08s
-Loading script took 0.24s
-Loading save slot metadata took 0.07s
-Loading persistent took 0.00s
-Running init code took 0.04s
-Loading analysis data took 0.01s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.02s
-Index archives took 0.00s
-Backing up script files to '/Users/hyunho/Library/RenPy/backups/the throbbing of love':
-Dump and make backups took 0.02s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.03s
-DPI scale factor: 1.000000
-Creating interface object took 0.04s
-Cleaning stores took 0.00s
-Init translation took 0.02s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.01s
-Prepare screens took 0.03s
-Save pyanalysis. took 0.04s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Interface start took 0.24s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1440, 900)
-swap interval: 1 frames
-Fullscreen mode.
-Vendor: "b'Apple'"
-Renderer: b'Apple M1'
-Version: b'2.1 Metal - 89.3'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 576.53s
-Loading error handling took 0.10s
-Loading script took 0.26s
-Loading save slot metadata took 0.07s
-Loading persistent took 0.00s
-Running init code took 0.04s
-Loading analysis data took 0.01s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.02s
-Index archives took 0.00s
-Backing up script files to '/Users/hyunho/Library/RenPy/backups/the throbbing of love':
-Dump and make backups took 0.02s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.03s
-DPI scale factor: 1.000000
-Creating interface object took 0.05s
-Cleaning stores took 0.00s
-Init translation took 0.02s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.01s
-Prepare screens took 0.03s
-Save pyanalysis. took 0.03s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Interface start took 0.25s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1440, 900)
-swap interval: 1 frames
-Fullscreen mode.
-Vendor: "b'Apple'"
-Renderer: b'Apple M1'
-Version: b'2.1 Metal - 89.3'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 589.29s
-Loading error handling took 0.10s
-Loading script took 0.24s
-Loading save slot metadata took 0.07s
-Loading persistent took 0.00s
-Running init code took 0.04s
-Loading analysis data took 0.01s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.02s
-Index archives took 0.00s
-Backing up script files to '/Users/hyunho/Library/RenPy/backups/the throbbing of love':
-Dump and make backups took 0.02s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.03s
-DPI scale factor: 1.000000
-Creating interface object took 0.03s
-Cleaning stores took 0.00s
-Init translation took 0.02s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.01s
-Prepare screens took 0.03s
-Save pyanalysis. took 0.03s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Interface start took 0.24s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1440, 900)
-swap interval: 1 frames
-Fullscreen mode.
-Vendor: "b'Apple'"
-Renderer: b'Apple M1'
-Version: b'2.1 Metal - 89.3'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 612.84s
-Loading error handling took 0.10s
-Loading script took 0.21s
-Loading save slot metadata took 0.05s
-Loading persistent took 0.00s
-Running init code took 0.04s
-Loading analysis data took 0.01s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.02s
-Index archives took 0.00s
-Backing up script files to '/Users/hyunho/Library/RenPy/backups/the throbbing of love':
-Dump and make backups took 0.02s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.03s
-DPI scale factor: 1.000000
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.02s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.01s
-Prepare screens took 0.03s
-Save pyanalysis. took 0.01s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Interface start took 0.30s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1440, 900)
-swap interval: 1 frames
-Fullscreen mode.
-Vendor: "b'Apple'"
-Renderer: b'Apple M1'
-Version: b'2.1 Metal - 89.3'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 625.48s
-Loading error handling took 0.11s
-Loading script took 0.21s
+Early init took 26.26s
+Loading error handling took 0.02s
+Loading script took 0.14s
 Loading save slot metadata took 0.02s
 Loading persistent took 0.00s
-Running init code took 0.04s
-Loading analysis data took 0.01s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.02s
-Index archives took 0.00s
-Backing up script files to '/Users/hyunho/Library/RenPy/backups/the throbbing of love':
-Dump and make backups took 0.02s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.03s
-DPI scale factor: 1.000000
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.02s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.01s
-Prepare screens took 0.03s
-Save pyanalysis. took 0.01s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Interface start took 0.15s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1440, 900)
-swap interval: 1 frames
-Fullscreen mode.
-Vendor: "b'Apple'"
-Renderer: b'Apple M1'
-Version: b'2.1 Metal - 89.3'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 647.19s
-Loading error handling took 0.11s
-Loading script took 0.21s
-Loading save slot metadata took 0.02s
-Loading persistent took 0.00s
-Running init code took 0.04s
-Loading analysis data took 0.01s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.02s
-Index archives took 0.00s
-Backing up script files to '/Users/hyunho/Library/RenPy/backups/the throbbing of love':
-Dump and make backups took 0.02s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.03s
-DPI scale factor: 1.000000
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.02s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.01s
-Prepare screens took 0.03s
-Save pyanalysis. took 0.01s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Interface start took 0.15s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1440, 900)
-swap interval: 1 frames
-Fullscreen mode.
-Vendor: "b'Apple'"
-Renderer: b'Apple M1'
-Version: b'2.1 Metal - 89.3'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 655.59s
-Loading error handling took 0.11s
-Loading script took 0.23s
-Loading save slot metadata took 0.04s
-Loading persistent took 0.00s
-Running init code took 0.04s
-Loading analysis data took 0.01s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.02s
-Index archives took 0.00s
-Backing up script files to '/Users/hyunho/Library/RenPy/backups/the throbbing of love':
-Dump and make backups took 0.02s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.03s
-DPI scale factor: 1.000000
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.03s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.01s
-Prepare screens took 0.03s
-Save pyanalysis. took 0.05s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Interface start took 0.36s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1440, 900)
-swap interval: 1 frames
-Fullscreen mode.
-Vendor: "b'Apple'"
-Renderer: b'Apple M1'
-Version: b'2.1 Metal - 89.3'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 682.27s
-Loading error handling took 0.10s
-Loading script took 0.22s
-Loading save slot metadata took 0.04s
-Loading persistent took 0.00s
-Running init code took 0.04s
-Loading analysis data took 0.01s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.02s
-Index archives took 0.00s
-Backing up script files to '/Users/hyunho/Library/RenPy/backups/the throbbing of love':
-Dump and make backups took 0.03s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.03s
-DPI scale factor: 1.000000
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.02s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.01s
-Prepare screens took 0.03s
-Save pyanalysis. took 0.04s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Interface start took 0.30s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1440, 900)
-swap interval: 1 frames
-Fullscreen mode.
-Vendor: "b'Apple'"
-Renderer: b'Apple M1'
-Version: b'2.1 Metal - 89.3'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 693.50s
-Loading error handling took 0.10s
-Loading script took 0.21s
-Loading save slot metadata took 0.05s
-Loading persistent took 0.00s
-Running init code took 0.04s
+Running init code took 0.05s
 Loading analysis data took 0.01s
 Analyze and compile ATL took 0.00s
 Reloading save slot metadata took 0.02s
@@ -1184,10 +110,10 @@ Load screen analysis took 0.00s
 Analyze screens took 0.01s
 Save screen analysis took 0.01s
 Prepare screens took 0.03s
-Save pyanalysis. took 0.04s
+Save pyanalysis. took 0.00s
 Save bytecode. took 0.01s
 Running _start took 0.00s
-Interface start took 0.24s
+Interface start took 0.14s
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1440, 900)
@@ -1202,35 +128,10 @@ Maximum texture size: 4096x4096
 Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
 Maximum texture size: 4096x4096
 Resetting cache.
-Early init took 718.96s
-Loading error handling took 0.10s
-Loading script took 0.19s
-Loading save slot metadata took 0.04s
-Loading persistent took 0.00s
-
-File "game/script.rpy", line 317: show statement expects a non-empty block.
-    show a_base at left with move:
-                                  ^
-DPI scale factor: 1.000000
-Interface start took 0.26s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1440, 900)
-swap interval: 1 frames
-Fullscreen mode.
-Vendor: "b'Apple'"
-Renderer: b'Apple M1'
-Version: b'2.1 Metal - 89.3'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 734.52s
-Loading error handling took 0.15s
-Loading script took 0.25s
-Loading save slot metadata took 0.11s
+Early init took 34.42s
+Loading error handling took 0.02s
+Loading script took 0.14s
+Loading save slot metadata took 0.02s
 Loading persistent took 0.00s
 Running init code took 0.05s
 Loading analysis data took 0.01s
@@ -1241,20 +142,20 @@ Backing up script files to '/Users/hyunho/Library/RenPy/backups/the throbbing of
 Dump and make backups took 0.03s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
-Initial gc took 0.02s
+Initial gc took 0.03s
 DPI scale factor: 1.000000
-Creating interface object took 0.07s
+Creating interface object took 0.00s
 Cleaning stores took 0.00s
-Init translation took 0.02s
+Init translation took 0.03s
 Build styles took 0.00s
 Load screen analysis took 0.00s
 Analyze screens took 0.01s
 Save screen analysis took 0.01s
 Prepare screens took 0.03s
-Save pyanalysis. took 0.03s
+Save pyanalysis. took 0.00s
 Save bytecode. took 0.01s
-Running _start took 0.03s
-Interface start took 0.32s
+Running _start took 0.00s
+Interface start took 0.12s
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1440, 900)
@@ -1268,20 +169,13 @@ Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
 Maximum texture size: 4096x4096
 Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
 Maximum texture size: 4096x4096
-Cleaning stores took 0.00s
-Init translation took 0.00s
-Build styles took 0.00s
-Load screen analysis took 0.04s
-Analyze screens took 0.00s
-Prepare screens took 0.00s
-Running _start took 0.00s
 Resetting cache.
-Early init took 1241.24s
-Loading error handling took 0.16s
-Loading script took 0.21s
-Loading save slot metadata took 0.09s
+Early init took 48.40s
+Loading error handling took 0.02s
+Loading script took 0.14s
+Loading save slot metadata took 0.02s
 Loading persistent took 0.00s
-Running init code took 0.07s
+Running init code took 0.05s
 Loading analysis data took 0.01s
 Analyze and compile ATL took 0.00s
 Reloading save slot metadata took 0.02s
@@ -1290,20 +184,20 @@ Backing up script files to '/Users/hyunho/Library/RenPy/backups/the throbbing of
 Dump and make backups took 0.03s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
-Initial gc took 0.03s
+Initial gc took 0.04s
 DPI scale factor: 1.000000
-Creating interface object took 0.02s
+Creating interface object took 0.00s
 Cleaning stores took 0.00s
-Init translation took 0.02s
+Init translation took 0.04s
 Build styles took 0.00s
 Load screen analysis took 0.00s
 Analyze screens took 0.01s
-Save screen analysis took 0.02s
+Save screen analysis took 0.01s
 Prepare screens took 0.03s
 Save pyanalysis. took 0.00s
-Save bytecode. took 0.02s
+Save bytecode. took 0.01s
 Running _start took 0.00s
-Interface start took 0.17s
+Interface start took 0.15s
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1440, 900)
@@ -1317,17 +211,3 @@ Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
 Maximum texture size: 4096x4096
 Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
 Maximum texture size: 4096x4096
-Cleaning stores took 0.00s
-Init translation took 0.00s
-Build styles took 0.00s
-Load screen analysis took 0.04s
-Analyze screens took 0.00s
-Prepare screens took 0.00s
-Running _start took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.00s
-Build styles took 0.00s
-Load screen analysis took 0.03s
-Analyze screens took 0.00s
-Prepare screens took 0.00s
-Running _start took 0.00s

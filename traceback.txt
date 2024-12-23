@@ -1,48 +1,39 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-Compiling ATL code at game/script.rpy:885
-  File "game/script.rpy", line 884, in script
-    show b_backha at right with dissolve:
-  File "game/script.rpy", line 885, in <module>
-    size (0, 0)(1000,1100)
-TypeError: 'tuple' object is not callable
+While running game code:
+  File "renpy/common/00keymap.rpy", line 504, in script
+    python hide:
+  File "renpy/common/00keymap.rpy", line 504, in <module>
+    python hide:
+  File "renpy/common/00keymap.rpy", line 528, in _execute_python_hide
+    renpy.save("_reload-1", "reload save game")
+Exception: Could not pickle <module 'webbrowser' from '/Users/hyunho/Downloads/renpy-8.3.4-sdk/lib/python3.9/webbrowser.pyc'>. (perhaps store.webbrowser = <module 'webbrowser' from '/Users/hyunho/Downloads/renpy-8.3.4-sdk/lib/python3.9/webbrowser.pyc'>)
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 884, in script
-    show b_backha at right with dissolve:
-  File "/Users/hyunho/Downloads/renpy-8.3.4-sdk/renpy/ast.py", line 1117, in execute
-    show_imspec(self.imspec, atl=getattr(self, "atl", None))
-  File "/Users/hyunho/Downloads/renpy-8.3.4-sdk/renpy/ast.py", line 1080, in show_imspec
-    renpy.config.show(name,
-  File "/Users/hyunho/Downloads/renpy-8.3.4-sdk/renpy/exports/displayexports.py", line 503, in show
-    sls.add(layer, img, key, zorder, behind, at_list=at_list, name=name, atl=atl, default_transform=default_transform, transient=transient)
-  File "/Users/hyunho/Downloads/renpy-8.3.4-sdk/renpy/display/scenelists.py", line 477, in add
-    thing.visit_all(lambda d : None)
-  File "/Users/hyunho/Downloads/renpy-8.3.4-sdk/renpy/display/displayable.py", line 424, in visit_all
-    for d in self.visit():
-  File "/Users/hyunho/Downloads/renpy-8.3.4-sdk/renpy/atl.py", line 816, in visit
-    block = self.compile()
-  File "/Users/hyunho/Downloads/renpy-8.3.4-sdk/renpy/atl.py", line 723, in compile
-    block = self.atl.compile(self.context)
-  File "/Users/hyunho/Downloads/renpy-8.3.4-sdk/renpy/atl.py", line 925, in compile
-    statements = [ i.compile(ctx) for i in self.statements ]
-  File "/Users/hyunho/Downloads/renpy-8.3.4-sdk/renpy/atl.py", line 925, in <listcomp>
-    statements = [ i.compile(ctx) for i in self.statements ]
-  File "/Users/hyunho/Downloads/renpy-8.3.4-sdk/renpy/atl.py", line 1267, in compile
-    value = ctx.eval(expr)
-  File "/Users/hyunho/Downloads/renpy-8.3.4-sdk/renpy/atl.py", line 387, in eval
-    return renpy.python.py_eval(expr, locals=self.context)
-  File "/Users/hyunho/Downloads/renpy-8.3.4-sdk/renpy/python.py", line 1209, in py_eval
-    return py_eval_bytecode(code, globals, locals)
-  File "/Users/hyunho/Downloads/renpy-8.3.4-sdk/renpy/python.py", line 1202, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "game/script.rpy", line 885, in <module>
-    size (0, 0)(1000,1100)
-TypeError: 'tuple' object is not callable
+  File "renpy/common/00keymap.rpy", line 504, in script
+    python hide:
+  File "/Users/hyunho/Downloads/renpy-8.3.4-sdk/renpy/ast.py", line 827, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "/Users/hyunho/Downloads/renpy-8.3.4-sdk/renpy/python.py", line 1178, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "renpy/common/00keymap.rpy", line 504, in <module>
+    python hide:
+  File "renpy/common/00keymap.rpy", line 528, in _execute_python_hide
+    renpy.save("_reload-1", "reload save game")
+  File "/Users/hyunho/Downloads/renpy-8.3.4-sdk/renpy/loadsave.py", line 436, in save
+    reraise(t, e, tb)
+  File "lib/python3.9/future/utils/__init__.py", line 444, in raise_
+  File "/Users/hyunho/Downloads/renpy-8.3.4-sdk/renpy/loadsave.py", line 417, in save
+    dump((roots, renpy.game.log), logf)
+  File "/Users/hyunho/Downloads/renpy-8.3.4-sdk/renpy/compat/pickle.py", line 107, in dump
+    pickle.dump(o, f, pickle.HIGHEST_PROTOCOL if highest else PROTOCOL)
+  File "/Users/hyunho/Downloads/renpy-8.3.4-sdk/renpy/python.py", line 1275, in module_pickle
+    raise Exception("Could not pickle {!r}.".format(module))
+Exception: Could not pickle <module 'webbrowser' from '/Users/hyunho/Downloads/renpy-8.3.4-sdk/lib/python3.9/webbrowser.pyc'>. (perhaps store.webbrowser = <module 'webbrowser' from '/Users/hyunho/Downloads/renpy-8.3.4-sdk/lib/python3.9/webbrowser.pyc'>)
 
 macOS-15.1.1-arm64-arm-64bit arm64
 Ren'Py 8.3.4.24120703
  Beta
-Sun Dec 15 20:40:17 2024
+Mon Dec 23 16:03:36 2024
