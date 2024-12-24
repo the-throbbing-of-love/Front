@@ -154,7 +154,7 @@ init python:
 
         try:
             response = requests.post(url, payload)
-            response.raise_for_status()  # HTTP 에러 발생 시 예외 처리
+            response.raise_for_status()  # 예외 처리
             return response.json()
         except requests.exceptions.RequestException as e:
             return {"status": 500, "error": f"서버 연결 실패: {str(e)}"}
