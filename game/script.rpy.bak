@@ -843,7 +843,7 @@ label day_3:
     scene camera1
     "나는 멤버들과 함께 사진 촬영 준비를 했다. 카메라 앞에 서니 조금 긴장이 되었다."
     play sound "audio/sound/Storytelling.mp3"
-    call open_camera_page from _call_open_camera_page #카메라 불러오기
+    call open_camera_page #카메라 불러오기
     "찰칵! 카메라 셔터 소리와 함께 모두의 얼굴이 사진으로 남았다."
     scene dongai
     # 동아리 여행 공지
@@ -1071,7 +1071,7 @@ label chapter_4:
             $ b_love -= 2
             $ c_love += 3
             play sound "audio/sound/Storytelling.mp3"
-            call open_camera_page from _call_open_camera_page_1 #카메라 불러오기
+            call open_camera_page #카메라 불러오기
             "내가 찍은 셀카가 잘 나온 것 같아 뿌듯해했다."
             "사진을 찍고 모두 기분 좋게 정상에서 내려왔다."
             
@@ -1295,7 +1295,7 @@ label chapter_5:
     b "김치!"
     c "ㄱ,김치"
     play sound "audio/sound/Storytelling.mp3"
-    call open_camera_page from _call_open_camera_page_2 #카메라 불러오기
+    call open_camera_page #카메라 불러오기
     "촬영을 마친 후, 사진을 보며 그동안의 추억이 떠올랐다. 부스에서 웃고 떠들던 시간, 그리고 동아리 친구들과의 따뜻한 순간들이 떠오른다."
 
 
@@ -1329,7 +1329,7 @@ label chapter_5:
     #     show page5
     # elif heart-page == 6:
     #     show page6
-    call all_picture from _call_all_picture
+    call all_picture
     "오늘의 축제도 끝이 나고, 나는 다시 일상으로 돌아갔다."
     "하지만 그 날의 추억은 항상 내 마음 속에 남아 있을 것이다."
 
