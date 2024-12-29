@@ -346,7 +346,7 @@ label all_picture:
     # Python 코드에서 웹 브라우저 열기
     python:
         import webbrowser
-        # 서버의 /camera 경로를 호출
+        # 서버의 camera 경로를 호출
         url = f"http://10.150.150.219:8000/history?round_id={new_round_number}"
         webbrowser.open(url)
     
