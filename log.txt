@@ -1,29 +1,314 @@
-2024-12-24 04:18:32 UTC
+2024-12-30 01:20:58 UTC
 macOS-15.1.1-arm64-arm-64bit
 Ren'Py 8.3.4.24120703
 
-Early init took 0.04s
-Loading error handling took 0.02s
-Loading script took 0.08s
-Loading save slot metadata took 0.03s
+Early init took 0.03s
+Traceback (most recent call last):
+  File "/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/script.py", line 768, in load_file
+    with open(rpycfn, "wb") as f:
+OSError: [Errno 30] Read-only file system: '/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/common/_errorhandling.rpymc'
+Traceback (most recent call last):
+  File "/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/script.py", line 768, in load_file
+    with open(rpycfn, "wb") as f:
+OSError: [Errno 30] Read-only file system: '/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/common/_shaders.rpymc'
+Loading error handling took 0.07s
+Traceback (most recent call last):
+  File "/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/script.py", line 768, in load_file
+    with open(rpycfn, "wb") as f:
+OSError: [Errno 30] Read-only file system: '/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/common/000atl.rpyc'
+Traceback (most recent call last):
+  File "/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/script.py", line 768, in load_file
+    with open(rpycfn, "wb") as f:
+OSError: [Errno 30] Read-only file system: '/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/common/000namespaces.rpyc'
+Traceback (most recent call last):
+  File "/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/script.py", line 768, in load_file
+    with open(rpycfn, "wb") as f:
+OSError: [Errno 30] Read-only file system: '/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/common/000statements.rpyc'
+Traceback (most recent call last):
+  File "/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/script.py", line 768, in load_file
+    with open(rpycfn, "wb") as f:
+OSError: [Errno 30] Read-only file system: '/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/common/000window.rpyc'
+Traceback (most recent call last):
+  File "/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/script.py", line 768, in load_file
+    with open(rpycfn, "wb") as f:
+OSError: [Errno 30] Read-only file system: '/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/common/00accessibility.rpyc'
+Traceback (most recent call last):
+  File "/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/script.py", line 768, in load_file
+    with open(rpycfn, "wb") as f:
+OSError: [Errno 30] Read-only file system: '/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/common/00achievement.rpyc'
+Traceback (most recent call last):
+  File "/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/script.py", line 768, in load_file
+    with open(rpycfn, "wb") as f:
+OSError: [Errno 30] Read-only file system: '/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/common/00action_audio.rpyc'
+Traceback (most recent call last):
+  File "/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/script.py", line 768, in load_file
+    with open(rpycfn, "wb") as f:
+OSError: [Errno 30] Read-only file system: '/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/common/00action_control.rpyc'
+Traceback (most recent call last):
+  File "/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/script.py", line 768, in load_file
+    with open(rpycfn, "wb") as f:
+OSError: [Errno 30] Read-only file system: '/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/common/00action_data.rpyc'
+Traceback (most recent call last):
+  File "/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/script.py", line 768, in load_file
+    with open(rpycfn, "wb") as f:
+OSError: [Errno 30] Read-only file system: '/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/common/00action_file.rpyc'
+Traceback (most recent call last):
+  File "/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/script.py", line 768, in load_file
+    with open(rpycfn, "wb") as f:
+OSError: [Errno 30] Read-only file system: '/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/common/00action_menu.rpyc'
+Traceback (most recent call last):
+  File "/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/script.py", line 768, in load_file
+    with open(rpycfn, "wb") as f:
+OSError: [Errno 30] Read-only file system: '/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/common/00action_other.rpyc'
+Traceback (most recent call last):
+  File "/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/script.py", line 768, in load_file
+    with open(rpycfn, "wb") as f:
+OSError: [Errno 30] Read-only file system: '/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/common/00audio.rpyc'
+Traceback (most recent call last):
+  File "/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/script.py", line 768, in load_file
+    with open(rpycfn, "wb") as f:
+OSError: [Errno 30] Read-only file system: '/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/common/00barvalues.rpyc'
+Traceback (most recent call last):
+  File "/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/script.py", line 768, in load_file
+    with open(rpycfn, "wb") as f:
+OSError: [Errno 30] Read-only file system: '/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/common/00build.rpyc'
+Traceback (most recent call last):
+  File "/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/script.py", line 768, in load_file
+    with open(rpycfn, "wb") as f:
+OSError: [Errno 30] Read-only file system: '/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/common/00compat.rpyc'
+Traceback (most recent call last):
+  File "/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/script.py", line 768, in load_file
+    with open(rpycfn, "wb") as f:
+OSError: [Errno 30] Read-only file system: '/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/common/00console.rpyc'
+Traceback (most recent call last):
+  File "/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/script.py", line 768, in load_file
+    with open(rpycfn, "wb") as f:
+OSError: [Errno 30] Read-only file system: '/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/common/00db.rpyc'
+Traceback (most recent call last):
+  File "/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/script.py", line 768, in load_file
+    with open(rpycfn, "wb") as f:
+OSError: [Errno 30] Read-only file system: '/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/common/00defaults.rpyc'
+Traceback (most recent call last):
+  File "/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/script.py", line 768, in load_file
+    with open(rpycfn, "wb") as f:
+OSError: [Errno 30] Read-only file system: '/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/common/00definitions.rpyc'
+Traceback (most recent call last):
+  File "/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/script.py", line 768, in load_file
+    with open(rpycfn, "wb") as f:
+OSError: [Errno 30] Read-only file system: '/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/common/00director.rpyc'
+Traceback (most recent call last):
+  File "/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/script.py", line 768, in load_file
+    with open(rpycfn, "wb") as f:
+OSError: [Errno 30] Read-only file system: '/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/common/00gallery.rpyc'
+Traceback (most recent call last):
+  File "/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/script.py", line 768, in load_file
+    with open(rpycfn, "wb") as f:
+OSError: [Errno 30] Read-only file system: '/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/common/00gamemenu.rpyc'
+Traceback (most recent call last):
+  File "/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/script.py", line 768, in load_file
+    with open(rpycfn, "wb") as f:
+OSError: [Errno 30] Read-only file system: '/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/common/00gamepad.rpyc'
+Traceback (most recent call last):
+  File "/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/script.py", line 768, in load_file
+    with open(rpycfn, "wb") as f:
+OSError: [Errno 30] Read-only file system: '/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/common/00gltest.rpyc'
+Traceback (most recent call last):
+  File "/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/script.py", line 768, in load_file
+    with open(rpycfn, "wb") as f:
+OSError: [Errno 30] Read-only file system: '/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/common/00gui.rpyc'
+Traceback (most recent call last):
+  File "/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/script.py", line 768, in load_file
+    with open(rpycfn, "wb") as f:
+OSError: [Errno 30] Read-only file system: '/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/common/00iap.rpyc'
+Traceback (most recent call last):
+  File "/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/script.py", line 768, in load_file
+    with open(rpycfn, "wb") as f:
+OSError: [Errno 30] Read-only file system: '/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/common/00icon.rpyc'
+Traceback (most recent call last):
+  File "/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/script.py", line 768, in load_file
+    with open(rpycfn, "wb") as f:
+OSError: [Errno 30] Read-only file system: '/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/common/00iconbutton.rpyc'
+Traceback (most recent call last):
+  File "/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/script.py", line 768, in load_file
+    with open(rpycfn, "wb") as f:
+OSError: [Errno 30] Read-only file system: '/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/common/00images.rpyc'
+Traceback (most recent call last):
+  File "/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/script.py", line 768, in load_file
+    with open(rpycfn, "wb") as f:
+OSError: [Errno 30] Read-only file system: '/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/common/00inputvalues.rpyc'
+Traceback (most recent call last):
+  File "/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/script.py", line 768, in load_file
+    with open(rpycfn, "wb") as f:
+OSError: [Errno 30] Read-only file system: '/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/common/00keymap.rpyc'
+Traceback (most recent call last):
+  File "/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/script.py", line 768, in load_file
+    with open(rpycfn, "wb") as f:
+OSError: [Errno 30] Read-only file system: '/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/common/00layeredimage.rpyc'
+Traceback (most recent call last):
+  File "/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/script.py", line 768, in load_file
+    with open(rpycfn, "wb") as f:
+OSError: [Errno 30] Read-only file system: '/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/common/00layout.rpyc'
+Traceback (most recent call last):
+  File "/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/script.py", line 768, in load_file
+    with open(rpycfn, "wb") as f:
+OSError: [Errno 30] Read-only file system: '/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/common/00library.rpyc'
+Traceback (most recent call last):
+  File "/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/script.py", line 768, in load_file
+    with open(rpycfn, "wb") as f:
+OSError: [Errno 30] Read-only file system: '/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/common/00matrixcolor.rpyc'
+Traceback (most recent call last):
+  File "/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/script.py", line 768, in load_file
+    with open(rpycfn, "wb") as f:
+OSError: [Errno 30] Read-only file system: '/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/common/00matrixtransform.rpyc'
+Traceback (most recent call last):
+  File "/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/script.py", line 768, in load_file
+    with open(rpycfn, "wb") as f:
+OSError: [Errno 30] Read-only file system: '/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/common/00mixers.rpyc'
+Traceback (most recent call last):
+  File "/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/script.py", line 768, in load_file
+    with open(rpycfn, "wb") as f:
+OSError: [Errno 30] Read-only file system: '/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/common/00mousedisplayable.rpyc'
+Traceback (most recent call last):
+  File "/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/script.py", line 768, in load_file
+    with open(rpycfn, "wb") as f:
+OSError: [Errno 30] Read-only file system: '/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/common/00musicroom.rpyc'
+Traceback (most recent call last):
+  File "/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/script.py", line 768, in load_file
+    with open(rpycfn, "wb") as f:
+OSError: [Errno 30] Read-only file system: '/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/common/00nvl_mode.rpyc'
+Traceback (most recent call last):
+  File "/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/script.py", line 768, in load_file
+    with open(rpycfn, "wb") as f:
+OSError: [Errno 30] Read-only file system: '/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/common/00obsolete.rpyc'
+Traceback (most recent call last):
+  File "/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/script.py", line 768, in load_file
+    with open(rpycfn, "wb") as f:
+OSError: [Errno 30] Read-only file system: '/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/common/00performance.rpyc'
+Traceback (most recent call last):
+  File "/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/script.py", line 768, in load_file
+    with open(rpycfn, "wb") as f:
+OSError: [Errno 30] Read-only file system: '/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/common/00placeholder.rpyc'
+Traceback (most recent call last):
+  File "/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/script.py", line 768, in load_file
+    with open(rpycfn, "wb") as f:
+OSError: [Errno 30] Read-only file system: '/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/common/00preferences.rpyc'
+Traceback (most recent call last):
+  File "/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/script.py", line 768, in load_file
+    with open(rpycfn, "wb") as f:
+OSError: [Errno 30] Read-only file system: '/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/common/00shaders.rpyc'
+Traceback (most recent call last):
+  File "/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/script.py", line 768, in load_file
+    with open(rpycfn, "wb") as f:
+OSError: [Errno 30] Read-only file system: '/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/common/00sideimage.rpyc'
+Traceback (most recent call last):
+  File "/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/script.py", line 768, in load_file
+    with open(rpycfn, "wb") as f:
+OSError: [Errno 30] Read-only file system: '/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/common/00speechbubble.rpyc'
+Traceback (most recent call last):
+  File "/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/script.py", line 768, in load_file
+    with open(rpycfn, "wb") as f:
+OSError: [Errno 30] Read-only file system: '/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/common/00splines.rpyc'
+Traceback (most recent call last):
+  File "/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/script.py", line 768, in load_file
+    with open(rpycfn, "wb") as f:
+OSError: [Errno 30] Read-only file system: '/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/common/00sshtransition.rpyc'
+Traceback (most recent call last):
+  File "/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/script.py", line 768, in load_file
+    with open(rpycfn, "wb") as f:
+OSError: [Errno 30] Read-only file system: '/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/common/00start.rpyc'
+Traceback (most recent call last):
+  File "/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/script.py", line 768, in load_file
+    with open(rpycfn, "wb") as f:
+OSError: [Errno 30] Read-only file system: '/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/common/00steam.rpyc'
+Traceback (most recent call last):
+  File "/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/script.py", line 768, in load_file
+    with open(rpycfn, "wb") as f:
+OSError: [Errno 30] Read-only file system: '/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/common/00style.rpyc'
+Traceback (most recent call last):
+  File "/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/script.py", line 768, in load_file
+    with open(rpycfn, "wb") as f:
+OSError: [Errno 30] Read-only file system: '/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/common/00stylepreferences.rpyc'
+Traceback (most recent call last):
+  File "/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/script.py", line 768, in load_file
+    with open(rpycfn, "wb") as f:
+OSError: [Errno 30] Read-only file system: '/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/common/00sync.rpyc'
+Traceback (most recent call last):
+  File "/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/script.py", line 768, in load_file
+    with open(rpycfn, "wb") as f:
+OSError: [Errno 30] Read-only file system: '/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/common/00textshader.rpyc'
+Traceback (most recent call last):
+  File "/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/script.py", line 768, in load_file
+    with open(rpycfn, "wb") as f:
+OSError: [Errno 30] Read-only file system: '/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/common/00themes.rpyc'
+Traceback (most recent call last):
+  File "/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/script.py", line 768, in load_file
+    with open(rpycfn, "wb") as f:
+OSError: [Errno 30] Read-only file system: '/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/common/00touchkeyboard.rpyc'
+Traceback (most recent call last):
+  File "/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/script.py", line 768, in load_file
+    with open(rpycfn, "wb") as f:
+OSError: [Errno 30] Read-only file system: '/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/common/00translation.rpyc'
+Traceback (most recent call last):
+  File "/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/script.py", line 768, in load_file
+    with open(rpycfn, "wb") as f:
+OSError: [Errno 30] Read-only file system: '/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/common/00updater.rpyc'
+Traceback (most recent call last):
+  File "/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/script.py", line 768, in load_file
+    with open(rpycfn, "wb") as f:
+OSError: [Errno 30] Read-only file system: '/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/common/00voice.rpyc'
+Loading script took 0.90s
+Loading save slot metadata took 0.02s
 Loading persistent took 0.00s
-Running init code took 0.10s
-Loading analysis data took 0.01s
+Traceback (most recent call last):
+  File "/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/script.py", line 768, in load_file
+    with open(rpycfn, "wb") as f:
+OSError: [Errno 30] Read-only file system: '/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/common/_layout/screen_main_menu.rpymc'
+Traceback (most recent call last):
+  File "/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/script.py", line 768, in load_file
+    with open(rpycfn, "wb") as f:
+OSError: [Errno 30] Read-only file system: '/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/common/_layout/screen_load_save.rpymc'
+Traceback (most recent call last):
+  File "/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/script.py", line 768, in load_file
+    with open(rpycfn, "wb") as f:
+OSError: [Errno 30] Read-only file system: '/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/common/_layout/classic_navigation.rpymc'
+Traceback (most recent call last):
+  File "/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/script.py", line 768, in load_file
+    with open(rpycfn, "wb") as f:
+OSError: [Errno 30] Read-only file system: '/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/common/_layout/screen_yesno_prompt.rpymc'
+Traceback (most recent call last):
+  File "/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/script.py", line 768, in load_file
+    with open(rpycfn, "wb") as f:
+OSError: [Errno 30] Read-only file system: '/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/common/_layout/screen_preferences.rpymc'
+Traceback (most recent call last):
+  File "/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/script.py", line 768, in load_file
+    with open(rpycfn, "wb") as f:
+OSError: [Errno 30] Read-only file system: '/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/common/_layout/classic_joystick_preferences.rpymc'
+Traceback (most recent call last):
+  File "/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/script.py", line 768, in load_file
+    with open(rpycfn, "wb") as f:
+OSError: [Errno 30] Read-only file system: '/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/common/_developer/developer.rpymc'
+Traceback (most recent call last):
+  File "/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/script.py", line 768, in load_file
+    with open(rpycfn, "wb") as f:
+OSError: [Errno 30] Read-only file system: '/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/common/_developer/inspector.rpymc'
+Running init code took 0.09s
+Loading analysis data took 0.00s
 Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.02s
+Reloading save slot metadata took 0.01s
 Index archives took 0.00s
-Dump and make backups took 0.03s
+Backing up script files to '/Users/hyunho/Library/RenPy/backups/the throbbing of love':
+Dump and make backups took 0.02s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
-Initial gc took 0.02s
+Initial gc took 0.03s
 DPI scale factor: 1.000000
 Creating interface object took 0.00s
 Cleaning stores took 0.00s
 Init translation took 0.02s
 Build styles took 0.00s
-Load screen analysis took 0.02s
-Analyze screens took 0.00s
-Save screen analysis took 0.00s
-Prepare screens took 0.03s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.01s
+Prepare screens took 0.06s
+Save pyanalysis. took 0.01s
+Save bytecode. took 0.02s
