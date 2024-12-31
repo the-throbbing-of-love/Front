@@ -3,69 +3,69 @@
 While running game code:
   File "renpy/common/00action_file.rpy", line 415, in __call__
     renpy.save(fn, extra_info=save_name)
-Exception: Could not pickle <module 'webbrowser' from '/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/lib/python3.9/webbrowser.pyc'>. (perhaps store.webbrowser = <module 'webbrowser' from '/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/lib/python3.9/webbrowser.pyc'>)
+Exception: Could not pickle <module 'webbrowser' from '/Users/hyunho/Downloads/renpy-8.3.4-sdk/lib/python3.9/webbrowser.pyc'>. (perhaps store.webbrowser = <module 'webbrowser' from '/Users/hyunho/Downloads/renpy-8.3.4-sdk/lib/python3.9/webbrowser.pyc'>)
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
   File "renpy/common/_layout/screen_load_save.rpym", line 35, in script
     $ ui.interact()
-  File "/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/ast.py", line 827, in execute
+  File "/Users/hyunho/Downloads/renpy-8.3.4-sdk/renpy/ast.py", line 827, in execute
     renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/python.py", line 1178, in py_exec_bytecode
+  File "/Users/hyunho/Downloads/renpy-8.3.4-sdk/renpy/python.py", line 1178, in py_exec_bytecode
     exec(bytecode, globals, locals)
   File "renpy/common/_layout/screen_load_save.rpym", line 35, in <module>
     $ ui.interact()
-  File "/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/ui.py", line 301, in interact
+  File "/Users/hyunho/Downloads/renpy-8.3.4-sdk/renpy/ui.py", line 301, in interact
     rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-  File "/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/display/core.py", line 2215, in interact
+  File "/Users/hyunho/Downloads/renpy-8.3.4-sdk/renpy/display/core.py", line 2215, in interact
     repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
-  File "/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/display/core.py", line 3286, in interact_core
+  File "/Users/hyunho/Downloads/renpy-8.3.4-sdk/renpy/display/core.py", line 3286, in interact_core
     rv = root_widget.event(ev, x, y, 0)
-  File "/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/display/layout.py", line 1297, in event
+  File "/Users/hyunho/Downloads/renpy-8.3.4-sdk/renpy/display/layout.py", line 1297, in event
     rv = i.event(ev, x - xo, y - yo, cst)
-  File "/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/display/layout.py", line 1297, in event
+  File "/Users/hyunho/Downloads/renpy-8.3.4-sdk/renpy/display/layout.py", line 1297, in event
     rv = i.event(ev, x - xo, y - yo, cst)
-  File "/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/display/layout.py", line 1297, in event
+  File "/Users/hyunho/Downloads/renpy-8.3.4-sdk/renpy/display/layout.py", line 1297, in event
     rv = i.event(ev, x - xo, y - yo, cst)
-  File "/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/display/screen.py", line 791, in event
+  File "/Users/hyunho/Downloads/renpy-8.3.4-sdk/renpy/display/screen.py", line 791, in event
     rv = self.child.event(ev, x, y, st)
-  File "/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/display/layout.py", line 1297, in event
+  File "/Users/hyunho/Downloads/renpy-8.3.4-sdk/renpy/display/layout.py", line 1297, in event
     rv = i.event(ev, x - xo, y - yo, cst)
-  File "/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/display/layout.py", line 1526, in event
+  File "/Users/hyunho/Downloads/renpy-8.3.4-sdk/renpy/display/layout.py", line 1526, in event
     rv = super(Window, self).event(ev, x, y, st)
-  File "/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/display/layout.py", line 285, in event
+  File "/Users/hyunho/Downloads/renpy-8.3.4-sdk/renpy/display/layout.py", line 285, in event
     rv = d.event(ev, x - xo, y - yo, st)
-  File "/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/display/layout.py", line 1297, in event
+  File "/Users/hyunho/Downloads/renpy-8.3.4-sdk/renpy/display/layout.py", line 1297, in event
     rv = i.event(ev, x - xo, y - yo, cst)
-  File "/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/display/layout.py", line 1526, in event
+  File "/Users/hyunho/Downloads/renpy-8.3.4-sdk/renpy/display/layout.py", line 1526, in event
     rv = super(Window, self).event(ev, x, y, st)
-  File "/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/display/layout.py", line 285, in event
+  File "/Users/hyunho/Downloads/renpy-8.3.4-sdk/renpy/display/layout.py", line 285, in event
     rv = d.event(ev, x - xo, y - yo, st)
-  File "/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/display/layout.py", line 1297, in event
+  File "/Users/hyunho/Downloads/renpy-8.3.4-sdk/renpy/display/layout.py", line 1297, in event
     rv = i.event(ev, x - xo, y - yo, cst)
-  File "/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/display/layout.py", line 285, in event
+  File "/Users/hyunho/Downloads/renpy-8.3.4-sdk/renpy/display/layout.py", line 285, in event
     rv = d.event(ev, x - xo, y - yo, st)
-  File "/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/display/behavior.py", line 1182, in event
+  File "/Users/hyunho/Downloads/renpy-8.3.4-sdk/renpy/display/behavior.py", line 1182, in event
     return handle_click(self.clicked)
-  File "/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/display/behavior.py", line 1103, in handle_click
+  File "/Users/hyunho/Downloads/renpy-8.3.4-sdk/renpy/display/behavior.py", line 1103, in handle_click
     rv = run(action)
-  File "/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/display/behavior.py", line 401, in run
+  File "/Users/hyunho/Downloads/renpy-8.3.4-sdk/renpy/display/behavior.py", line 401, in run
     return action(*args, **kwargs)
   File "renpy/common/00action_file.rpy", line 415, in __call__
     renpy.save(fn, extra_info=save_name)
-  File "/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/loadsave.py", line 436, in save
+  File "/Users/hyunho/Downloads/renpy-8.3.4-sdk/renpy/loadsave.py", line 436, in save
     reraise(t, e, tb)
   File "lib/python3.9/future/utils/__init__.py", line 444, in raise_
-  File "/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/loadsave.py", line 417, in save
+  File "/Users/hyunho/Downloads/renpy-8.3.4-sdk/renpy/loadsave.py", line 417, in save
     dump((roots, renpy.game.log), logf)
-  File "/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/compat/pickle.py", line 107, in dump
+  File "/Users/hyunho/Downloads/renpy-8.3.4-sdk/renpy/compat/pickle.py", line 107, in dump
     pickle.dump(o, f, pickle.HIGHEST_PROTOCOL if highest else PROTOCOL)
-  File "/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/renpy/python.py", line 1275, in module_pickle
+  File "/Users/hyunho/Downloads/renpy-8.3.4-sdk/renpy/python.py", line 1275, in module_pickle
     raise Exception("Could not pickle {!r}.".format(module))
-Exception: Could not pickle <module 'webbrowser' from '/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/lib/python3.9/webbrowser.pyc'>. (perhaps store.webbrowser = <module 'webbrowser' from '/Volumes/renpy-8.3.4-sdk/renpy-8.3.4-sdk/lib/python3.9/webbrowser.pyc'>)
+Exception: Could not pickle <module 'webbrowser' from '/Users/hyunho/Downloads/renpy-8.3.4-sdk/lib/python3.9/webbrowser.pyc'>. (perhaps store.webbrowser = <module 'webbrowser' from '/Users/hyunho/Downloads/renpy-8.3.4-sdk/lib/python3.9/webbrowser.pyc'>)
 
 macOS-15.1.1-arm64-arm-64bit arm64
 Ren'Py 8.3.4.24120703
  Beta
-Tue Dec 24 10:06:35 2024
+Tue Dec 31 10:20:05 2024
