@@ -424,7 +424,7 @@ label first_day:
     $ send_emotions = analyze_emotion(new_round_number, scene)
     $ neutral = send_emotions["neutral"]
     $ happy = send_emotions["happy"]
-    s "현재 감정 분석중입니다.. 웃으시면 어떤 대사가 나오고 무표정이면 또 다른 대사가 나옴니다."
+    s "현재 감정 분석중입니다.. 웃으시면 '조금 둘러보고 있어요'라는 대사가 나오고 무표정이면 '네, 하지만 뭐가 좋을지 모르겠네요'라는 대사가 나옴니다."
     if happy >= neutral:
         #표정이 좋으면
         "조금 둘러보고 있어요"
@@ -530,9 +530,9 @@ label chapter_2:
     b "안녕하세요! 혹시 여기가 사진 동아리 맞나요?"
     
     "들어오는 나와 동시에 동기인 서현이가 반갑게 인사하며 동아리 방에 들어왔다."
-    
-    $ test = send_to_raspberry_pi(new_round_number, scene) # 심박수 측정 호출
     "이곳에서 앞으로의 내 삶이 어떻게 바뀔지 상상하니 가슴이 두근거렸다."
+    s "현재 심장박동 분석중입니다.. 높아지면 '서현에게 친근하게 인사를 건냈다'라는 선택지로 이동하고 낮아지면 '조용히 자리에 앉았다'라는 선택지로 이동합니다."
+    $ test = send_to_raspberry_pi(new_round_number, scene) # 심박수 측정 호출
     if test['rising'] == True:
         #심장박동 오르면
         "서현에게 친근하게 인사를 건냈다"
@@ -1113,6 +1113,7 @@ label chapter_5:
     "하지만 그 날의 추억은 항상 내 마음 속에 남아 있을 것이다."
 
     stop music fadeout 2.5
+    return
 
 
 
@@ -1179,7 +1180,7 @@ label long_first_day:
     q "안녕! 신입생 맞지? 동아리 알아보고 있어?"
 
     # 첫 대화 선택지
-    s "현재 감정 분석중입니다.. 웃으시면 어떤 대사가 나오고 무표정이면 또 다른 대사가 나옴니다."
+    s "현재 감정 분석중입니다.. 웃으시면 '조금 둘러보고 있어요'라는 대사가 나오고 무표정이면 '네, 하지만 뭐가 좋을지 모르겠네요'라는 대사가 나옴니다."
     $ send_emotions = analyze_emotion(new_round_number, scene)
     $ neutral = send_emotions["neutral"]
     $ happy = send_emotions["happy"]
@@ -1304,9 +1305,10 @@ label long_chapter_2:
     
     "들어오는 나와 동시에 동기인 서현이가 반갑게 인사하며 동아리 방에 들어왔다."
     
-    $ test = send_to_raspberry_pi(new_round_number, scene) # 심박수 측정 호출
+    
     "이곳에서 앞으로의 내 삶이 어떻게 바뀔지 상상하니 가슴이 두근거렸다."
-    s "현재 심장박동 분석중입니다.. 높아지면 어떤 대사가 나오고 낮아지면 또 다른 대사가 나옴니다."
+    s "현재 심장박동 분석중입니다.. 높아지면 '서현에게 친근하게 인사를 건냈다'라는 선택지로 이동하고 낮아지면 '조용히 자리에 앉았다'라는 선택지로 이동합니다."
+    $ test = send_to_raspberry_pi(new_round_number, scene) # 심박수 측정 호출
     if test['rising'] == True:
         #심장박동 오르면
         "서현에게 친근하게 인사를 건냈다"
@@ -2102,3 +2104,4 @@ label long_chapter_5:
     "하지만 그 날의 추억은 항상 내 마음 속에 남아 있을 것이다."
 
     stop music fadeout 2.5
+    return 
